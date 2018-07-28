@@ -19,5 +19,8 @@ public class ArrowShooter : MonoBehaviour {
         mousePosition = Input.mousePosition;
         mousePosition = new Vector2(Mathf.Clamp(Camera.main.ScreenToWorldPoint(mousePosition).x,bounds.x,bounds.y), transform.position.y);
         transform.position = Vector2.Lerp(transform.position, mousePosition, moveSpeed);
+
+
+
 	}
 }
