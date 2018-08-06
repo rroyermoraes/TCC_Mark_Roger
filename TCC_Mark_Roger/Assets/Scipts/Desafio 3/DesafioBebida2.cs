@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DesafioBebida : MonoBehaviour {
+public class DesafioBebida2 : MonoBehaviour
+{
 
 
-    private List<int> a = new List<int>(new int[4]);
+    private List<int> a = new List<int>(new int[3]);
     private List<int> b = new List<int>(new int[4]);
     private int moves = 0;
     private int maxMoves = 0;
@@ -40,13 +41,14 @@ public class DesafioBebida : MonoBehaviour {
     //Turn Preparations
     private void SetA(List<int> nA)
     {
-        //a = nA;
-        for (int j = 0; j < 4; j++)
-        {
+       // a = nA;
+        for (int j = 0; j < 3; j++) {
             a[j] = nA[j];
 
         }
-        for (int i = 0; i < 4; i++)
+
+
+        for (int i = 0; i < 3; i++)
         {
             aF[i].text = a[i].ToString();
 
@@ -55,7 +57,7 @@ public class DesafioBebida : MonoBehaviour {
 
     private void SetB(List<int> nB)
     {
-        //b = nB;
+        //  b = nB;
         for (int j = 0; j < 4; j++)
         {
             b[j] = nB[j];
@@ -83,7 +85,8 @@ public class DesafioBebida : MonoBehaviour {
             }
 
         }
-        else {
+        else
+        {
             foreach (Button b in exchangeButtons)
             {
                 b.interactable = false;
@@ -95,17 +98,36 @@ public class DesafioBebida : MonoBehaviour {
     private void CommitTurn()
     {
         bool result = true;
-        List<int> c = new List<int>(new int[4]);
+        List<int> c = new List<int>(new int[3]);
+        List<int> aux = new List<int>(new int[3]);
         EnableDisableExchange(false);
-        for (int i = 0; i < 4; i++) {
-            c[i] = a[i] + b[i];
+        int smallPosition = 0;
+
+        for (int i = 0; i < 3; i++) {
+            if (b[i]<b[smallPosition]) {
+                smallPosition = i;
+            }
+        }
+
+        for (int i = 0; i < 3; i++) {
+            aux[i] = a[i] + b[i];
+        }
+        aux[smallPosition] += b[3];
+
+        c = aux;
+        
+
+
+        for (int i = 0; i < 3; i++)
+        {
+            
             if (c[i] > 10)
             {
                 result = false;
             }
 
         }
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < 3; i++)
         {
             cF[i].text = c[i].ToString();
 
@@ -118,7 +140,8 @@ public class DesafioBebida : MonoBehaviour {
 
 
 
-    public void ConfirmButton() {
+    public void ConfirmButton()
+    {
         CommitTurn();
 
 
@@ -128,7 +151,7 @@ public class DesafioBebida : MonoBehaviour {
         SetA(turnos[activeTurn].iA);
         for (int i = 0; i < 4; i++)
         {
-            bF[i].text = "0";
+            bF[i].text = "01";
 
         }
         SetMaxMoves(turnos[activeTurn].iMaxMoves);
@@ -136,7 +159,7 @@ public class DesafioBebida : MonoBehaviour {
         moves = 0;
         moveCountF.text = moves.ToString();
 
-
+       
         SetTurnB();
 
     }
@@ -169,9 +192,11 @@ public class DesafioBebida : MonoBehaviour {
 
     }
 
-    public void ButtonExchange(int i) {
+    public void ButtonExchange(int i)
+    {
 
-        switch (i) {
+        switch (i)
+        {
             case 1:
                 Exchange(0, 1);
                 break;
@@ -190,7 +215,8 @@ public class DesafioBebida : MonoBehaviour {
 
 
 
-    public void CheckTurn(bool result) {
+    public void CheckTurn(bool result)
+    {
 
         if (!result)
         {
@@ -199,17 +225,19 @@ public class DesafioBebida : MonoBehaviour {
             {
                 Debug.LogError("Fim do desafio, voce falhou demais.");
             }
-            else {
+            else
+            {
                 Debug.Log("VoceFalhou Nesse turno." + "(" + activeTurn.ToString() + ")");
                 
                 newTurnReady = true;
                 nextTurnB.gameObject.SetActive(true);
-                
+
             }
 
         }
-        else {
-            Debug.Log("Parabens voce concluiu esse turno."+"(" + activeTurn.ToString() + ")");
+        else
+        {
+            Debug.Log("Parabens voce concluiu esse turno." + "(" + activeTurn.ToString() + ")");
             activeTurn++;
             newTurnReady = true;
             nextTurnB.gameObject.SetActive(true);
@@ -220,27 +248,32 @@ public class DesafioBebida : MonoBehaviour {
 
     }
 
-    public void NextTurnButton() {
-        if (newTurnReady) {
+    public void NextTurnButton()
+    {
+        if (newTurnReady)
+        {
             StartNewTurn();
         }
-        nextTurnB.gameObject.SetActive(false);
+      
     }
 
 
-    public void StartGame() {
+    public void StartGame()
+    {
         activeTurn = 0;
         newTurnReady = false;
         SetTurnA();
 
     }
-    public void StartNewTurn() {
-        
+    public void StartNewTurn()
+    {
+
         newTurnReady = false;
-        SetTurnA();
-        foreach (Text t in cF) {
+        foreach (Text t in cF)
+        {
             t.text = "";
         }
+        SetTurnA();
 
     }
 
@@ -250,9 +283,10 @@ public class DesafioBebida : MonoBehaviour {
 }
 
 [System.Serializable]
-public class DesafioBebidaTurn {
+public class DesafioBebida2Turn
+{
 
-    public List<int> iA = new List<int>(4);
+    public List<int> iA = new List<int>(3);
     public List<int> iB = new List<int>(4);
 
     public int iMaxMoves = 0;
