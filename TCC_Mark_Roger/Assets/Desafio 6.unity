@@ -319,6 +319,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 212445056416951622, guid: 97fe4fd8e53e7d54487df5e2a9394c17,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212445056416951622, guid: 97fe4fd8e53e7d54487df5e2a9394c17,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212445056416951622, guid: 97fe4fd8e53e7d54487df5e2a9394c17,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97fe4fd8e53e7d54487df5e2a9394c17, type: 2}
   m_IsPrefabAsset: 0
@@ -992,7 +1007,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startPosition:
-    position: {x: 0, y: 0}
+    position: {x: 2, y: 0}
     topConnection: 0
     bottomConnection: 1
     leftConnection: 0

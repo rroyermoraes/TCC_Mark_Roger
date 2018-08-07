@@ -68,7 +68,15 @@ public class DesafioCripta : MonoBehaviour {
         k = Random.Range(0, 5);
         y = Random.Range(0, 5);
 
-        
+        StopAllCoroutines();
+        for (int a = 0; a < 5; a++) {
+            for (int b = 0; b < 5; b++)
+            {
+                game[a, b].Reset();
+
+            }
+        }
+
 
         while (it > 0) {
             it--;
@@ -142,14 +150,14 @@ public class DesafioCripta : MonoBehaviour {
         }
     }
 
-    public void Flood(int i, int j) {
+    IEnumerator Flood(int i, int j) {
         game[i,j].Flood();
-
+        yield return new WaitForSeconds(1);
         //direita
         if (i < 4 && game[i, j].RightConnection && game[i + 1, j].LeftConnection) {
             if (!game[i + 1, j].GetFlooded())
             {
-                Flood(i + 1, j);
+                StartCoroutine(Flood(i + 1, j)) ;
             }
         }
         //acima
@@ -157,7 +165,7 @@ public class DesafioCripta : MonoBehaviour {
         {
             if (!game[i, j + 1].GetFlooded())
             {
-                Flood(i, j + 1);
+                StartCoroutine(Flood(i, j + 1));
             }             
         }
         //Esquerda
@@ -165,7 +173,7 @@ public class DesafioCripta : MonoBehaviour {
         {
             if (!game[i - 1, j].GetFlooded())
             {
-                Flood(i - 1, j);
+                StartCoroutine(Flood(i - 1, j));
             }
         }
         //Baixo
@@ -173,7 +181,7 @@ public class DesafioCripta : MonoBehaviour {
         {
             if (!game[i, j - 1].GetFlooded())
             {
-                Flood(i, j - 1);
+                StartCoroutine(Flood(i, j - 1));
             }
         }
 
@@ -209,7 +217,7 @@ public class DesafioCripta : MonoBehaviour {
         }
 
         if (f) {
-            Flood(Mathf.RoundToInt(startPosition.position.x), Mathf.RoundToInt(startPosition.position.y));
+            StartCoroutine(Flood(Mathf.RoundToInt(startPosition.position.x), Mathf.RoundToInt(startPosition.position.y)));
         }
         
     }

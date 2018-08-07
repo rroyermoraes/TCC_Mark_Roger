@@ -75,6 +75,10 @@ public class GamePiece : MonoBehaviour {
     public bool GetFlooded() {
         return flooded;
     }
+    public void Reset() {
+        flooded = false;
+        r.color = Color.white;
+    }
     public void Flood() {
         flooded = true;
         r.color = Color.blue;
