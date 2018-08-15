@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b624a761662d24285b8a585a0d8807, type: 3}
+  m_Name: BobNormalDefault
+  m_EditorClassIdentifier: 
+  greeting: "Sauda\xE7\xF5es <color=red>forasteiro</color>, n\xE3o \xE9 sempre que
+    se v\xEA algu\xE9m por essas bandas."
+  specialGreetingPortrait: {fileID: 0}
+  blankState: 0
+  lines:
+  - line: "Quem \xE9 voce? e o que faz por aqui?"
+    responses:
+    - "Ora eu sou um plebeu, e n\xE3o fa\xE7o muita coisa por aqui n\xE3o..."
+    - "Alem disso n\xE3o tem <color=red>muito</color> o que eu te falar..."
+    - "E voc\xEA quem \xE9?"
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    defaultEndLine: 0
+    nextState: {fileID: 11400000, guid: 4be3fde99f43d364ab81cccd2c89ff78, type: 2}
+    targetNPCDialogue: {fileID: 0}
+    somethigToGive: {fileID: 0}
+    linesToUnlock: []
+    exitDialogue: 0
+  - line: Belo tom de verde.(Libera linha escondida)
+    responses:
+    - "Sua roupa ate que n\xE3o \xE9 nada mal tambem."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    defaultEndLine: 0
+    nextState: {fileID: 0}
+    targetNPCDialogue: {fileID: 0}
+    somethigToGive: {fileID: 1846484844934468, guid: 9fbd137d20ef50145a1a47cf122d8e17,
+      type: 2}
+    linesToUnlock:
+    - state: {fileID: 11400000}
+      index: 4
+    exitDialogue: 0
+  - line: <color=green>Fique feliz e mude seu estado, pra podermos testar umas coisas.</color>
+    responses:
+    - Claro que sim amigo...
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    defaultEndLine: 0
+    nextState: {fileID: 0}
+    targetNPCDialogue: {fileID: 11400000, guid: 52c92ae81e99db94a8764f178f90c9af,
+      type: 2}
+    somethigToGive: {fileID: 0}
+    linesToUnlock: []
+    exitDialogue: 0
+  - line: <color=red>Fique irritado comigo mude o estado da conversa e termine o dialoguo
+      imediatamente.</color>
+    responses:
+    - Vai se ferrar cara. *piscadinha*
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    defaultEndLine: 0
+    nextState: {fileID: 0}
+    targetNPCDialogue: {fileID: 11400000, guid: 09ab61af5dc0e3547a6ca0da7bb7e8e4,
+      type: 2}
+    somethigToGive: {fileID: 0}
+    linesToUnlock: []
+    exitDialogue: 1
+  - line: Esta linha de dialogo esteve anteriormete escondida
+    responses:
+    - 'UUUU... Interessante.
+
+'
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    defaultEndLine: 0
+    nextState: {fileID: 0}
+    targetNPCDialogue: {fileID: 0}
+    somethigToGive: {fileID: 0}
+    linesToUnlock: []
+    exitDialogue: 0
+  - line: Adeus.
+    responses:
+    - "At\xE9 mais..."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    defaultEndLine: 1
+    nextState: {fileID: 0}
+    targetNPCDialogue: {fileID: 0}
+    somethigToGive: {fileID: 0}
+    linesToUnlock: []
+    exitDialogue: 1
