@@ -493,7 +493,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh-103028
+  m_Name: pb_Mesh13950
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -1831,6 +1831,7 @@ GameObject:
   - component: {fileID: 1465539619}
   - component: {fileID: 1465539621}
   - component: {fileID: 1465539620}
+  - component: {fileID: 1465539622}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1855,21 +1856,21 @@ Camera:
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
+  m_projectionMatrixMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.0005257726
-    y: 0.1141479
-    width: 0.99894845
-    height: 0.7717042
+    x: 0.0006426871
+    y: 0.06591639
+    width: 0.9987146
+    height: 0.8681672
   near clip plane: 0.1
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 3.75
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1892,7 +1893,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1465539615}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.40625, y: -0.4375, z: -10}
+  m_LocalPosition: {x: 0.84375, y: -0.9375, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1904,7 +1905,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1465539615}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a160d838ff8b4b4693ac20007e008c7, type: 3}
   m_Name: 
@@ -1943,6 +1944,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   referenceHeight: 180
   pixelsPerUnit: 32
+--- !u!114 &1465539622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1465539615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f08a6f40d2ec4de981f811bfc829f87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TexturePixelsPerWorldUnit: 32
 --- !u!1 &1555312403
 GameObject:
   m_ObjectHideFlags: 0

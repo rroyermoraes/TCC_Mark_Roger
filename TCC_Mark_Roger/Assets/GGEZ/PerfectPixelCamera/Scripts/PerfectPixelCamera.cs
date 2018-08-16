@@ -17,7 +17,7 @@ public class PerfectPixelCamera : MonoBehaviour
 // Set this value to the same value as Pixels Per Unit when importing sprites
 [
     Tooltip ("The number of texture pixels that fit in 1.0 world units. Common values are 8, 16, 32 and 64. If you're making a tile-based game, this is your tile size."),
-    Range (1, 64)
+    Range (1, 128)
 ]
 public int TexturePixelsPerWorldUnit = 16;
 
@@ -25,16 +25,9 @@ public int TexturePixelsPerWorldUnit = 16;
 // by the OnEnable function.
 private Camera cameraComponent;
 
-// Set to a value that compensates for the half-pixel offset when rendering
-// with Direct3D. This is automatically handled by Unity 5.5 and later.
-// If that's the case, it is declared as a constant 0 which the compiler
-// can use to optimize calculations in LateUpdate.
-// See: https://docs.unity3d.com/Manual/UpgradeGuide55.html
-#if UNITY_5_5_OR_NEWER
-private const float halfPixelOffsetIfNeededForD3D = 0f;
-#else
+// Set to a value that compensates for the half-pixel offset when
+// rendering with Direct3D
 private float halfPixelOffsetIfNeededForD3D;
-#endif
 
 // Objects that you want to be perfectly aligned should have X and Y
 // coordinates that are integer multiples of this value. It is always
@@ -51,13 +44,10 @@ void OnEnable ()
     // Grab a reference to the camera
     this.cameraComponent = (Camera)this.GetComponent (typeof(Camera));
 
-#if !UNITY_5_5_OR_NEWER
-
     // Detect whether we are using Direct3D, because D3D rendering has a
     // half-pixel offset from OpenGL rendering.
     bool isD3D =
-            SystemInfo.graphicsDeviceType == GraphicsDeviceType.Direct3D9
-            || SystemInfo.graphicsDeviceType == GraphicsDeviceType.Direct3D11
+           SystemInfo.graphicsDeviceType == GraphicsDeviceType.Direct3D11
             || SystemInfo.graphicsDeviceType == GraphicsDeviceType.Direct3D12;
 
     // 0.4975f and not 0.5f is used because 0.5f is able to be represented
@@ -66,8 +56,6 @@ void OnEnable ()
     // the wrong way. It can be tricky to reproduce so this isn't part
     // of the main demo.
     this.halfPixelOffsetIfNeededForD3D = isD3D ? 0.4975f : 0f;
-
-#endif
 
     // Run the LateUpdate immediately so that the projection gets set up
     this.LateUpdate ();
@@ -93,7 +81,7 @@ void OnDisable ()
 
 //---------------------------------------------------------------------------
 // LateUpdate - Called by Unity after all other functions have run Update.
-// If you have other scripts that use LateUpdate, you might want to use
+// If you have other scripts that use LateUpdate, you might want to use 
 // the Script Execution Order project setting to make this script run last.
 //---------------------------------------------------------------------------
 void LateUpdate ()
@@ -103,9 +91,9 @@ void LateUpdate ()
     Camera camera = this.cameraComponent;
 
     // Make sure the camera is in 2D mode
-    camera.transparencySortMode = TransparencySortMode.Orthographic;
+    camera.transparencySortMode = TransparencySortMode.CustomAxis;
     camera.orthographic = true;
-    camera.transform.rotation = Quaternion.identity;
+   // camera.transform.rotation = Quaternion.identity;
     camera.orthographicSize = Mathf.Max (camera.orthographicSize, 0.00001f);
 
     // This is the code that computes the parameters needed to perfectly map
@@ -116,7 +104,7 @@ void LateUpdate ()
     float halfWidth  = (1f * pixelRect.width)  / (zoomFactor * 2f * texturePixelsPerWorldUnit);
     float halfHeight = (1f * pixelRect.height) / (zoomFactor * 2f * texturePixelsPerWorldUnit);
     float snapSizeWorldUnits = 1f / (zoomFactor * texturePixelsPerWorldUnit);
-    float halfPixelOffsetInWorldUnits = halfPixelOffsetIfNeededForD3D * snapSizeWorldUnits;
+    float halfPixelOffsetInWorldUnits = this.halfPixelOffsetIfNeededForD3D * snapSizeWorldUnits;
     float pixelPerfectXOffset = halfPixelOffsetInWorldUnits - Mathf.Repeat (snapSizeWorldUnits + Mathf.Repeat (camera.transform.position.x, snapSizeWorldUnits), snapSizeWorldUnits);
     float pixelPerfectYOffset = halfPixelOffsetInWorldUnits - Mathf.Repeat (snapSizeWorldUnits + Mathf.Repeat (camera.transform.position.y, snapSizeWorldUnits), snapSizeWorldUnits);
 
