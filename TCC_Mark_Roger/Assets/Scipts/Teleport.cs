@@ -28,6 +28,7 @@ public class Teleport : MonoBehaviour {
                 {
                     player.GetComponent<NavMeshAgent>().enabled = false;
                     player.transform.position = tpoint.position;
+                    Camera.main.transform.position = new Vector3(tpoint.position.x, tpoint.position.y, Camera.main.transform.position.z);
                     player.GetComponent<NavMeshAgent>().enabled = true;
 
                 }

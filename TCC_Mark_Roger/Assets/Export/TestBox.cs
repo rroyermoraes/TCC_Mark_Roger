@@ -20,7 +20,7 @@ public class TestBox : InteractableObject{
         //base.Take();
         string[] s = new string[] { "Não consigo pegar isso, é muito pesado" };
         FindObjectOfType<PlayerSpeaker>().PlayerSpeak(s);
-        Debug.Log(s);
+        //Debug.Log(s);
         
     }
 

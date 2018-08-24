@@ -20,18 +20,22 @@ public class PlayerSpeaker : MonoBehaviour {
 
 	
 	// Update is called once per frame
-	void Update () {
-        time = time - Time.deltaTime;
-        if (time < 0){
-            talkBallon.SetActive(false);
-        }
-	}
 
+    IEnumerator Countdown() {
+        while (time>0) {
+            talkBallon.SetActive(true);
+            yield return new WaitForSeconds(1);
+            time = time - 1;
+        }
+        talkBallon.SetActive(false);
+    }
 
     public void PlayerSpeak(string[] sentences)
     {
-        talkBallon.SetActive(true);
+        
+        //talkBallon.SetActive(true);
         time = 1;
+        StartCoroutine(Countdown());
        // startCountdown = true;
         spechText.text = "";
         richTextString = "";
@@ -48,7 +52,6 @@ public class PlayerSpeaker : MonoBehaviour {
     {
         if (playerSentences.Count == 0)
         {
-           // isPlayerSpeaking = false;
             return;
         }
         string toDisplaySentece = playerSentences.Dequeue();
@@ -92,7 +95,6 @@ public class PlayerSpeaker : MonoBehaviour {
                 time = 2;
 
             }
-           // richTextString += "\n";
             spechText.text = richTextString;
             DisplayNextNPCSentece();
         }
@@ -106,7 +108,6 @@ public class PlayerSpeaker : MonoBehaviour {
                 yield return new WaitForSecondsRealtime(typingSpeed);
 
             }
-            //spechText.text += "\n";
 
             DisplayNextNPCSentece();
         }
