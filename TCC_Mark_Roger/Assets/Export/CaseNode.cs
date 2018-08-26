@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GraphNode : MonoBehaviour {
+public class CaseNode : MonoBehaviour {
     public int id;
-    public GraphEdge[] edges;
 	// Use this for initialization
 	void Start () {
 		

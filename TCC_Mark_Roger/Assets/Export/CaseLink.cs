@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GraphEdge : MonoBehaviour {
+public class CaseLink : MonoBehaviour {
 
-    public GraphNode a;
-    public GraphNode b;
+    public CaseNode a;
+    public CaseNode b;
 
 
 	// Use this for initialization

@@ -32,19 +32,23 @@ public class Link : MonoBehaviour {
             {
                 if (locked)
                 {
-                    Debug.Log("hit");
-                    activeLine.GetComponent<GraphEdge>().b = hit.collider.gameObject.GetComponent<GraphNode>();
+                    
+                    
+                    Debug.Log("hit1");
+                    activeLine.GetComponent<CaseLink>().b = hit.collider.gameObject.GetComponent<CaseNode>();
                     locked = false;
+                    FindObjectOfType<CaseBoard>().AddLink(activeLine.GetComponent<CaseLink>());
                     activeLine = null;
+
                 }
                 else {
-                    Debug.Log("hit");
+
+                    Debug.Log("hit2");
                     activeLine = Instantiate(linePrefab.gameObject, hit.transform.parent);
                     activeLine.GetComponent<LineRenderer>().enabled = false;
-                    activeLine.GetComponent<GraphEdge>().a = hit.collider.gameObject.GetComponent<GraphNode>();
-                    activeLine.GetComponent<GraphEdge>().b = hit.collider.gameObject.GetComponent<GraphNode>();
+                    activeLine.GetComponent<CaseLink>().a = hit.collider.gameObject.GetComponent<CaseNode>();
+                    activeLine.GetComponent<CaseLink>().b = hit.collider.gameObject.GetComponent<CaseNode>();
                     activeLine.GetComponent<LineRenderer>().SetPosition(1, new Vector3(screenPosition.x, screenPosition.y, 10f));
-                    
                     locked = true;
                     
                 }
