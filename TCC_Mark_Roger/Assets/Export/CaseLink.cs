@@ -8,15 +8,18 @@ public class CaseLink : MonoBehaviour {
     public CaseNode b;
 
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        GetComponent<LineRenderer>().SetPosition(0, a.transform.position);
-        GetComponent<LineRenderer>().SetPosition(1, b.transform.position);
+        //GetComponent<LineRenderer>().SetPosition(0, a.transform.position);
+        //GetComponent<LineRenderer>().SetPosition(1, b.transform.position);
+
+
 
     }
+    
 }
