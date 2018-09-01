@@ -5047,7 +5047,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42b2b2e502f000b4ea4027e2acfe4fbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DefaltNPCPortrait: {fileID: 21300000, guid: 675f8a22e0a320a4ebbf817ad6d2eccd, type: 3}
+  DefaltNPCPortrait: {fileID: 21300000, guid: c8175a3e7ccaade40826170f30a59bcb, type: 3}
   activeNPCState: {fileID: 11400000, guid: 5ca4271583438df4c8f72e2670e857cc, type: 2}
   activeDialogueState: {fileID: 0}
 --- !u!50 &842388850
@@ -15506,8 +15506,8 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.1
-  far clip plane: 5000
+  near clip plane: 0
+  far clip plane: 100
   field of view: 40
   orthographic: 1
   orthographic size: 6
@@ -15520,7 +15520,7 @@ Camera:
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
-  m_AllowMSAA: 1
+  m_AllowMSAA: 0
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
