@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
 
         if (agent.velocity.magnitude > stopAnimBias)
         {
-            if ((angle >= 0 && angle <= 45)||(angle <= 0 && angle >= -45))
+            if ((angle >= 0 && angle <= 30)||(angle <= 0 && angle >= -30))
             {
                 anim.SetBool("Right", true);
 
@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
                 anim.SetBool("Up", false);
                 anim.SetBool("Down", false);
             }
-            if (angle > 45 && angle < 135)
+            if (angle > 30 && angle < 150)
             {
                 anim.SetBool("Up", true);
 
@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour
                 anim.SetBool("Right", false);
                 anim.SetBool("Left", false);
             }
-            if ((angle >= 135 && angle <= 180)||(angle <= -135 && angle >= -180))
+            if ((angle >= 150 && angle <= 180)||(angle <= -150 && angle >= -180))
             {
                 anim.SetBool("Left", true);
 
@@ -57,7 +57,7 @@ public class PlayerController : MonoBehaviour
                 anim.SetBool("Down", false);
                 anim.SetBool("Right", false);
             }
-            if (angle < -45 && angle > -135)
+            if (angle < -30 && angle > -150)
             {
                 anim.SetBool("Down", true);
 
