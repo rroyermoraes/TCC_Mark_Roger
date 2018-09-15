@@ -24,6 +24,13 @@ public class DesafioBebida : MonoBehaviour {
     public List<Text> aF = new List<Text>(4);
     public List<Text> bF = new List<Text>(4);
     public List<Text> cF = new List<Text>(4);
+    public List<Slider> bDrink = new List<Slider>(4);
+
+    public Slider b1Slider;
+    public Slider b2Slider;
+    public Slider b3Slider;
+
+
 
     public Text maxMovesF;
     public Text moveCountF;
@@ -51,6 +58,9 @@ public class DesafioBebida : MonoBehaviour {
             aF[i].text = a[i].ToString();
 
         }
+        b1Slider.value = a[3];
+        b2Slider.value = a[0];
+        b3Slider.value = a[1];
     }
 
     private void SetB(List<int> nB)
@@ -64,9 +74,11 @@ public class DesafioBebida : MonoBehaviour {
         for (int i = 0; i < 4; i++)
         {
             bF[i].text = b[i].ToString();
+            bDrink[i].value = b[i];
 
         }
-    }
+
+}
 
     private void SetMaxMoves(int i)
     {
@@ -108,6 +120,17 @@ public class DesafioBebida : MonoBehaviour {
         for (int i = 0; i < 4; i++)
         {
             cF[i].text = c[i].ToString();
+            if (c[3] <= 10){
+                b1Slider.value = c[3];
+            }
+            if (c[0] <= 10)
+            {
+                b2Slider.value = c[0];
+            }
+            if (c[1] <= 10)
+            {
+                b3Slider.value = c[1];
+            }
 
         }
 
@@ -165,6 +188,9 @@ public class DesafioBebida : MonoBehaviour {
 
         bF[pos1].text = b[pos1].ToString();
         bF[pos2].text = b[pos2].ToString();
+
+        bDrink[pos1].value = b[pos1];
+        bDrink[pos2].value = b[pos2];
 
 
     }
@@ -237,10 +263,18 @@ public class DesafioBebida : MonoBehaviour {
     public void StartNewTurn() {
         
         newTurnReady = false;
-        SetTurnA();
-        foreach (Text t in cF) {
-            t.text = "";
+        if (activeTurn < turnos.Count){
+            SetTurnA();
+            foreach (Text t in cF)
+            {
+                t.text = "";
+            }
         }
+        else{
+
+            Debug.Log("COMCLUIDO");
+        }
+        
 
     }
 
