@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Events;
 [System.Serializable]
 public struct UnlockableLine {
     public DialogueState state;
@@ -60,6 +60,7 @@ public class DialogueLineSerial
     [Tooltip("What dialogue lines will this one unlock? None by default")]
     public UnlockableLine[] linesToUnlock;
 
+    public UnityEvent eventsX;
 
     [Tooltip("Turn on if you want this line to end de conversation")]
     public bool exitDialogue = false;
@@ -71,9 +72,9 @@ public class DialogueLineSerial
 
     public DialogueLineSerial() {
         responses = new string[1];
-
-
     }
+
+
 
 
 

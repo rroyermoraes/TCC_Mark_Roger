@@ -22,6 +22,7 @@ public class ArrowShooter : MonoBehaviour {
     private Vector2 mousePosition;
     public float moveSpeed = 0.5f;
     
+    
 
 
 	// Update is called once per frame
@@ -33,6 +34,7 @@ public class ArrowShooter : MonoBehaviour {
             Vector3 t = new Vector3(this.transform.position.x+spawnPoint.x, this.transform.position.y+spawnPoint.y, this.transform.position.z);
             Quaternion q = this.transform.rotation;
             Instantiate(arrow,t,q);
+            GetComponent<Animator>().SetTrigger("Shoot");
             cooldown = true;
             StartCoroutine(Cooldown());
         }

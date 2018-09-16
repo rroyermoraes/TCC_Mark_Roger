@@ -291,6 +291,8 @@ public class DialogueManager : MonoBehaviour {
             //---------------------------------------------------------------------------------
 
 
+            activeLines[opt + linesContainer.topPointer].eventsX.Invoke();
+
             //check if this option will close de dialogue
             if (activeLines[opt + linesContainer.topPointer].exitDialogue)
             {

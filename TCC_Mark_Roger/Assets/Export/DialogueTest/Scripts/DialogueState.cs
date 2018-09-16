@@ -17,7 +17,16 @@ public class DialogueState : ScriptableObject {
     
     public DialogueLineSerial[] lines;
 
-    
 
-    
+    public void EnableObj(int id)
+    {
+        GameObject.FindObjectOfType<ObjectiveManager>().EnableObjective(id);
+    }
+    public void CompleteObj(int id)
+    {
+        GameObject.FindObjectOfType<ObjectiveManager>().CompleteObjetive(id);
+    }
+
+
+
 }

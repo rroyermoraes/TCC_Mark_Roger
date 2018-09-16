@@ -3,7 +3,7 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -28,6 +28,11 @@ MonoBehaviour:
     targetNPCDialogue: {fileID: 0}
     somethigToGive: {fileID: 0}
     linesToUnlock: []
+    eventsX:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
   - line: Belo tom de verde.(Libera linha escondida)
     responses:
@@ -42,6 +47,22 @@ MonoBehaviour:
     linesToUnlock:
     - state: {fileID: 11400000}
       index: 4
+    eventsX:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 11400000}
+          m_MethodName: EnableObj
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 16
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 1
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
   - line: <color=green>Fique feliz e mude seu estado, pra podermos testar umas coisas.</color>
     responses:
@@ -54,6 +75,11 @@ MonoBehaviour:
       type: 2}
     somethigToGive: {fileID: 0}
     linesToUnlock: []
+    eventsX:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
   - line: <color=red>Fique irritado comigo mude o estado da conversa e termine o dialoguo
       imediatamente.</color>
@@ -67,6 +93,11 @@ MonoBehaviour:
       type: 2}
     somethigToGive: {fileID: 0}
     linesToUnlock: []
+    eventsX:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
     exitDialogue: 1
   - line: Esta linha de dialogo esteve anteriormete escondida
     responses:
@@ -80,6 +111,11 @@ MonoBehaviour:
     targetNPCDialogue: {fileID: 0}
     somethigToGive: {fileID: 0}
     linesToUnlock: []
+    eventsX:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
   - line: Adeus.
     responses:
@@ -91,4 +127,9 @@ MonoBehaviour:
     targetNPCDialogue: {fileID: 0}
     somethigToGive: {fileID: 0}
     linesToUnlock: []
+    eventsX:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
     exitDialogue: 1
