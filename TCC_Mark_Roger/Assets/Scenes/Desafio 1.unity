@@ -650,6 +650,7 @@ GameObject:
   m_Component:
   - component: {fileID: 130863094}
   - component: {fileID: 130863095}
+  - component: {fileID: 130863096}
   m_Layer: 5
   m_Name: DrinkSlider
   m_TagString: Untagged
@@ -718,13 +719,25 @@ MonoBehaviour:
   m_Direction: 2
   m_MinValue: 0
   m_MaxValue: 10
-  m_WholeNumbers: 1
+  m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &130863096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 130863093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2420bee69ed15b641bdeadaa710557c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
 --- !u!1 &139198690
 GameObject:
   m_ObjectHideFlags: 0
@@ -1246,9 +1259,9 @@ MonoBehaviour:
   - {fileID: 1583913699}
   - {fileID: 1752060804}
   - {fileID: 2087778164}
-  b1Slider: {fileID: 2052229840}
-  b2Slider: {fileID: 827997104}
-  b3Slider: {fileID: 438130039}
+  b1Slider: {fileID: 2087778165}
+  b2Slider: {fileID: 130863096}
+  b3Slider: {fileID: 1583913700}
   maxMovesF: {fileID: 1197776063}
   moveCountF: {fileID: 1647293575}
   exchangeButtons:
@@ -4664,6 +4677,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1583913698}
   - component: {fileID: 1583913699}
+  - component: {fileID: 1583913700}
   m_Layer: 5
   m_Name: DrinkSlider
   m_TagString: Untagged
@@ -4732,13 +4746,25 @@ MonoBehaviour:
   m_Direction: 2
   m_MinValue: 0
   m_MaxValue: 10
-  m_WholeNumbers: 1
+  m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1583913700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1583913697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2420bee69ed15b641bdeadaa710557c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
 --- !u!1 &1644392731
 GameObject:
   m_ObjectHideFlags: 0
@@ -4975,6 +5001,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1752060803}
   - component: {fileID: 1752060804}
+  - component: {fileID: 1752060805}
   m_Layer: 5
   m_Name: DrinkSlider
   m_TagString: Untagged
@@ -5043,13 +5070,25 @@ MonoBehaviour:
   m_Direction: 2
   m_MinValue: 0
   m_MaxValue: 10
-  m_WholeNumbers: 1
+  m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1752060805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1752060802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2420bee69ed15b641bdeadaa710557c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
 --- !u!1 &1777330201
 GameObject:
   m_ObjectHideFlags: 0
@@ -6245,6 +6284,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2087778163}
   - component: {fileID: 2087778164}
+  - component: {fileID: 2087778165}
   m_Layer: 5
   m_Name: DrinkSlider
   m_TagString: Untagged
@@ -6313,13 +6353,25 @@ MonoBehaviour:
   m_Direction: 2
   m_MinValue: 0
   m_MaxValue: 10
-  m_WholeNumbers: 1
+  m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &2087778165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2087778162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2420bee69ed15b641bdeadaa710557c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
 --- !u!1 &2099023877
 GameObject:
   m_ObjectHideFlags: 0

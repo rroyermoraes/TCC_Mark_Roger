@@ -5,6 +5,7 @@ using UnityEngine;
 public class Arrow : MonoBehaviour {
 
     public float moveSpeed = 1;
+    public Sprite hitArrow;
 
 	
 	// Update is called once per frame
@@ -15,6 +16,7 @@ public class Arrow : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         moveSpeed = 0;
+        GetComponent<SpriteRenderer>().sprite = hitArrow;
         Destroy(this.gameObject, 0.5f);
 
     }

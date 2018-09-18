@@ -26,8 +26,10 @@ public class Prey : MonoBehaviour {
 
         if (collision.tag == "Arrow") {
             Debug.Log("Matou o Alvo");
+            GetComponent<Animator>().SetBool("Dead", true);
             moveSpeed = 0;
-            ArrowShooter.AddScore(1);
+            ArrowShooter.AddScore(value);
+            
             Destroy(this.gameObject, 0.5f);
         }
         

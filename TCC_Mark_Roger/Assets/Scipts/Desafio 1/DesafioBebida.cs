@@ -26,9 +26,9 @@ public class DesafioBebida : MonoBehaviour {
     public List<Text> cF = new List<Text>(4);
     public List<Slider> bDrink = new List<Slider>(4);
 
-    public Slider b1Slider;
-    public Slider b2Slider;
-    public Slider b3Slider;
+    public SliderAnimator b1Slider;
+    public SliderAnimator b2Slider;
+    public SliderAnimator b3Slider;
 
 
 
@@ -58,9 +58,12 @@ public class DesafioBebida : MonoBehaviour {
             aF[i].text = a[i].ToString();
 
         }
-        b1Slider.value = a[3];
-        b2Slider.value = a[0];
-        b3Slider.value = a[1];
+       // b1Slider.value = a[3];
+        b1Slider.AnimateSlide(a[3]);
+        // b2Slider.value = a[0];
+        b2Slider.AnimateSlide(a[0]);
+        //  b3Slider.value = a[1];
+        b3Slider.AnimateSlide(a[1]);
     }
 
     private void SetB(List<int> nB)
@@ -121,15 +124,15 @@ public class DesafioBebida : MonoBehaviour {
         {
             cF[i].text = c[i].ToString();
             if (c[3] <= 10){
-                b1Slider.value = c[3];
+              //  b1Slider.value = c[3];
             }
             if (c[0] <= 10)
             {
-                b2Slider.value = c[0];
+               // b2Slider.value = c[0];
             }
             if (c[1] <= 10)
             {
-                b3Slider.value = c[1];
+               // b3Slider.value = c[1];
             }
 
         }
