@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [System.Serializable]
 public struct TimedObject
@@ -32,11 +33,13 @@ public class SpawnWave{
 public class TimedSpawner : MonoBehaviour {
 
     [SerializeField]
+    
     public List<SpawnWave> waves = new List<SpawnWave>();
-    public float delayTime = 0;
+    public int delayTime = 0;
     private int activeWave = 0;
     public float randomFactor = 0;
     public ArrowShooter manager;
+    public Text cooldownText;
     private bool ended = false;
 
     public void StartSpawnCicle(){
@@ -46,31 +49,52 @@ public class TimedSpawner : MonoBehaviour {
     }
 
     IEnumerator SpawnCicle() {
-        
+        Cursor.visible = false;
         activeWave = 0;
         Queue<TimedObject> q = new Queue<TimedObject>();
+        int waveDelayTime;
         while (activeWave < waves.Count) {
+            cooldownText.text = ("Nivel: " + (activeWave + 1));
+            yield return new WaitForSeconds(1.5f);
+            Debug.Log("Spawning wave: " + (activeWave + 1) + " in " + delayTime.ToString() + " seconds.");
+            
+            waveDelayTime = delayTime;
             q.Clear();
             foreach (TimedObject t in waves[activeWave].toBeSpawned)
             {
                 q.Enqueue(t);
             }
             TimedObject obj = new TimedObject();
+           
+            while (waveDelayTime > 0) {
+                cooldownText.text = (waveDelayTime.ToString());
+                yield return new WaitForSeconds(1);
+                waveDelayTime--;
 
-            Debug.Log("Spawning wave: " + (activeWave + 1) + " in " + delayTime.ToString() + " seconds.");
-            yield return new WaitForSeconds(delayTime);
-            
+            }
+            cooldownText.text = ("");
+            yield return new WaitForSeconds(2);
+
+
+            // yield return new WaitForSeconds(delayTime);
+
             while (q.Count > 0)
             {
                 obj = q.Dequeue();
                 yield return new WaitForSeconds(obj.time+Random.Range(-randomFactor,randomFactor));
+
                 Vector3 t = obj.spawnPositon.position;
                 Quaternion r = this.transform.rotation;
+                while (manager.Idle)
+                {
+                    yield return new WaitForEndOfFrame();
+                }
                 Instantiate(obj.objectToSpawn, t, r);
             }
             activeWave++;
+            yield return new WaitForSeconds(delayTime+3);
         }
-        yield return new WaitForSeconds(delayTime);
+        
         ended = true;
     }
 

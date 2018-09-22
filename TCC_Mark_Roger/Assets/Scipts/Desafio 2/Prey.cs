@@ -12,6 +12,7 @@ public class Prey : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         Vector3.Normalize(direction);
+        StartCoroutine(IA());
 	}
 	
 	// Update is called once per frame
@@ -20,6 +21,30 @@ public class Prey : MonoBehaviour {
 		
 
     }
+    
+    IEnumerator IA()
+    {
+        float originalSpeed = moveSpeed;
+        yield return new WaitForSeconds(0.2f);
+        ArrowShooter a = FindObjectOfType<ArrowShooter>();
+            if (Random.Range(0, 10) > 3)
+            {
+                
+                GetComponent<Animator>().SetBool("Idle", true);
+                yield return new WaitForSeconds(0.3f);
+                moveSpeed = 0;
+                yield return new WaitForSeconds(Random.Range(0.5f,1f));
+                
+                GetComponent<Animator>().SetBool("Idle", false);
+                //yield return new WaitForSeconds(0.3f);
+                moveSpeed = originalSpeed;
+
+
+
+        }
+
+    }
+    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -28,7 +53,7 @@ public class Prey : MonoBehaviour {
             Debug.Log("Matou o Alvo");
             GetComponent<Animator>().SetBool("Dead", true);
             moveSpeed = 0;
-            ArrowShooter.AddScore(value);
+            FindObjectOfType<ArrowShooter>().AddScore(value);
             
             Destroy(this.gameObject, 0.5f);
         }
