@@ -135,7 +135,7 @@ public class ArrowShooter : MonoBehaviour {
         yield return new WaitForSecondsRealtime(6);
         while (true) {
             lateXPosition = transform.position.x;
-            yield return new WaitForSecondsRealtime(1);
+            yield return new WaitForSecondsRealtime(2);
             if (Mathf.Abs(transform.position.x - lateXPosition) < 1) {
                 Idle = true;
             }

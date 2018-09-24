@@ -8,6 +8,7 @@ public class Prey : MonoBehaviour {
     private Vector3 direction = new Vector3();
     public int value = 1;
     public float moveSpeed = 1;
+    private bool alive = true;
 
 	// Use this for initialization
 	void Start () {
@@ -49,8 +50,9 @@ public class Prey : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if (collision.tag == "Arrow") {
+        if (collision.tag == "Arrow"&&alive) {
             Debug.Log("Matou o Alvo");
+            alive = false;
             GetComponent<Animator>().SetBool("Dead", true);
             moveSpeed = 0;
             FindObjectOfType<ArrowShooter>().AddScore(value);
