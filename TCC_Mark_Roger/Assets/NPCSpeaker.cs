@@ -26,8 +26,19 @@ public class NPCSpeaker : MonoBehaviour
     // Update is called once per frame
 
 
-    public void NPCSpeak(string[] sentences)
+    public void NPCSpeak(List<SpecialDialogueLine> nPCLines)
     {
+        string[] sentences;
+
+        
+        sentences = new string[nPCLines.Count];
+        for (int i = 0; i < nPCLines.Count; i++)
+        {
+            sentences[i] = nPCLines[i].line;
+
+        }
+        
+
 
         playerSentences.Clear();
         foreach (string sentence in sentences)
