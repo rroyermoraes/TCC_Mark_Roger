@@ -3,8 +3,8 @@ using System.Collections;
 
 [ExecuteInEditMode]
 public class SnapToPixel : MonoBehaviour {
-	private PixelCamera cam;
-
+	//private PixelCamera cam;
+    public int pixelPerUnit = 16;
     public GameObject followTarget;
     private Vector3 targetPos;
     public Vector2 offset;
@@ -13,9 +13,9 @@ public class SnapToPixel : MonoBehaviour {
     float d;
 	
 	void Start() {
-		cam = GetComponentInChildren<PixelCamera>();
+		//cam = GetComponentInChildren<PixelCamera>();
 		
-		d = 1f / cam.pixelsPerUnit;
+		d = 1f / pixelPerUnit;
 	}
 
 	void LateUpdate() {
@@ -29,6 +29,6 @@ public class SnapToPixel : MonoBehaviour {
     
         Vector3 pos = transform.position;
 		Vector3 camPos = new Vector3 (pos.x - pos.x % d, pos.y - pos.y % d, pos.z);
-		cam.transform.position = camPos;
+		transform.position = camPos;
 	}
 }
