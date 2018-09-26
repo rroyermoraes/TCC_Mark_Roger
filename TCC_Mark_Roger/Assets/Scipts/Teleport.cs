@@ -43,12 +43,13 @@ public class Teleport : MonoBehaviour {
     {
         Gizmos.color = Color.red;
         Gizmos.DrawSphere(tpoint.position, 0.1f);
-        
+
+#if UNITY_EDITOR
         UnityEditor.Handles.color = Color.green;
         UnityEditor.Handles.DrawWireDisc(transform.position, Vector3.back, interactionDistance);
         UnityEditor.Handles.color = Color.yellow;
         UnityEditor.Handles.DrawWireDisc(transform.position, Vector3.back, 0.1f);
-
+#endif
     }
 
 }

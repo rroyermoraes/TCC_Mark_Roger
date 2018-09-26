@@ -10,17 +10,20 @@ public class NPCSpeaker : MonoBehaviour
     private bool nextSentence=false;
     public GameObject talkBallon;
     public Text spechText;
+    public Image portraitImage;
     public bool richTextFix = true;
     public float typingSpeed = 1f;
     private string richTextString;
-    public bool isNPCSpeaking = false;
-    private Queue<string> playerSentences = new Queue<string>();
+    private bool isNPCSpeaking = false;
+    //private Queue<string> playerSentences = new Queue<string>();
+    private Queue<SpecialDialogueLine> playerSentences = new Queue<SpecialDialogueLine>();
     [SerializeField]
  //   private float time = 0f;
     private float startTime;
     //private bool startCountdown = false;
     // Use this for initialization
     public UnityEvent whenDialogueEnds;
+    private SpecialDialogueLine activeLine;
 
 
     // Update is called once per frame
@@ -28,6 +31,7 @@ public class NPCSpeaker : MonoBehaviour
 
     public void NPCSpeak(List<SpecialDialogueLine> nPCLines)
     {
+        /*
         string[] sentences;
 
         
@@ -37,11 +41,11 @@ public class NPCSpeaker : MonoBehaviour
             sentences[i] = nPCLines[i].line;
 
         }
-        
-
+        */
+        activeLine = null;
 
         playerSentences.Clear();
-        foreach (string sentence in sentences)
+        foreach (SpecialDialogueLine sentence in nPCLines)
         {
             playerSentences.Enqueue(sentence);
         }
@@ -55,7 +59,14 @@ public class NPCSpeaker : MonoBehaviour
             return;
         }
 
-        string toDisplaySentece = playerSentences.Dequeue();
+        activeLine = playerSentences.Dequeue();
+        if (activeLine.contextPortrait)
+        {
+            portraitImage.sprite = activeLine.contextPortrait;
+        }
+        
+
+        string toDisplaySentece = activeLine.line;
         StartCoroutine(TypeSentence(toDisplaySentece));
     }
 
@@ -112,7 +123,7 @@ public class NPCSpeaker : MonoBehaviour
                 yield return new WaitForEndOfFrame();
             }
             nextSentence = false;
-            
+            activeLine.specialEvent.Invoke();
             DisplayNextNPCSentece();
         }
         else
@@ -129,7 +140,7 @@ public class NPCSpeaker : MonoBehaviour
                 yield return new WaitForEndOfFrame();
             }
             nextSentence = false;
-            
+            activeLine.specialEvent.Invoke();
             DisplayNextNPCSentece();
         }
         
@@ -139,6 +150,7 @@ public class NPCSpeaker : MonoBehaviour
         nextSentence = true;
         if (playerSentences.Count == 0 && !isNPCSpeaking)
         {
+            activeLine.specialEvent.Invoke();
             whenDialogueEnds.Invoke();
             talkBallon.SetActive(false);
         }

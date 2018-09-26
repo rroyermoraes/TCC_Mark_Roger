@@ -27,7 +27,7 @@ public class Prey : MonoBehaviour {
     {
         float originalSpeed = moveSpeed;
         yield return new WaitForSeconds(0.2f);
-        ArrowShooter a = FindObjectOfType<ArrowShooter>();
+       // ArrowShooter a = FindObjectOfType<ArrowShooter>();
             if (Random.Range(0, 10) > 3)
             {
                 
