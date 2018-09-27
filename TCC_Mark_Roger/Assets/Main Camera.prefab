@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4562269379045646}
   - component: {fileID: 20715556099216150}
   - component: {fileID: 81858189936343618}
-  - component: {fileID: 114530431950945996}
   - component: {fileID: 114285621691095090}
   - component: {fileID: 114938995717855552}
   - component: {fileID: 114832294625242200}
@@ -103,22 +102,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 495dd559182a945f9831de5714b2051c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pixelPerUnit: 16
   followTarget: {fileID: 0}
   offset: {x: 0, y: 1}
   moveSpeed: 1
---- !u!114 &114530431950945996
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1419625716043544}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ca652c13353f448d9227970c0928082, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  referenceHeight: 180
-  pixelsPerUnit: 32
 --- !u!114 &114832294625242200
 MonoBehaviour:
   m_ObjectHideFlags: 1
