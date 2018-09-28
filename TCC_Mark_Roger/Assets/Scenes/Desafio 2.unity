@@ -4205,7 +4205,6 @@ MonoBehaviour:
   portraitImage: {fileID: 0}
   richTextFix: 1
   typingSpeed: 0.01
-  isNPCSpeaking: 0
   startTime: 0
   whenDialogueEnds:
     m_PersistentCalls:
@@ -6536,8 +6535,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AssetsPPU: 32
-  m_RefResolutionX: 378
-  m_RefResolutionY: 189
+  m_RefResolutionX: 352
+  m_RefResolutionY: 196
   m_UpscaleRT: 1
   m_PixelSnapping: 0
   m_CropFrameX: 0
@@ -6555,7 +6554,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouseWheelZoom: 0
-  zoomLvl: 3
+  zoomLvl: 4
 --- !u!1 &1218888785
 GameObject:
   m_ObjectHideFlags: 0
