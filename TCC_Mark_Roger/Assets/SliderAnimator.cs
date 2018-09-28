@@ -26,7 +26,7 @@ public class SliderAnimator : MonoBehaviour {
         }
         
         
-        Debug.Log("ACE");
+      //  Debug.Log("ACE");
         
     }
 

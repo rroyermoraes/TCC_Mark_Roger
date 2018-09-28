@@ -35,3 +35,8 @@ public class Frog{
 
     }
 }
+
+public class GameFrog : MonoBehaviour {
+    public Frog frog;
+
+}

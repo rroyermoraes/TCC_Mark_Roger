@@ -6535,8 +6535,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AssetsPPU: 32
-  m_RefResolutionX: 352
-  m_RefResolutionY: 196
+  m_RefResolutionX: 268
+  m_RefResolutionY: 200
   m_UpscaleRT: 1
   m_PixelSnapping: 0
   m_CropFrameX: 0
@@ -6553,7 +6553,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8791115311140ce4cbda5b26d75dc4f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseWheelZoom: 0
+  mouseWheelZoom: 1
   zoomLvl: 4
 --- !u!1 &1218888785
 GameObject:
