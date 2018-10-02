@@ -251,6 +251,13 @@ public class DialogueManager : MonoBehaviour {
                 npcPortrait.sprite = activeLines[opt + linesContainer.topPointer].specialPortrait;
             }
 
+
+            //check if this option calls for a change to a diferente NPCState
+            if (activeLines[opt + linesContainer.topPointer].targetNPCDialogue != null)
+            {
+                activeNPCDialogue.ChageNPCState(activeLines[opt + linesContainer.topPointer].targetNPCDialogue);
+            }
+
             //check if this option calls for a change to another dialogueState
             if (activeLines[opt + linesContainer.topPointer].nextState != null)
             {
@@ -263,11 +270,7 @@ public class DialogueManager : MonoBehaviour {
             }
 
 
-            //check if this option calls for a change to a diferente NPCState
-            if (activeLines[opt + linesContainer.topPointer].targetNPCDialogue != null)
-            {
-                activeNPCDialogue.ChageNPCState(activeLines[opt + linesContainer.topPointer].targetNPCDialogue);
-            }
+
 
 
 
