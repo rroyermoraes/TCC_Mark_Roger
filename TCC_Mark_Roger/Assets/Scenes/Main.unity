@@ -2344,7 +2344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DefaltNPCPortrait: {fileID: 21300000, guid: ad119388d54dced46a3d163a7763ec64, type: 3}
-  activeNPCState: {fileID: 11400000, guid: 5ca4271583438df4c8f72e2670e857cc, type: 2}
+  activeNPCState: {fileID: 11400000, guid: 80e93098830cc6343afdedff96b2e0a9, type: 2}
   activeDialogueState: {fileID: 0}
 --- !u!50 &189248806
 Rigidbody2D:

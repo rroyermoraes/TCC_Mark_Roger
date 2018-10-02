@@ -112,7 +112,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
   endDialogueLine:
-    line: 
+    line: Adeus
     responses:
     - "At\xE9 mais..."
     isHidden: 0
