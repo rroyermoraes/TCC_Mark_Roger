@@ -21,6 +21,7 @@ public class DialogueManager : MonoBehaviour {
     public GameObject GivenItem { get { return givenItem; } }
     private string richTextString = "";
     public bool richTextFix = true;
+    private bool closingDialogue = false;
 
 
 
@@ -31,6 +32,7 @@ public class DialogueManager : MonoBehaviour {
         if (activeNPCDialogue.activeNPCState) {
             dialogueScreen.SetActive(true);
             linesContainer.ResetPointer();
+            closingDialogue = false;
             activeNPCDialogue.activeDialogueState = activeNPCDialogue.activeNPCState.defualtDialogueState;
             npcLineContainer.text = "";
             if (activeNPCDialogue.activeNPCState.portrait != null) {
@@ -50,6 +52,7 @@ public class DialogueManager : MonoBehaviour {
             {
                 RefreshActiveLines();
                 lockedOptions = false;
+                activeLines.Add(activeNPCDialogue.activeDialogueState.endDialogueLine);
                 linesContainer.FillConteiners(activeLines);
                 StartCoroutine(ShowResponses());
             }
@@ -87,6 +90,7 @@ public class DialogueManager : MonoBehaviour {
         npcLineContainer.text = "";
         richTextString = "";
         isNPCSpeaking = true;
+       // Debug.LogError(isNPCSpeaking);
         npcSentences.Clear();
         foreach (string sentence in sentences)
         {
@@ -151,6 +155,7 @@ public class DialogueManager : MonoBehaviour {
             }
             richTextString += "\n";
             npcLineContainer.text = richTextString;
+            
             DisplayNextNPCSentece();
         }
         else{
@@ -180,21 +185,26 @@ public class DialogueManager : MonoBehaviour {
     */
     IEnumerator ShowResponses()
     {
+        while (true){
+            for (int i = 0; i < linesContainer.uITextContainers.Length; i++)
+            {
+                linesContainer.uITextContainers[i].interactable = linesContainer.textConteinersUsability[i] & false;
+                linesContainer.uITextContainers[i].GetComponentInChildren<Text>().enabled = linesContainer.textConteinersUsability[i] & false;
+            }
 
-        for (int i = 0; i < linesContainer.uITextContainers.Length; i++) {
-            linesContainer.uITextContainers[i].interactable = linesContainer.textConteinersUsability[i] & false;
-            linesContainer.uITextContainers[i].GetComponentInChildren<Text>().enabled = linesContainer.textConteinersUsability[i] & false;
-        }
+            while (isNPCSpeaking)
+            {
+                yield return null;
+            }
 
-        while (isNPCSpeaking) {
+            for (int i = 0; i < linesContainer.uITextContainers.Length; i++)
+            {
+                linesContainer.uITextContainers[i].interactable = linesContainer.textConteinersUsability[i] & true;
+                linesContainer.uITextContainers[i].GetComponentInChildren<Text>().enabled = linesContainer.textConteinersUsability[i] & true;
+            }
             yield return null;
         }
-
-        for (int i = 0; i < linesContainer.uITextContainers.Length; i++)
-        {
-            linesContainer.uITextContainers[i].interactable = linesContainer.textConteinersUsability[i] & true;
-            linesContainer.uITextContainers[i].GetComponentInChildren<Text>().enabled = linesContainer.textConteinersUsability[i] & true;
-        }
+        
     }
 
 
@@ -203,22 +213,19 @@ public class DialogueManager : MonoBehaviour {
         while (isNPCSpeaking) {
             yield return null;
         }
+        isNPCSpeaking = true;
         yield return new WaitForSecondsRealtime(time);
+        StopCoroutine(ShowResponses());
         dialogueScreen.SetActive(false);
     }
 
 
     public void CloseDialogue() {
         DialogueLineSerial endLine=null;
-        List<DialogueLineSerial> lines = activeLines;
-        foreach (DialogueLineSerial nline in lines) {
-            if (nline.defaultEndLine) {
-                endLine = nline;
-                break;
-            }
-        }
-        if (endLine!=null) {
+        endLine = activeNPCDialogue.activeDialogueState.endDialogueLine;
+        if (endLine!=null&&!closingDialogue&&!isNPCSpeaking) {
             NPCSpeak(endLine.responses);
+            closingDialogue = true;
             StartCoroutine(EndConversation(1f));
         }else
             {
@@ -250,6 +257,7 @@ public class DialogueManager : MonoBehaviour {
                 activeNPCDialogue.ChangeDialogueState(activeLines[opt + linesContainer.topPointer].nextState);
                 RefreshActiveLines();
                 linesContainer.ResetPointer();
+                activeLines.Add(activeNPCDialogue.activeDialogueState.endDialogueLine);
                 linesContainer.FillConteiners(activeLines);
                 StartCoroutine(ShowResponses());
             }
@@ -261,12 +269,7 @@ public class DialogueManager : MonoBehaviour {
                 activeNPCDialogue.ChageNPCState(activeLines[opt + linesContainer.topPointer].targetNPCDialogue);
             }
 
-            //check for items to give and if there is subscribers
-            givenItem = null;
-            if (activeLines[opt + linesContainer.topPointer].GetSomething())
-            {
-                givenItem = activeLines[opt + linesContainer.topPointer].GetSomething();
-            }
+
 
             //check if this option will unlock another ones, if so, unlocks them, and if one of them is within the same dialogue state, it will reset the options containers
             if (activeLines[opt + linesContainer.topPointer].linesToUnlock != null)

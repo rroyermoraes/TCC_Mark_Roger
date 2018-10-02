@@ -17,6 +17,8 @@ public class DialogueState : ScriptableObject {
     
     public DialogueLineSerial[] lines;
 
+    public DialogueLineSerial endDialogueLine;
+
 
     public void EnableObj(int id)
     {

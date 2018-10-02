@@ -9,47 +9,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56b624a761662d24285b8a585a0d8807, type: 3}
-  m_Name: BobNormalWhoAreYou
+  m_Name: TaberneiroState1
   m_EditorClassIdentifier: 
-  greeting: 
+  greeting: Vai beber algo?
   specialGreetingPortrait: {fileID: 0}
   blankState: 0
   lines:
-  - line: "Eu sou um detetive da capital, estou fazendo uma investiga\xE7\xE3o por
-      ai."
+  - line: Bebados.
     responses:
-    - Uuuu, parece interessante.
-    isHidden: 0
-    specialPortrait: {fileID: 0}
-    nextState: {fileID: 11400000, guid: 8b3863c41bdd14d43ad5eee8675d10d9, type: 2}
-    targetNPCDialogue: {fileID: 0}
-    allreadySayd: 0
-    linesToUnlock: []
-    eventsX:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-    exitDialogue: 0
-  - line: "N\xE3o te interessa..."
-    responses:
-    - "Ok, ok, n\xE3o ta mais aqui quem perguntou..."
-    isHidden: 0
-    specialPortrait: {fileID: 0}
-    nextState: {fileID: 11400000, guid: 8b3863c41bdd14d43ad5eee8675d10d9, type: 2}
-    targetNPCDialogue: {fileID: 0}
-    allreadySayd: 0
-    linesToUnlock: []
-    eventsX:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-    exitDialogue: 0
-  endDialogueLine:
-    line: Adeus...
-    responses:
-    - Adeus.
+    - "Esses tr\xEAs est\xE3o sempre por aqui enchendo a cara"
+    - "Eu n\xE3o ligo, pras bobeiras deles, contanto que paguem a conta"
+    - "O que por incrivel que pare\xE7a tem acontecido."
     isHidden: 0
     specialPortrait: {fileID: 0}
     nextState: {fileID: 0}
@@ -62,3 +32,38 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
+  - line: Sujeito sentado no canto.
+    responses:
+    - "Eu nem sei de onde ele \xE9 para ser sincero, n\xE3o entendo quase nada do
+      que ele diz."
+    - "Ele dorme no segundo quarto la em cima e bebe eventualmente.\nPoderia muito
+      bem ser um espi\xE3o estrangeiro, mas n\xE3o \xE9 problema meu. "
+    - "Se est\xE1 pagando ent\xE3o n\xE3o me interessa."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    nextState: {fileID: 0}
+    targetNPCDialogue: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    eventsX:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+  endDialogueLine:
+    line: "At\xE9 mais."
+    responses:
+    - "At\xE9 mais, se quiser algo pra beber me avise."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    nextState: {fileID: 0}
+    targetNPCDialogue: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    eventsX:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 1

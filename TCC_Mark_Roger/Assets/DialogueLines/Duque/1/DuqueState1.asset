@@ -9,21 +9,39 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56b624a761662d24285b8a585a0d8807, type: 3}
-  m_Name: BobNormalDefault
+  m_Name: DuqueState1
   m_EditorClassIdentifier: 
-  greeting: "Sauda\xE7\xF5es <color=red>forasteiro</color>, n\xE3o \xE9 sempre que
-    se v\xEA algu\xE9m por essas bandas."
+  greeting: "Hey como anda a investiga\xE7\xE3o?"
   specialGreetingPortrait: {fileID: 0}
   blankState: 0
   lines:
-  - line: "Quem \xE9 voce? e o que faz por aqui?"
+  - line: Anel desaparecido
     responses:
-    - "Ora eu sou um plebeu, e n\xE3o fa\xE7o muita coisa por aqui n\xE3o..."
-    - "Alem disso n\xE3o tem <color=red>muito</color> o que eu te falar..."
-    - "E voc\xEA quem \xE9?"
+    - Um Anel de valor aparentemente foi roubado da Familia Larch
+    - "E eles est\xE3o acusando a Familia Ash. Essas duas familias vivem de briga
+      *hahaha*"
+    - "Mas preciso que voc\xEA ajude a resolver esse roubo antes que essa briga fique
+      mais s\xE9ria"
     isHidden: 0
     specialPortrait: {fileID: 0}
-    nextState: {fileID: 11400000, guid: 4be3fde99f43d364ab81cccd2c89ff78, type: 2}
+    nextState: {fileID: 0}
+    targetNPCDialogue: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    eventsX:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+  - line: Guarda ocupada
+    responses:
+    - "N\xE3o se preocupe com isso"
+    - "Um campones est\xE1 desaparecido, e os guardas est\xE3o procurando por ele"
+    - 'Espero que encontrem ele logo, e que nenhum urso ja tenha encontrado '
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    nextState: {fileID: 0}
     targetNPCDialogue: {fileID: 0}
     allreadySayd: 0
     linesToUnlock: []
@@ -33,43 +51,16 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-  - line: Belo tom de verde.(Libera linha escondida)
+  - line: Acontecimentos recentes
     responses:
-    - "Sua roupa ate que n\xE3o \xE9 nada mal tambem."
+    - "As coisas est\xE3o bem agitadas recentemente."
+    - "Normalmente \xE9 tudo muito pacato por aqui."
+    - Espero que sua chegada ajude a resolver as coisas *hahaha*
     isHidden: 0
     specialPortrait: {fileID: 0}
     nextState: {fileID: 0}
     targetNPCDialogue: {fileID: 0}
     allreadySayd: 0
-    linesToUnlock:
-    - state: {fileID: 11400000}
-      index: 4
-    eventsX:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 11400000}
-          m_MethodName: EnableObj
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 12
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 1
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-    exitDialogue: 0
-  - line: <color=green>Fique feliz e mude seu estado, pra podermos testar umas coisas.</color>
-    responses:
-    - Claro que sim amigo...
-    isHidden: 0
-    specialPortrait: {fileID: 0}
-    nextState: {fileID: 0}
-    targetNPCDialogue: {fileID: 11400000, guid: 52c92ae81e99db94a8764f178f90c9af,
-      type: 2}
-    allreadySayd: 0
     linesToUnlock: []
     eventsX:
       m_PersistentCalls:
@@ -77,28 +68,12 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-  - line: <color=red>Fique irritado comigo mude o estado da conversa e termine o dialoguo
-      imediatamente.</color>
+  - line: Coelhos?
     responses:
-    - Vai se ferrar cara. *piscadinha*
-    isHidden: 0
-    specialPortrait: {fileID: 0}
-    nextState: {fileID: 0}
-    targetNPCDialogue: {fileID: 11400000, guid: 09ab61af5dc0e3547a6ca0da7bb7e8e4,
-      type: 2}
-    allreadySayd: 0
-    linesToUnlock: []
-    eventsX:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-    exitDialogue: 1
-  - line: Esta linha de dialogo esteve anteriormete escondida
-    responses:
-    - 'UUUU... Interessante.
-
-'
+    - Ahhhh...sim... os coelhos *hahaha*
+    - Digamos que temos muitos pequenos problemas peludos por aqui.
+    - "Esses pestinhas s\xE3o uma dor de cabe\xE7a."
+    - "Mas quando conseguimos pegalos, s\xE3o uma delicia assados *hahaha*"
     isHidden: 0
     specialPortrait: {fileID: 0}
     nextState: {fileID: 0}
@@ -112,9 +87,9 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
   endDialogueLine:
-    line: 
+    line: Adeus.
     responses:
-    - "At\xE9 mais..."
+    - "At\xE9 mais."
     isHidden: 0
     specialPortrait: {fileID: 0}
     nextState: {fileID: 0}

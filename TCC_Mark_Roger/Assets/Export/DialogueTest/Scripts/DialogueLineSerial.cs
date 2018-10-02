@@ -44,8 +44,8 @@ public class DialogueLineSerial
     [Header("End Line Options")]
     // public DialogueLineSerial nextline;
     //   public bool backToStateDialogue = false;
-    [Tooltip("Is this line the default end of conversation line for this DialogueState? False by default")]
-    public bool defaultEndLine=false;
+    //[Tooltip("Is this line the default end of conversation line for this DialogueState? False by default")]
+   // public bool defaultEndLine=false;
 
     [Tooltip("Will this line move the conversation to a new DialogueState? None by default")]
     public DialogueState nextState;
@@ -53,22 +53,21 @@ public class DialogueLineSerial
     [Tooltip("Will this line change the NPCState? None by default")]
     public NPCState targetNPCDialogue;
 
-    [Tooltip("What GameObject this line will give the player? Empty by default")]
-    [SerializeField]
-    private GameObject somethigToGive;
+    [HideInInspector]
+    public bool allreadySayd = false;
+
 
     [Tooltip("What dialogue lines will this one unlock? None by default")]
     public UnlockableLine[] linesToUnlock;
 
+
+    [Tooltip("UnityEvents by this line")]
     public UnityEvent eventsX;
 
     [Tooltip("Turn on if you want this line to end de conversation")]
     public bool exitDialogue = false;
 
-    public GameObject GetSomething() {
-       
-        return somethigToGive;
-    }
+
 
     public DialogueLineSerial() {
         responses = new string[1];

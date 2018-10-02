@@ -1707,8 +1707,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 68.5, y: 38}
-  m_SizeDelta: {x: -137, y: 76}
+  m_AnchoredPosition: {x: 68.5, y: 32}
+  m_SizeDelta: {x: -137, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &120661068
 GameObject:
@@ -4997,8 +4997,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 235.75, y: -35}
-  m_SizeDelta: {x: 471.5, y: 23.333332}
+  m_AnchoredPosition: {x: 143, y: -28.999998}
+  m_SizeDelta: {x: 286, y: 19.333332}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &549057714
 MonoBehaviour:
@@ -16493,8 +16493,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 238.75, y: -38}
-  m_SizeDelta: {x: 471.5, y: 70}
+  m_AnchoredPosition: {x: 146, y: -32}
+  m_SizeDelta: {x: 286, y: 58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &808377017
 MonoBehaviour:
@@ -17346,7 +17346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cac9f47641fb131459e412729fbdd768, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Duquesa Elisa
+  name: Duquesa Silma
   mouseOverCursor: {fileID: 2800000, guid: 28fdb2803cdd9cf4ea422c804eca2a99, type: 3}
   bInteractions: []
 --- !u!114 &871492766
@@ -17362,7 +17362,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DefaltNPCPortrait: {fileID: 21300000, guid: c771012d10c133d4c8bcf444cae3c51f, type: 3}
-  activeNPCState: {fileID: 11400000, guid: 5ca4271583438df4c8f72e2670e857cc, type: 2}
+  activeNPCState: {fileID: 11400000, guid: 1a13b1e10ccd7244390ff08511e3a0e1, type: 2}
   activeDialogueState: {fileID: 0}
 --- !u!50 &871492767
 Rigidbody2D:
@@ -17468,8 +17468,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 235.75, y: -11.666666}
-  m_SizeDelta: {x: 471.5, y: 23.333332}
+  m_AnchoredPosition: {x: 143, y: -9.666666}
+  m_SizeDelta: {x: 286, y: 19.333332}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &876471723
 MonoBehaviour:
@@ -18334,8 +18334,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 484.5, y: -38}
-  m_SizeDelta: {x: 20, y: 70}
+  m_AnchoredPosition: {x: 299, y: -32}
+  m_SizeDelta: {x: 20, y: 58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1028734926
 MonoBehaviour:
@@ -18850,6 +18850,16 @@ Prefab:
         type: 2}
       propertyPath: moveSpeed
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114926107370500032, guid: 9455dc4d8fa3bab4c8b953235efc82ec,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114475659094305894, guid: 9455dc4d8fa3bab4c8b953235efc82ec,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9455dc4d8fa3bab4c8b953235efc82ec, type: 2}
@@ -21719,8 +21729,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 235.75, y: -58.33333}
-  m_SizeDelta: {x: 471.5, y: 23.333332}
+  m_AnchoredPosition: {x: 143, y: -48.33333}
+  m_SizeDelta: {x: 286, y: 19.333332}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1178950121
 GameObject:
@@ -33531,8 +33541,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 381.25, y: -26}
-  m_SizeDelta: {x: 506.5, y: 52}
+  m_AnchoredPosition: {x: 288.5, y: -32}
+  m_SizeDelta: {x: 321, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1569858417
 MonoBehaviour:
@@ -33550,7 +33560,7 @@ MonoBehaviour:
   m_MinWidth: -1
   m_MinHeight: -1
   m_PreferredWidth: -1
-  m_PreferredHeight: 52
+  m_PreferredHeight: 64
   m_FlexibleWidth: 1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
@@ -55087,7 +55097,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DefaltNPCPortrait: {fileID: 21300000, guid: b2753de60a5006a429ad9fdd52fdf463, type: 3}
-  activeNPCState: {fileID: 11400000, guid: 5ca4271583438df4c8f72e2670e857cc, type: 2}
+  activeNPCState: {fileID: 11400000, guid: 3687b123d7de5a4458e76055b3ee5b11, type: 2}
   activeDialogueState: {fileID: 0}
 --- !u!50 &2036632145
 Rigidbody2D:
@@ -55941,7 +55951,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DefaltNPCPortrait: {fileID: 21300000, guid: caefcfcd7f063a84792a8c30f7b2af68, type: 3}
-  activeNPCState: {fileID: 11400000, guid: 5ca4271583438df4c8f72e2670e857cc, type: 2}
+  activeNPCState: {fileID: 11400000, guid: 83fb4694ca6b94f4190344acdee2e2a7, type: 2}
   activeDialogueState: {fileID: 0}
 --- !u!50 &2122990492
 Rigidbody2D:
