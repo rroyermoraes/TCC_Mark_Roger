@@ -303,7 +303,7 @@ public class DialogueManager : MonoBehaviour {
             if (activeLines[opt + linesContainer.topPointer].exitDialogue|| activeLines[opt+linesContainer.topPointer]==activeNPCDialogue.activeDialogueState.endDialogueLine)
             {
                 lockedOptions = true;
-                StartCoroutine(EndConversation(0.5f));
+                StartCoroutine(EndConversation(1f));
             }
         }
         

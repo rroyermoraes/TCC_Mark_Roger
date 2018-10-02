@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b624a761662d24285b8a585a0d8807, type: 3}
+  m_Name: F1MaeState1
+  m_EditorClassIdentifier: 
+  greeting: "O que voc\xEA quer aqui, n\xE3o estou com tempo pra perder com conversa."
+  specialGreetingPortrait: {fileID: 0}
+  blankState: 0
+  lines:
+  - line: Anel roubado
+    responses:
+    - "\xC9 isso mesmo alguem deu um jeito de entrar aqui e roubar um anel valioso.
+      Esse Anel \xE9 uma reliquia na nossa familia."
+    - "Meu filho deveria dar ele para sua noiva, quando ele encontra-se uma boa menina.
+      O anel devia ficar na familia assim, mas agora ele est\xE1 sumido."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    nextState: {fileID: 11400000, guid: 10fc18b664e9010439881cb243fff271, type: 2}
+    targetNPCDialogue: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    eventsX:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+  - line: Sua familia
+    responses:
+    - "N\xF3s vivemos nessas terras a muito tempo, plantamos aqui e tem sido assim
+      sempre."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    nextState: {fileID: 0}
+    targetNPCDialogue: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    eventsX:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+  - line: A familia Larch
+    responses:
+    - "Eles s\xE3o um bando de metidos irritantes. Principalmente aquelasinha da Nora."
+    - "\"Olhe para minhas aboboras, como s\xE3o grandes e bonitas\""
+    - "Ela adora fazer coisas s\xF3 pra me irritar."
+    - "Aposto que toda esse confus\xE3o tem o dedo deles"
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    nextState: {fileID: 0}
+    targetNPCDialogue: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    eventsX:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+  endDialogueLine:
+    line: "At\xE9 mais."
+    responses:
+    - "At\xE9 mais... E cuidado por onde anda pra n\xE3o sujar meu ch\xE3o"
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    nextState: {fileID: 0}
+    targetNPCDialogue: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    eventsX:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0

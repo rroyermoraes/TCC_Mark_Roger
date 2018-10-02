@@ -1,0 +1,98 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b624a761662d24285b8a585a0d8807, type: 3}
+  m_Name: F1MaeAnelRoubado
+  m_EditorClassIdentifier: 
+  greeting: 
+  specialGreetingPortrait: {fileID: 0}
+  blankState: 0
+  lines:
+  - line: Como era o anel?
+    responses:
+    - ANEL 4
+    - "Espero que tenha prestado aten\xE7\xE3o."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    nextState: {fileID: 0}
+    targetNPCDialogue: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    eventsX:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+  - line: Algum suspeito?
+    responses:
+    - "Claro. Eu tenho quase certeza que isso \xE9 coisa dos Larch"
+    - "Desde que estamos aqui esses malditos tambem est\xE3o, sempre se achando melhor
+      que os outros"
+    - "Aposto que eles deram jeito de pegar esse anel s\xF3 para nos irritar."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    nextState: {fileID: 0}
+    targetNPCDialogue: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    eventsX:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+  - line: Pistas?
+    responses:
+    - "Eu n\xE3o sei de nada, s\xF3 sei que o anel estava no bau trancado."
+    - "Voc\xEA que \xE9 o investigar n\xE3o \xE9 mesmo? Ent\xE3o investigue."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    nextState: {fileID: 0}
+    targetNPCDialogue: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    eventsX:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+  - line: Falar sobre outra coisa.
+    responses:
+    - "O que voc\xEA quer falar?"
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    nextState: {fileID: 11400000, guid: 88809e30579bc4f46a5d1429f1bc2354, type: 2}
+    targetNPCDialogue: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    eventsX:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+  endDialogueLine:
+    line: "At\xE9 mais."
+    responses:
+    - "At\xE9... e cuidado por onde anda pra n\xE3o sujar minha casa."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    nextState: {fileID: 0}
+    targetNPCDialogue: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    eventsX:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
