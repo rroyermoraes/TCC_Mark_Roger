@@ -9,16 +9,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56b624a761662d24285b8a585a0d8807, type: 3}
-  m_Name: EstranhoState1
+  m_Name: "Ca\xE7adorDialogue1"
   m_EditorClassIdentifier: 
-  greeting: "Eu n\xE3o te conhe\xE7o... que assuntos voc\xEA tem comigo"
+  greeting: "O que voc\xEA quer comigo?"
   specialGreetingPortrait: {fileID: 0}
   blankState: 0
   lines:
   - line: "Quem \xE9 voc\xEA?"
     responses:
-    - Eu viajo por ai, comprando coisas e vendendo coisas
-    - "E isso \xE9 tudo que voc\xEA precisa saber."
+    - "Meu nome \xE9 Thomas, eu que cuido da maior parte da ca\xE7a por essas bandas"
+    - "E eu te garanto que n\xE3o tem bicho ou pessoa que eu n\xE3o consiga ca\xE7ar."
+    - "Mas julgando pelas suas roupas n\xE3o acho que voc\xEA n\xE3o entenderia do
+      que eu estou falando."
     isHidden: 0
     specialPortrait: {fileID: 0}
     nextState: {fileID: 0}
@@ -31,12 +33,12 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-  - line: Anel Roubado
+  - line: Pacote do feiticeiro
     responses:
-    - "\xC9 eu comprei um anel de um dos bebados"
-    - "Mas eu paguei por ele, ent\xE3o n\xE3o \xE9 problema meu."
-    - "Alem disso o que me garante que o anel que voc\xEA est\xE1 procurando \xE9
-      o que eu comprei."
+    - Ahh sim. As coisas daquele velho maluco.
+    - "Quanto a isso, eu ainda n\xE3o consegui juntar tudo que ele precisa"
+    - "Nessa \xE9poca eu fico muito ocupado com esses coelhos."
+    - "S\xF3 se alguem me ajudasse eu conseguiria resolver isso logo."
     isHidden: 0
     specialPortrait: {fileID: 0}
     nextState: {fileID: 0}
@@ -51,36 +53,49 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-  - line: Devolver o anel
+  - line: Oferecer ajuda
     responses:
-    - "Voc\xEA quer que eu te de o anel pelo qual eu paguei com meu dinheiro?"
-    - "Como eu disse, eu nem sei se eu tenho o anel que voc\xEA est\xE1 procurando."
-    isHidden: 0
+    - "Voc\xEA acha que consgue me ajudar a ca\xE7ar ent\xE3o? *hahahahah*"
+    - "\xC9 s\xE9rio?..."
+    - "Vamos ver ent\xE3o se voc\xEA presta pra alguma coisa. *hahaha* Quero s\xF3
+      ver..."
+    isHidden: 1
     specialPortrait: {fileID: 0}
     nextState: {fileID: 0}
     targetNPCDialogue: {fileID: 0}
     allreadySayd: 0
-    linesToUnlock:
-    - state: {fileID: 11400000}
-      index: 3
+    linesToUnlock: []
     eventsX:
       m_PersistentCalls:
         m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-  - line: Avisar a guarda
+  - line: Ursos
     responses:
-    - "\xC9 assim ent\xE3o... Olha eu n\xE3o quero arrumar problemas."
-    - "Vamos fazer o seguinte, me descreve exatamente como \xE9 o anel que voc\xEA
-      esta procurando"
-    - "Se o anel que voc\xEA descrever for o que eu comprei do b\xEAbado eu te devolvo."
-    - "Me diga ent\xE3o como era o anel:"
+    - "Ahhh vejo que voc\xEA notou meus trof\xE9us..."
+    - "\xC9 isso ai minha especialidade \xE9 ca\xE7ar ursos"
+    - "Eles se acham os maiorais da floresta... algu\xE9m tem que mostrar pra eles
+      quem \xE9 o verdadeiro maioral da floresta."
     isHidden: 0
     specialPortrait: {fileID: 0}
-    nextState: {fileID: 11400000, guid: 8da58977455d94642b8f2146d563d404, type: 2}
-    targetNPCDialogue: {fileID: 11400000, guid: b75155a61041bc24fab6b391b3fac105,
-      type: 2}
+    nextState: {fileID: 0}
+    targetNPCDialogue: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    eventsX:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+  - line: Tamanho
+    responses:
+    - '...'
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    nextState: {fileID: 0}
+    targetNPCDialogue: {fileID: 0}
     allreadySayd: 0
     linesToUnlock: []
     eventsX:

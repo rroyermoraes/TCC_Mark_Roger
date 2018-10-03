@@ -9,16 +9,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56b624a761662d24285b8a585a0d8807, type: 3}
-  m_Name: EstranhoState1
+  m_Name: Familia1FilhoState1
   m_EditorClassIdentifier: 
-  greeting: "Eu n\xE3o te conhe\xE7o... que assuntos voc\xEA tem comigo"
+  greeting: Hey.
   specialGreetingPortrait: {fileID: 0}
   blankState: 0
   lines:
-  - line: "Quem \xE9 voc\xEA?"
+  - line: "Quem \xE9 voce?"
     responses:
-    - Eu viajo por ai, comprando coisas e vendendo coisas
-    - "E isso \xE9 tudo que voc\xEA precisa saber."
+    - Meu chamo Willian
+    - Eu sou o filho mais velho da familia
     isHidden: 0
     specialPortrait: {fileID: 0}
     nextState: {fileID: 0}
@@ -31,12 +31,13 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-  - line: Anel Roubado
+  - line: Anel desaparecido
     responses:
-    - "\xC9 eu comprei um anel de um dos bebados"
-    - "Mas eu paguei por ele, ent\xE3o n\xE3o \xE9 problema meu."
-    - "Alem disso o que me garante que o anel que voc\xEA est\xE1 procurando \xE9
-      o que eu comprei."
+    - Acho que alguem entrou aqui e roubou o anel da familia
+    - "Mam\xE3e est\xE1 furiosa, e fica botando a culpa nos Larch"
+    - "Eu n\xE3o acho que eles tenham feito algo assim."
+    - "Mas \xE9  dificil convenser minha m\xE3e quando ela coloca alguma coisa na
+      cabe\xE7a."
     isHidden: 0
     specialPortrait: {fileID: 0}
     nextState: {fileID: 0}
@@ -51,10 +52,13 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-  - line: Devolver o anel
+  - line: Alguma pista?
     responses:
-    - "Voc\xEA quer que eu te de o anel pelo qual eu paguei com meu dinheiro?"
-    - "Como eu disse, eu nem sei se eu tenho o anel que voc\xEA est\xE1 procurando."
+    - "Bem... no dia que entraram aqui eu notei algo estranho, mas n\xE3o conte pra
+      minha m\xE3e... "
+    - "O sol j\xE1 estava se ponto e eu vi um vulto estranho perto de casa."
+    - Quando fui checar senti um cheiro de bebida...
+    - "Mas prometa que n\xE3o vai falar sobre isso pra minha m\xE3e."
     isHidden: 0
     specialPortrait: {fileID: 0}
     nextState: {fileID: 0}
@@ -69,18 +73,35 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-  - line: Avisar a guarda
+  - line: "Escondendo coisas de sua m\xE3e"
     responses:
-    - "\xC9 assim ent\xE3o... Olha eu n\xE3o quero arrumar problemas."
-    - "Vamos fazer o seguinte, me descreve exatamente como \xE9 o anel que voc\xEA
-      esta procurando"
-    - "Se o anel que voc\xEA descrever for o que eu comprei do b\xEAbado eu te devolvo."
-    - "Me diga ent\xE3o como era o anel:"
+    - "Hey...isso \xE9 problema meu viu..."
+    - Ok...Ok...  eu devia estar fazendo outra coisa quando invadiram nossa casa.
+    - "Se minha m\xE3e descobrir que eu vi alguma coisa, ela vai descobrir que eu
+      n\xE3o estava fazendo minhas tarefas."
+    - Ai ela vai ficar mais furiosa ainda. E vai me encher de perguntas.
     isHidden: 0
     specialPortrait: {fileID: 0}
-    nextState: {fileID: 11400000, guid: 8da58977455d94642b8f2146d563d404, type: 2}
-    targetNPCDialogue: {fileID: 11400000, guid: b75155a61041bc24fab6b391b3fac105,
-      type: 2}
+    nextState: {fileID: 0}
+    targetNPCDialogue: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock:
+    - state: {fileID: 11400000}
+      index: 4
+    eventsX:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+  - line: "O que voc\xEA estava fazendo na hora do roubo?"
+    responses:
+    - '... e eu estava com a...'
+    - "hey, espera ai, eu n\xE3o preciso te falar sobre isso."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    nextState: {fileID: 0}
+    targetNPCDialogue: {fileID: 0}
     allreadySayd: 0
     linesToUnlock: []
     eventsX:
@@ -90,7 +111,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
   endDialogueLine:
-    line: Adeus.
+    line: "At\xE9 mais, rapaz."
     responses:
     - "At\xE9 mais."
     isHidden: 0
