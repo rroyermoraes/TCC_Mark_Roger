@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6102cb0121796b0478baca1959700f19, type: 3}
-  m_Name: Familia1FilhoNPCState1
+  m_Name: F1FilhoNPCState1
   m_EditorClassIdentifier: 
   portrait: {fileID: 21300000, guid: b130dbab74a406e4d8001b045dc33f28, type: 3}
   defualtDialogueState: {fileID: 11400000, guid: ef3b527d39602ec499ae10f34976f020,

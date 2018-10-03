@@ -1135,7 +1135,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 81244615}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -32.75, y: -21.41, z: 0}
+  m_LocalPosition: {x: -68.22, y: -11.38, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 841248576}
@@ -1186,7 +1186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DefaltNPCPortrait: {fileID: 21300000, guid: b130dbab74a406e4d8001b045dc33f28, type: 3}
-  activeNPCState: {fileID: 11400000, guid: 5ca4271583438df4c8f72e2670e857cc, type: 2}
+  activeNPCState: {fileID: 11400000, guid: f8890bbbac6d9984da96385b971f2984, type: 2}
   activeDialogueState: {fileID: 0}
 --- !u!50 &81244620
 Rigidbody2D:
@@ -6754,7 +6754,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DefaltNPCPortrait: {fileID: 21300000, guid: 9fcfa91eac728eb4eb521ef0fe114973, type: 3}
-  activeNPCState: {fileID: 11400000, guid: 5ca4271583438df4c8f72e2670e857cc, type: 2}
+  activeNPCState: {fileID: 11400000, guid: da0643bc8a3f6884f902763f071c4404, type: 2}
   activeDialogueState: {fileID: 0}
 --- !u!50 &757800291
 Rigidbody2D:
@@ -19479,7 +19479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42b2b2e502f000b4ea4027e2acfe4fbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DefaltNPCPortrait: {fileID: 21300000, guid: fa11427351e2b744f9909d0be3fe284b, type: 3}
+  DefaltNPCPortrait: {fileID: 21300000, guid: 5c42170f0c59dfa4da3f3a0f46ec1c4c, type: 3}
   activeNPCState: {fileID: 11400000, guid: 5ca4271583438df4c8f72e2670e857cc, type: 2}
   activeDialogueState: {fileID: 0}
 --- !u!50 &1112882335
@@ -35831,7 +35831,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1347589107}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -66.13, y: -7.84, z: 0}
+  m_LocalPosition: {x: -28.829994, y: -16.529999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2143595866}
@@ -40992,7 +40992,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1671228077}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -26.79, y: -20.26, z: 0}
+  m_LocalPosition: {x: -62.260002, y: -10.230001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 154245326}
@@ -41043,7 +41043,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DefaltNPCPortrait: {fileID: 21300000, guid: 420df8454800ce246aa4d009add872d9, type: 3}
-  activeNPCState: {fileID: 11400000, guid: 5ca4271583438df4c8f72e2670e857cc, type: 2}
+  activeNPCState: {fileID: 11400000, guid: 948a66477506a4e41b3a85101a0e4287, type: 2}
   activeDialogueState: {fileID: 0}
 --- !u!50 &1671228082
 Rigidbody2D:
@@ -41253,7 +41253,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1710918375}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -65.94, y: -12.29, z: 0}
+  m_LocalPosition: {x: -28.64, y: -20.98, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 505720353}
@@ -42849,7 +42849,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DefaltNPCPortrait: {fileID: 21300000, guid: 57c8337c7cd0ffc418524d5375acfcbe, type: 3}
-  activeNPCState: {fileID: 11400000, guid: 5ca4271583438df4c8f72e2670e857cc, type: 2}
+  activeNPCState: {fileID: 11400000, guid: fe873623d9469584099787ec089c8835, type: 2}
   activeDialogueState: {fileID: 0}
 --- !u!50 &1936792214
 Rigidbody2D:
