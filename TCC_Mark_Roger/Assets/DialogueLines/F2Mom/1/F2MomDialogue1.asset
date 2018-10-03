@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b624a761662d24285b8a585a0d8807, type: 3}
+  m_Name: F2MomDialogue1
+  m_EditorClassIdentifier: 
+  greeting: "Ol\xE1 rapaz."
+  specialGreetingPortrait: {fileID: 0}
+  blankState: 0
+  lines:
+  - line: Anel desaparecido.
+    responses:
+    - Ahhh... sim eu fiquei sabendo que alguem roubou um anel da casa dos Ash.
+    - E tambem que aquela nojenta da Teresa acha que foi alguem da minha familia.
+    - "Aposto que voc\xEA s\xF3 esta aqui inclusive por que ela falou que foi alguem
+      daqui que pegou esse anel idiota."
+    - "Eu te digo uma coisa rapaz. Ninguem aqui de casa faria isso, e \xE9 melhor
+      eles pararem com essas acusa\xE7\xF5es e logo."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    nextState: {fileID: 0}
+    targetNPCDialogue: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    eventsX:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+  - line: Alguma suspeita?
+    responses:
+    - "N\xE3o fa\xE7o id\xE9ia de quem poderia ter sido"
+    - Alem disso. como eu saberia de alguma coisa.
+    - "Se quiser ter certeza pode perguntar pra qualquer um aqui. Eu garanto que n\xE3o
+      temos nada a ver com essa confus\xE3o."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    nextState: {fileID: 0}
+    targetNPCDialogue: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    eventsX:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+  - line: Familia Ash
+    responses:
+    - "Eles s\xE3o um tipinho de gente bem irritante."
+    - "Est\xE3o sempre querendo ser melhores que todo mundo"
+    - "Desde que vivemos nessas terras eles est\xE3o por aqui e nunca nos demos bem,
+      e garanto que nunca vamos."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    nextState: {fileID: 0}
+    targetNPCDialogue: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    eventsX:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+  endDialogueLine:
+    line: Adeus
+    responses:
+    - "At\xE9 mais."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    nextState: {fileID: 0}
+    targetNPCDialogue: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    eventsX:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0

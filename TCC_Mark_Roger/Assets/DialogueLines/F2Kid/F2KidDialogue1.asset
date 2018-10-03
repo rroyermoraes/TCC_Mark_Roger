@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b624a761662d24285b8a585a0d8807, type: 3}
+  m_Name: F2KidDialogue1
+  m_EditorClassIdentifier: 
+  greeting: Hey! tudo bem?
+  specialGreetingPortrait: {fileID: 0}
+  blankState: 0
+  lines:
+  - line: Anel Roubado.
+    responses:
+    - Eu fiquei sabendo que roubaram um anel valioso da casa do Willian.
+    - "\xC9 estranho pensar que alguem aqui do vilarejo fosse fazer algo assim."
+    - "Seja l\xE1 quem for deve estar em uma situa\xE7\xE3o dificil."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    nextState: {fileID: 0}
+    targetNPCDialogue: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    eventsX:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+  - line: Familia Ash.
+    responses:
+    - "As nossas familias nunca se deram bem, a mam\xE3e e a Senhora Teresa se odeiam."
+    - "Mas eu n\xE3o acho que eles s\xE3o t\xE3o maus assim. Principalmente o Willian...err...
+      esque\xE7a o que eu acabei de dizer..."
+    - "Eu gostaria que nossas familias se dessem bem, mas mam\xE3e \xE9 t\xE3o teimosa
+      quanto a Senhora Teresa."
+    - "E agora com essa situa\xE7\xE3o do anel as coisas est\xE3o ainda mais sensiveis."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    nextState: {fileID: 0}
+    targetNPCDialogue: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    eventsX:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+  - line: "Rela\xE7\xE3o com Willian Ash"
+    responses:
+    - "Fala baixo... se minha m\xE3e ouvir voc\xEA falando nisso ela me mata."
+    - "*cochicho* N\xE3o conte pra mam\xE3e, mas eu tenho encontrado o Willian escondida,
+      eu gosto de ficar com ele, mas se mam\xE3e descobrir ela vai estragar tudo."
+    - "*cochicho* Eu sei de uma coisa que pode te ajudar nessa hist\xF3ria do anel.
+      Eu posso te contar se voc\xEA prometer ficar calado sobre eu e o Willian..."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    nextState: {fileID: 0}
+    targetNPCDialogue: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    eventsX:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+  - line: Eu prometo. Pode me contar.
+    responses:
+    - No dia que o entraram na  casa do Willian ele estava comigo.
+    - "Nos vimos um vulto perto da casa. Parecia ser um homem grande. At\xE9 meio
+      gordinho."
+    - Ai o Willian foi checar e disse que sentiu cheiro de bebida.
+    - "Isso \xE9 tudo que eu sei, mas n\xE3o fale sobre isso com ninguem... principalemente
+      com a mam\xE3e e com a Senhora Teresa."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    nextState: {fileID: 0}
+    targetNPCDialogue: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    eventsX:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+  endDialogueLine:
+    line: "At\xE9 mais."
+    responses:
+    - "At\xE9 mais."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    nextState: {fileID: 0}
+    targetNPCDialogue: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    eventsX:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0

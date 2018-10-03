@@ -1170,7 +1170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cac9f47641fb131459e412729fbdd768, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Michael
+  name: Willian
   mouseOverCursor: {fileID: 2800000, guid: 28fdb2803cdd9cf4ea422c804eca2a99, type: 3}
   bInteractions: []
 --- !u!114 &81244619
@@ -2733,7 +2733,7 @@ Transform:
   - {fileID: 1561962741}
   - {fileID: 556619179}
   m_Father: {fileID: 1737476748}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &224755800
 GameObject:
@@ -3067,7 +3067,7 @@ Transform:
   - {fileID: 228845395}
   - {fileID: 1971037462}
   m_Father: {fileID: 1737476748}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &258478711
 GameObject:
@@ -3097,7 +3097,7 @@ Transform:
   - {fileID: 1988858421}
   - {fileID: 340577892}
   m_Father: {fileID: 1737476748}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &263615325
 GameObject:
@@ -19464,7 +19464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cac9f47641fb131459e412729fbdd768, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: "Franc\xEAs"
+  name: Pescador
   mouseOverCursor: {fileID: 2800000, guid: 28fdb2803cdd9cf4ea422c804eca2a99, type: 3}
   bInteractions: []
 --- !u!114 &1112882334
@@ -35882,7 +35882,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DefaltNPCPortrait: {fileID: 21300000, guid: 0a761bbdbadeca14fb5ecb71fc19de51, type: 3}
-  activeNPCState: {fileID: 11400000, guid: 5ca4271583438df4c8f72e2670e857cc, type: 2}
+  activeNPCState: {fileID: 11400000, guid: 3e491fc88c517d1458841c05851bad33, type: 2}
   activeDialogueState: {fileID: 0}
 --- !u!50 &1347589112
 Rigidbody2D:
@@ -41147,7 +41147,7 @@ Transform:
   - {fileID: 1064263309}
   - {fileID: 47059173}
   m_Father: {fileID: 1737476748}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1704687087
 GameObject:
@@ -41304,7 +41304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DefaltNPCPortrait: {fileID: 21300000, guid: 476fcd1435da91f438a3f4a64a9ea9ce, type: 3}
-  activeNPCState: {fileID: 11400000, guid: 5ca4271583438df4c8f72e2670e857cc, type: 2}
+  activeNPCState: {fileID: 11400000, guid: b286cede8464ce54ca942f7e02626d1f, type: 2}
   activeDialogueState: {fileID: 0}
 --- !u!50 &1710918380
 Rigidbody2D:
@@ -41500,12 +41500,12 @@ Transform:
   - {fileID: 1283551812}
   - {fileID: 1120815132}
   - {fileID: 803314388}
+  - {fileID: 2028912561}
   - {fileID: 1856944592}
   - {fileID: 221927517}
   - {fileID: 1682543189}
   - {fileID: 254740193}
   - {fileID: 258478712}
-  - {fileID: 2028912561}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -42105,7 +42105,7 @@ Transform:
   - {fileID: 1577155554}
   - {fileID: 1068401125}
   m_Father: {fileID: 1737476748}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1876943955
 GameObject:
@@ -43675,7 +43675,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1737476748}
-  m_RootOrder: 8
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &2028912562
 TilemapRenderer:

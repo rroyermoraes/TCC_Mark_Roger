@@ -9,16 +9,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56b624a761662d24285b8a585a0d8807, type: 3}
-  m_Name: F1MaeAnelRoubado
+  m_Name: F1KidDialoge1
   m_EditorClassIdentifier: 
-  greeting: 
+  greeting: Hey.
   specialGreetingPortrait: {fileID: 0}
   blankState: 0
   lines:
-  - line: Como era o anel?
+  - line: "Quem \xE9 voce?"
     responses:
-    - ANEL 4
-    - "Espero que tenha prestado aten\xE7\xE3o."
+    - Meu chamo Willian
+    - Eu sou o filho mais velho da familia
     isHidden: 0
     specialPortrait: {fileID: 0}
     nextState: {fileID: 0}
@@ -31,46 +31,76 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-  - line: Algum suspeito?
+  - line: Anel desaparecido
     responses:
-    - "Claro. Eu tenho quase certeza que isso \xE9 coisa dos Larch"
-    - "Desde que estamos aqui esses malditos tambem est\xE3o, sempre se achando melhor
-      que os outros"
-    - "Aposto que eles deram jeito de pegar esse anel s\xF3 para nos irritar."
+    - Acho que alguem entrou aqui e roubou o anel da familia
+    - "Mam\xE3e est\xE1 furiosa, e fica botando a culpa nos Larch"
+    - "Eu n\xE3o acho que eles tenham feito algo assim."
+    - "Mas \xE9  dificil convenser minha m\xE3e quando ela coloca alguma coisa na
+      cabe\xE7a."
     isHidden: 0
     specialPortrait: {fileID: 0}
     nextState: {fileID: 0}
     targetNPCDialogue: {fileID: 0}
     allreadySayd: 0
-    linesToUnlock: []
+    linesToUnlock:
+    - state: {fileID: 11400000}
+      index: 2
     eventsX:
       m_PersistentCalls:
         m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-  - line: Pistas?
+  - line: Alguma pista?
     responses:
-    - "Eu n\xE3o sei de nada, s\xF3 sei que o anel estava no bau trancado."
-    - "Voc\xEA que \xE9 o investigar n\xE3o \xE9 mesmo? Ent\xE3o investigue."
+    - "Bem... no dia que entraram aqui eu notei algo estranho, mas n\xE3o conte pra
+      minha m\xE3e... "
+    - "O sol j\xE1 estava se ponto e eu vi um vulto estranho perto de casa."
+    - Quando fui checar senti um cheiro de bebida...
+    - "Mas prometa que n\xE3o vai falar sobre isso pra minha m\xE3e."
     isHidden: 0
     specialPortrait: {fileID: 0}
     nextState: {fileID: 0}
     targetNPCDialogue: {fileID: 0}
     allreadySayd: 0
-    linesToUnlock: []
+    linesToUnlock:
+    - state: {fileID: 11400000}
+      index: 3
     eventsX:
       m_PersistentCalls:
         m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-  - line: Falar sobre outra coisa.
+  - line: "Escondendo coisas de sua m\xE3e"
     responses:
-    - "O que voc\xEA quer falar?"
+    - "Hey...isso \xE9 problema meu viu..."
+    - Ok...Ok...  eu devia estar fazendo outra coisa quando invadiram nossa casa.
+    - "Se minha m\xE3e descobrir que eu vi alguma coisa, ela vai descobrir que eu
+      n\xE3o estava fazendo minhas tarefas."
+    - Ai ela vai ficar mais furiosa ainda. E vai me encher de perguntas.
     isHidden: 0
     specialPortrait: {fileID: 0}
-    nextState: {fileID: 11400000, guid: 88809e30579bc4f46a5d1429f1bc2354, type: 2}
+    nextState: {fileID: 0}
+    targetNPCDialogue: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock:
+    - state: {fileID: 11400000}
+      index: 4
+    eventsX:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+  - line: "O que voc\xEA estava fazendo na hora do roubo?"
+    responses:
+    - '... e eu estava com a...'
+    - "hey, espera ai, eu n\xE3o preciso te falar sobre isso."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    nextState: {fileID: 0}
     targetNPCDialogue: {fileID: 0}
     allreadySayd: 0
     linesToUnlock: []
@@ -81,9 +111,9 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
   endDialogueLine:
-    line: "At\xE9 mais."
+    line: "At\xE9 mais, rapaz."
     responses:
-    - "At\xE9... e cuidado por onde anda pra n\xE3o sujar minha casa."
+    - "At\xE9 mais."
     isHidden: 0
     specialPortrait: {fileID: 0}
     nextState: {fileID: 0}
