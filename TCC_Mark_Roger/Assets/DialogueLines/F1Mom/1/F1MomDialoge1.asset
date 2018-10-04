@@ -9,16 +9,34 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56b624a761662d24285b8a585a0d8807, type: 3}
-  m_Name: EstranhoState1
+  m_Name: F1MomDialoge1
   m_EditorClassIdentifier: 
-  greeting: "Eu n\xE3o te conhe\xE7o... que assuntos voc\xEA tem comigo"
+  greeting: "O que voc\xEA quer aqui, n\xE3o estou com tempo pra perder com conversa."
   specialGreetingPortrait: {fileID: 0}
   blankState: 0
   lines:
-  - line: "Quem \xE9 voc\xEA?"
+  - line: Anel roubado
     responses:
-    - Eu viajo por ai, comprando coisas e vendendo coisas
-    - "E isso \xE9 tudo que voc\xEA precisa saber."
+    - "\xC9 isso mesmo alguem deu um jeito de entrar aqui e roubar um anel valioso.
+      Esse Anel \xE9 uma reliquia na nossa familia."
+    - "Meu filho deveria dar ele para sua noiva, quando ele encontra-se uma boa menina.
+      O anel devia ficar na familia assim, mas agora ele est\xE1 sumido."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    nextState: {fileID: 11400000, guid: 10fc18b664e9010439881cb243fff271, type: 2}
+    targetNPCDialogue: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    eventsX:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+  - line: Sua familia
+    responses:
+    - "N\xF3s vivemos nessas terras a muito tempo, plantamos aqui e tem sido assim
+      sempre."
     isHidden: 0
     specialPortrait: {fileID: 0}
     nextState: {fileID: 0}
@@ -31,56 +49,16 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-  - line: Anel Roubado
+  - line: A familia Larch
     responses:
-    - "\xC9 eu comprei um anel de um dos bebados"
-    - "Mas eu paguei por ele, ent\xE3o n\xE3o \xE9 problema meu."
-    - "Alem disso o que me garante que o anel que voc\xEA est\xE1 procurando \xE9
-      o que eu comprei."
+    - "Eles s\xE3o um bando de metidos irritantes. Principalmente aquelasinha da Nora."
+    - "\"Olhe para minhas aboboras, como s\xE3o grandes e bonitas\""
+    - "Ela adora fazer coisas s\xF3 pra me irritar."
+    - "Aposto que toda esse confus\xE3o tem o dedo deles"
     isHidden: 0
     specialPortrait: {fileID: 0}
     nextState: {fileID: 0}
     targetNPCDialogue: {fileID: 0}
-    allreadySayd: 0
-    linesToUnlock:
-    - state: {fileID: 11400000}
-      index: 2
-    eventsX:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-    exitDialogue: 0
-  - line: Devolver o anel
-    responses:
-    - "Voc\xEA quer que eu te de o anel pelo qual eu paguei com meu dinheiro?"
-    - "Como eu disse, eu nem sei se eu tenho o anel que voc\xEA est\xE1 procurando."
-    isHidden: 0
-    specialPortrait: {fileID: 0}
-    nextState: {fileID: 0}
-    targetNPCDialogue: {fileID: 0}
-    allreadySayd: 0
-    linesToUnlock:
-    - state: {fileID: 11400000}
-      index: 3
-    eventsX:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-    exitDialogue: 0
-  - line: Avisar a guarda
-    responses:
-    - "\xC9 assim ent\xE3o... Olha eu n\xE3o quero arrumar problemas."
-    - "Vamos fazer o seguinte, me descreve exatamente como \xE9 o anel que voc\xEA
-      esta procurando"
-    - "Se o anel que voc\xEA descrever for o que eu comprei do b\xEAbado eu te devolvo."
-    - "Me diga ent\xE3o como era o anel:"
-    isHidden: 0
-    specialPortrait: {fileID: 0}
-    nextState: {fileID: 11400000, guid: 8da58977455d94642b8f2146d563d404, type: 2}
-    targetNPCDialogue: {fileID: 11400000, guid: b75155a61041bc24fab6b391b3fac105,
-      type: 2}
     allreadySayd: 0
     linesToUnlock: []
     eventsX:
@@ -90,9 +68,9 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
   endDialogueLine:
-    line: Adeus.
+    line: "At\xE9 mais."
     responses:
-    - "At\xE9 mais."
+    - "At\xE9 mais... E cuidado por onde anda pra n\xE3o sujar meu ch\xE3o"
     isHidden: 0
     specialPortrait: {fileID: 0}
     nextState: {fileID: 0}

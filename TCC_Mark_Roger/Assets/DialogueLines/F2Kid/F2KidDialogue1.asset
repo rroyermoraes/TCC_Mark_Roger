@@ -9,16 +9,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56b624a761662d24285b8a585a0d8807, type: 3}
-  m_Name: EstranhoState1
+  m_Name: F2KidDialogue1
   m_EditorClassIdentifier: 
-  greeting: "Eu n\xE3o te conhe\xE7o... que assuntos voc\xEA tem comigo"
+  greeting: Hey! tudo bem?
   specialGreetingPortrait: {fileID: 0}
   blankState: 0
   lines:
-  - line: "Quem \xE9 voc\xEA?"
+  - line: Anel Roubado.
     responses:
-    - Eu viajo por ai, comprando coisas e vendendo coisas
-    - "E isso \xE9 tudo que voc\xEA precisa saber."
+    - Eu fiquei sabendo que roubaram um anel valioso da casa do Willian.
+    - "\xC9 estranho pensar que alguem aqui do vilarejo fosse fazer algo assim."
+    - "Seja l\xE1 quem for deve estar em uma situa\xE7\xE3o dificil."
     isHidden: 0
     specialPortrait: {fileID: 0}
     nextState: {fileID: 0}
@@ -31,56 +32,57 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-  - line: Anel Roubado
+  - line: Familia Ash.
     responses:
-    - "\xC9 eu comprei um anel de um dos bebados"
-    - "Mas eu paguei por ele, ent\xE3o n\xE3o \xE9 problema meu."
-    - "Alem disso o que me garante que o anel que voc\xEA est\xE1 procurando \xE9
-      o que eu comprei."
+    - "As nossas familias nunca se deram bem, a mam\xE3e e a Senhora Teresa se odeiam."
+    - "Mas eu n\xE3o acho que eles s\xE3o t\xE3o maus assim. Principalmente o Willian...err...
+      esque\xE7a o que eu acabei de dizer..."
+    - "Eu gostaria que nossas familias se dessem bem, mas mam\xE3e \xE9 t\xE3o teimosa
+      quanto a Senhora Teresa."
+    - "E agora com essa situa\xE7\xE3o do anel as coisas est\xE3o ainda mais sensiveis."
     isHidden: 0
     specialPortrait: {fileID: 0}
     nextState: {fileID: 0}
     targetNPCDialogue: {fileID: 0}
     allreadySayd: 0
-    linesToUnlock:
-    - state: {fileID: 11400000}
-      index: 2
+    linesToUnlock: []
     eventsX:
       m_PersistentCalls:
         m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-  - line: Devolver o anel
+  - line: "Rela\xE7\xE3o com Willian Ash"
     responses:
-    - "Voc\xEA quer que eu te de o anel pelo qual eu paguei com meu dinheiro?"
-    - "Como eu disse, eu nem sei se eu tenho o anel que voc\xEA est\xE1 procurando."
+    - "Fala baixo... se minha m\xE3e ouvir voc\xEA falando nisso ela me mata."
+    - "*cochicho* N\xE3o conte pra mam\xE3e, mas eu tenho encontrado o Willian escondida,
+      eu gosto de ficar com ele, mas se mam\xE3e descobrir ela vai estragar tudo."
+    - "*cochicho* Eu sei de uma coisa que pode te ajudar nessa hist\xF3ria do anel.
+      Eu posso te contar se voc\xEA prometer ficar calado sobre eu e o Willian..."
     isHidden: 0
     specialPortrait: {fileID: 0}
     nextState: {fileID: 0}
     targetNPCDialogue: {fileID: 0}
     allreadySayd: 0
-    linesToUnlock:
-    - state: {fileID: 11400000}
-      index: 3
+    linesToUnlock: []
     eventsX:
       m_PersistentCalls:
         m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-  - line: Avisar a guarda
+  - line: Eu prometo. Pode me contar.
     responses:
-    - "\xC9 assim ent\xE3o... Olha eu n\xE3o quero arrumar problemas."
-    - "Vamos fazer o seguinte, me descreve exatamente como \xE9 o anel que voc\xEA
-      esta procurando"
-    - "Se o anel que voc\xEA descrever for o que eu comprei do b\xEAbado eu te devolvo."
-    - "Me diga ent\xE3o como era o anel:"
+    - No dia que o entraram na  casa do Willian ele estava comigo.
+    - "Nos vimos um vulto perto da casa. Parecia ser um homem grande. At\xE9 meio
+      gordinho."
+    - Ai o Willian foi checar e disse que sentiu cheiro de bebida.
+    - "Isso \xE9 tudo que eu sei, mas n\xE3o fale sobre isso com ninguem... principalemente
+      com a mam\xE3e e com a Senhora Teresa."
     isHidden: 0
     specialPortrait: {fileID: 0}
-    nextState: {fileID: 11400000, guid: 8da58977455d94642b8f2146d563d404, type: 2}
-    targetNPCDialogue: {fileID: 11400000, guid: b75155a61041bc24fab6b391b3fac105,
-      type: 2}
+    nextState: {fileID: 0}
+    targetNPCDialogue: {fileID: 0}
     allreadySayd: 0
     linesToUnlock: []
     eventsX:
@@ -90,7 +92,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
   endDialogueLine:
-    line: Adeus.
+    line: "At\xE9 mais."
     responses:
     - "At\xE9 mais."
     isHidden: 0

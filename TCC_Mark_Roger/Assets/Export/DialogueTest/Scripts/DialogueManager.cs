@@ -119,7 +119,7 @@ public class DialogueManager : MonoBehaviour {
     }
 
     IEnumerator TypeSentence(string sentence) {
-
+        
         if (richTextFix){
             string dialogueString = "";
             bool ignoreChar = false;
@@ -155,7 +155,7 @@ public class DialogueManager : MonoBehaviour {
             }
             richTextString += "\n";
             npcLineContainer.text = richTextString;
-            
+            yield return new WaitForSeconds(0.25f);
             DisplayNextNPCSentece();
         }
         else{
@@ -168,7 +168,7 @@ public class DialogueManager : MonoBehaviour {
 
             }
             npcLineContainer.text += "\n";
-
+            yield return new WaitForSeconds(0.25f);
             DisplayNextNPCSentece();
         }
         
@@ -303,7 +303,7 @@ public class DialogueManager : MonoBehaviour {
             if (activeLines[opt + linesContainer.topPointer].exitDialogue|| activeLines[opt+linesContainer.topPointer]==activeNPCDialogue.activeDialogueState.endDialogueLine)
             {
                 lockedOptions = true;
-                StartCoroutine(EndConversation(1f));
+                StartCoroutine(EndConversation(0.5f));
             }
         }
         

@@ -9,16 +9,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56b624a761662d24285b8a585a0d8807, type: 3}
-  m_Name: EstranhoState1
+  m_Name: F2MomDialogue1
   m_EditorClassIdentifier: 
-  greeting: "Eu n\xE3o te conhe\xE7o... que assuntos voc\xEA tem comigo"
+  greeting: "Ol\xE1 rapaz."
   specialGreetingPortrait: {fileID: 0}
   blankState: 0
   lines:
-  - line: "Quem \xE9 voc\xEA?"
+  - line: Anel desaparecido.
     responses:
-    - Eu viajo por ai, comprando coisas e vendendo coisas
-    - "E isso \xE9 tudo que voc\xEA precisa saber."
+    - Ahhh... sim eu fiquei sabendo que alguem roubou um anel da casa dos Ash.
+    - E tambem que aquela nojenta da Teresa acha que foi alguem da minha familia.
+    - "Aposto que voc\xEA s\xF3 esta aqui inclusive por que ela falou que foi alguem
+      daqui que pegou esse anel idiota."
+    - "Eu te digo uma coisa rapaz. Ninguem aqui de casa faria isso, e \xE9 melhor
+      eles pararem com essas acusa\xE7\xF5es e logo."
     isHidden: 0
     specialPortrait: {fileID: 0}
     nextState: {fileID: 0}
@@ -31,56 +35,34 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-  - line: Anel Roubado
+  - line: Alguma suspeita?
     responses:
-    - "\xC9 eu comprei um anel de um dos bebados"
-    - "Mas eu paguei por ele, ent\xE3o n\xE3o \xE9 problema meu."
-    - "Alem disso o que me garante que o anel que voc\xEA est\xE1 procurando \xE9
-      o que eu comprei."
+    - "N\xE3o fa\xE7o id\xE9ia de quem poderia ter sido"
+    - Alem disso. como eu saberia de alguma coisa.
+    - "Se quiser ter certeza pode perguntar pra qualquer um aqui. Eu garanto que n\xE3o
+      temos nada a ver com essa confus\xE3o."
     isHidden: 0
     specialPortrait: {fileID: 0}
     nextState: {fileID: 0}
     targetNPCDialogue: {fileID: 0}
     allreadySayd: 0
-    linesToUnlock:
-    - state: {fileID: 11400000}
-      index: 2
+    linesToUnlock: []
     eventsX:
       m_PersistentCalls:
         m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-  - line: Devolver o anel
+  - line: Familia Ash
     responses:
-    - "Voc\xEA quer que eu te de o anel pelo qual eu paguei com meu dinheiro?"
-    - "Como eu disse, eu nem sei se eu tenho o anel que voc\xEA est\xE1 procurando."
+    - "Eles s\xE3o um tipinho de gente bem irritante."
+    - "Est\xE3o sempre querendo ser melhores que todo mundo"
+    - "Desde que vivemos nessas terras eles est\xE3o por aqui e nunca nos demos bem,
+      e garanto que nunca vamos."
     isHidden: 0
     specialPortrait: {fileID: 0}
     nextState: {fileID: 0}
     targetNPCDialogue: {fileID: 0}
-    allreadySayd: 0
-    linesToUnlock:
-    - state: {fileID: 11400000}
-      index: 3
-    eventsX:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-    exitDialogue: 0
-  - line: Avisar a guarda
-    responses:
-    - "\xC9 assim ent\xE3o... Olha eu n\xE3o quero arrumar problemas."
-    - "Vamos fazer o seguinte, me descreve exatamente como \xE9 o anel que voc\xEA
-      esta procurando"
-    - "Se o anel que voc\xEA descrever for o que eu comprei do b\xEAbado eu te devolvo."
-    - "Me diga ent\xE3o como era o anel:"
-    isHidden: 0
-    specialPortrait: {fileID: 0}
-    nextState: {fileID: 11400000, guid: 8da58977455d94642b8f2146d563d404, type: 2}
-    targetNPCDialogue: {fileID: 11400000, guid: b75155a61041bc24fab6b391b3fac105,
-      type: 2}
     allreadySayd: 0
     linesToUnlock: []
     eventsX:
@@ -90,7 +72,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
   endDialogueLine:
-    line: Adeus.
+    line: Adeus
     responses:
     - "At\xE9 mais."
     isHidden: 0
