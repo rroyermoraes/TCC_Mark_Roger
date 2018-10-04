@@ -28,6 +28,10 @@ public class DialogueState : ScriptableObject {
     {
         GameObject.FindObjectOfType<ObjectiveManager>().CompleteObjetive(id);
     }
+    public void LoadLevel(string s)
+    {
+        GameObject.FindObjectOfType<LoadScene>().LoadLevel(s);
+    }
 
 
 
