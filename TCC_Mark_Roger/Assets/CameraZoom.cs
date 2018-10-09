@@ -7,7 +7,7 @@ using UnityEngine.U2D;
 public class CameraZoom : MonoBehaviour {
     private PixelPerfectCamera c;
     public bool mouseWheelZoom = false;
-    [Range(1,5)]
+    [Range(1,6)]
     public int zoomLvl = 1;
 	// Use this for initialization
 
