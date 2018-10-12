@@ -152,7 +152,7 @@ public class DesafioCripta : MonoBehaviour {
 
     IEnumerator Flood(int i, int j) {
         game[i,j].Flood();
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.25f);
         //direita
         if (i < 4 && game[i, j].RightConnection && game[i + 1, j].LeftConnection) {
             if (!game[i + 1, j].GetFlooded())
