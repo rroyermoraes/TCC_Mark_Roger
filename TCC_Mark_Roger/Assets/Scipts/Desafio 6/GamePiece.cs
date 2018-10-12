@@ -8,6 +8,8 @@ public class GamePiece : MonoBehaviour {
     [SerializeField]
     private Sprite pieceSprite;
     [SerializeField]
+    private Sprite completeSprite;
+    [SerializeField]
     private bool topConnection = false;
     [SerializeField]
     private bool bottomConnection = false;
@@ -77,13 +79,26 @@ public class GamePiece : MonoBehaviour {
     }
     public void Reset() {
         flooded = false;
-        r.color = Color.white;
-    }
+      //  r.color = Color.white;
+        r.sprite = pieceSprite;
+            }
     public void Flood() {
         flooded = true;
-        r.color = Color.blue;
+       // r.color = Color.blue;
+        if (completeSprite != null)
+        {
+            r.sprite = completeSprite;
+        }
     }
 
+    public void Shine()
+    {
+        if (completeSprite != null)
+        {
+            GetComponent<SpriteRenderer>().sprite = completeSprite;
+        }
+        
+    }
 
 
     public bool GetBlank() {
@@ -97,7 +112,7 @@ public class GamePiece : MonoBehaviour {
     }
     private void Update()
     {
-        r.sprite = pieceSprite;
+        //r.sprite = pieceSprite;
     }
 
 }

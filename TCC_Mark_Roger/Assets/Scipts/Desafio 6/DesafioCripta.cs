@@ -25,8 +25,10 @@ public class DesafioCripta : MonoBehaviour {
     public GamePiece[,] game = new GamePiece[5, 5];
     public SolutionPosition startPosition;
     public List<SolutionPosition> solutionPositions = new List<SolutionPosition>();
-
+    public bool autostart = false;
     public LayerMask filtro;
+    private bool flooding = false;
+    private bool complete = false;
 
 
 
@@ -55,9 +57,26 @@ public class DesafioCripta : MonoBehaviour {
             }
 
         }
+        if (autostart)
+        {
+            ShuffleGame(2000);
+        }
+        
         //DebugGame();
     }
-    
+
+    public void ResetPieces() {
+        StopAllCoroutines();
+        for (int a = 0; a < 5; a++)
+        {
+            for (int b = 0; b < 5; b++)
+            {
+                game[a, b].Reset();
+
+            }
+        }
+    }
+
     public void ShuffleGame(int iterations) {
         int it = iterations;
         int i, j, k, y;
@@ -68,14 +87,7 @@ public class DesafioCripta : MonoBehaviour {
         k = Random.Range(0, 5);
         y = Random.Range(0, 5);
 
-        StopAllCoroutines();
-        for (int a = 0; a < 5; a++) {
-            for (int b = 0; b < 5; b++)
-            {
-                game[a, b].Reset();
-
-            }
-        }
+        ResetPieces();
 
 
         while (it > 0) {
@@ -102,7 +114,7 @@ public class DesafioCripta : MonoBehaviour {
     // Update is called once per frame
 
     public void GameMove(int i, int j) {
-
+        ResetPieces();
         if ((i >= 0 && i <= 4) && (j >= 0 && j <= 4)) {
             GamePiece aux;
             Vector3 auxT;
@@ -151,13 +163,17 @@ public class DesafioCripta : MonoBehaviour {
     }
 
     IEnumerator Flood(int i, int j) {
+        flooding = true;
         game[i,j].Flood();
-        yield return new WaitForSeconds(0.25f);
+        // yield return new WaitForSeconds(0.25f);
+        //yield return new WaitForEndOfFrame();
+        yield return null;
         //direita
         if (i < 4 && game[i, j].RightConnection && game[i + 1, j].LeftConnection) {
             if (!game[i + 1, j].GetFlooded())
             {
                 StartCoroutine(Flood(i + 1, j)) ;
+                
             }
         }
         //acima
@@ -185,12 +201,73 @@ public class DesafioCripta : MonoBehaviour {
             }
         }
 
-
+        flooding = false;
         bool solution = CheckSolution();
         if (solution) {
             Debug.Log("Desafio Completo");
+            complete = true;
+         //   StartCoroutine(Shine(Mathf.RoundToInt(startPosition.position.x), Mathf.RoundToInt(startPosition.position.y)));
+            
         }
     }
+
+
+    /*
+    public void Shine()
+    {
+        for (int a = 0; a < 5; a++)
+        {
+            for (int b = 0; b < 5; b++)
+            {
+                if (game[a, b].GetFlooded()) {
+                    game[a, b].Shine();
+                }
+            }
+        }
+    }
+*/
+    IEnumerator Shine(int i, int j)
+    {
+        game[i, j].Shine();
+         yield return new WaitForSeconds(0.25f);
+        
+        //direita
+        if (i < 4 && game[i, j].RightConnection && game[i + 1, j].LeftConnection)
+        {
+            if (game[i + 1, j].GetFlooded())
+            {
+                StartCoroutine(Shine(i + 1, j));
+
+            }
+        }
+        //acima
+        if (j < 4 && game[i, j].TopConnection && game[i, j + 1].BottomConnection)
+        {
+            if (game[i, j + 1].GetFlooded())
+            {
+                StartCoroutine(Shine(i, j + 1));
+            }
+        }
+        //Esquerda
+        if (i > 0 && game[i, j].LeftConnection && game[i - 1, j].RightConnection)
+        {
+            if (game[i - 1, j].GetFlooded())
+            {
+                StartCoroutine(Shine(i - 1, j));
+            }
+        }
+        //Baixo
+        if (j > 0 && game[i, j].BottomConnection && game[i, j - 1].TopConnection)
+        {
+            if (game[i, j - 1].GetFlooded())
+            {
+                StartCoroutine(Shine(i, j - 1));
+            }
+        }
+    }
+
+
+
 
     public void StartFlood() {
 
@@ -262,6 +339,12 @@ public class DesafioCripta : MonoBehaviour {
         
         if (Input.GetMouseButtonDown(0))
         {
+            if (flooding) {
+                return;
+            }
+            if (complete) {
+                return;
+            }
             RaycastHit2D hit = Physics2D.Raycast(screenPosition, Vector3.forward, Mathf.Infinity, filtro);
             Debug.DrawRay(screenPosition, Vector3.forward, Color.red, 5f);
             if (hit)

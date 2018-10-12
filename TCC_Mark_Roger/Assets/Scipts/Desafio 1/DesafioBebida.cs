@@ -57,6 +57,7 @@ public class DesafioBebida : MonoBehaviour {
     IEnumerator SetA(List<int> nA)
     {
         EnableDisableExchange(false);
+        confirmB.interactable = false;
         a1Slider.AnimateSlide(0);
         a2Slider.AnimateSlide(0);
         a3Slider.AnimateSlide(0);
@@ -138,6 +139,7 @@ public class DesafioBebida : MonoBehaviour {
 
         }
         EnableDisableExchange(true);
+        confirmB.interactable = true;
     }
 
     private void SetMaxMoves(int i)
@@ -176,6 +178,7 @@ public class DesafioBebida : MonoBehaviour {
         b4Slider.AnimateSlide(0);
         List<int> c = new List<int>(new int[4]);
         EnableDisableExchange(false);
+        confirmB.interactable = false;
         for (int i = 0; i < 4; i++) {
             c[i] = a[i] + b[i];
             if (c[i] > 10)
@@ -324,6 +327,7 @@ public class DesafioBebida : MonoBehaviour {
 
         }
         EnableDisableExchange(false);
+        confirmB.interactable = false;
 
 
     }
