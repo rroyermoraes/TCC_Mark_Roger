@@ -24,8 +24,9 @@ public class PlayerController : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit))
             {
-                //move agent
                 agent.SetDestination(hit.point);
+                
+                //agent.Move(new Vector3(1, 0));
             }
         }
         

@@ -10,7 +10,7 @@ public class Teleport : MonoBehaviour {
 
     // Use this for initialization
 
-    public void Update()
+    public void LateUpdate()
     {
         
         if (Input.GetMouseButtonDown(1))
@@ -26,10 +26,13 @@ public class Teleport : MonoBehaviour {
 
                 if (hit && hit.transform == transform )
                 {
-                    player.GetComponent<NavMeshAgent>().enabled = false;
-                    player.transform.position = tpoint.position;
+                    player.GetComponent<NavMeshAgent>().Warp(tpoint.position);
+                    // player.GetComponent<NavMeshAgent>().enabled = false;
+                    // player.transform.position = tpoint.position;
+                    Camera.main.GetComponent<SnapToPixel>().enabled = false;
                     Camera.main.transform.position = new Vector3(tpoint.position.x, tpoint.position.y, Camera.main.transform.position.z);
-                    player.GetComponent<NavMeshAgent>().enabled = true;
+                    Camera.main.GetComponent<SnapToPixel>().enabled = true;
+                    //  player.GetComponent<NavMeshAgent>().enabled = true;
 
                 }
 
