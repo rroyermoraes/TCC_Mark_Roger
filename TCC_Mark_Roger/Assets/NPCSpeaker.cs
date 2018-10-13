@@ -156,4 +156,12 @@ public class NPCSpeaker : MonoBehaviour
         }
 
     }
+
+
+    private void FixedUpdate()
+    {
+        if (Input.GetKeyDown(KeyCode.Return)){
+            SkipSentence();
+        }
+    }
 }
