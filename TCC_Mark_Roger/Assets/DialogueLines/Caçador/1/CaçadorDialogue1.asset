@@ -78,7 +78,7 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: Desafio 2
             m_BoolArgument: 0
-          m_CallState: 2
+          m_CallState: 1
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0

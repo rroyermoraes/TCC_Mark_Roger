@@ -17,8 +17,8 @@ public class Frog{
 
     public enum Pattern
     {
-        ListrasVerticais,
-        ListrasHorizontais,
+        ListrasLongitudinais,
+        ListrasLatitudinais,
         Manchas,
         Pintas
     };
@@ -36,7 +36,33 @@ public class Frog{
     }
 }
 
-public class GameFrog : MonoBehaviour {
+public class GameFrog : InteractableObject {
     public Frog frog;
+    public string description;
+
+    void Start()
+    {
+        bInteractions.Add(new ButtonInteraction("Inspecionar", Inspect));
+        bInteractions.Add(new ButtonInteraction("Pegar", Take));
+    }
+
+    public override void Take()
+    {
+        //base.Take();
+        FindObjectOfType<FrogGame>().PickFrog(this);
+        string[] s = new string[] { "Peguei o sapo " + description + " ." };
+        FindObjectOfType<PlayerSpeaker>().PlayerSpeak(s);
+        //Debug.Log(s);
+
+    }
+    public override void Inspect()
+    {
+        //base.Take();
+        string[] s = new string[] { "É um sapo "+ description + " ." };
+        FindObjectOfType<PlayerSpeaker>().PlayerSpeak(s);
+        //Debug.Log(s);
+
+    }
+
 
 }

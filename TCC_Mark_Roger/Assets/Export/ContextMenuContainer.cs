@@ -44,6 +44,9 @@ public class ContextMenuContainer : MonoBehaviour {
 
     public Text label;
 
+    public PlayerController player;
+
+    [HideInInspector]
     public List<ButtonInteraction> actions = new List<ButtonInteraction>();
     private List<ButtonInteraction> blankActions = new List<ButtonInteraction>();
 
@@ -93,14 +96,15 @@ public class ContextMenuContainer : MonoBehaviour {
                 Debug.DrawRay(sPosition, Vector3.forward, Color.red, 5f);
                 if (hit)
                 {
-
-                    actions=blankActions;
-                    actions = hit.transform.gameObject.GetComponent<InteractableObject>().GetButtonInteractions();
-                    UpdateInteractions();
-                    label.text = hit.transform.gameObject.GetComponent<InteractableObject>().name;
-                    ShowContextMenu();
-                    contextMenuActive = true;
-
+                    if (Vector3.Magnitude(hit.transform.position - player.transform.position) <= hit.transform.gameObject.GetComponent<InteractableObject>().interactionDistance) {
+                        actions = blankActions;
+                        actions = hit.transform.gameObject.GetComponent<InteractableObject>().GetButtonInteractions();
+                        UpdateInteractions();
+                        label.text = hit.transform.gameObject.GetComponent<InteractableObject>().name;
+                        ShowContextMenu();
+                        contextMenuActive = true;
+                    }
+                   // Debug.Log("hit");
                 }
 
             }

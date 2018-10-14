@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class InteractableObject : MonoBehaviour {
     public new string name;
+    public float interactionDistance = 3f;
     public Texture2D mouseOverCursor;
     [SerializeField]
     protected List<ButtonInteraction> bInteractions = new List<ButtonInteraction>();
