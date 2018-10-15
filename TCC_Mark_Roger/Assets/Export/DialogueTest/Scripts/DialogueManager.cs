@@ -52,7 +52,7 @@ public class DialogueManager : MonoBehaviour {
             {
                 RefreshActiveLines();
                 lockedOptions = false;
-                activeLines.Add(activeNPCDialogue.activeDialogueState.endDialogueLine);
+                //activeLines.Add(activeNPCDialogue.activeDialogueState.endDialogueLine);
                 linesContainer.FillConteiners(activeLines);
                 StartCoroutine(ShowResponses());
             }
@@ -81,6 +81,7 @@ public class DialogueManager : MonoBehaviour {
                 activeLines.Add(line);
             }
         }
+        activeLines.Add(activeNPCDialogue.activeDialogueState.endDialogueLine);
     }
 
 

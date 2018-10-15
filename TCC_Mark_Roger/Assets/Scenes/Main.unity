@@ -1199,6 +1199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Willian
+  interactionDistance: 3
   mouseOverCursor: {fileID: 2800000, guid: 28fdb2803cdd9cf4ea422c804eca2a99, type: 3}
   bInteractions: []
 --- !u!114 &81244619
@@ -2357,6 +2358,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: "Franc\xEAs"
+  interactionDistance: 3
   mouseOverCursor: {fileID: 2800000, guid: 28fdb2803cdd9cf4ea422c804eca2a99, type: 3}
   bInteractions: []
 --- !u!114 &189248805
@@ -3748,6 +3750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Bob
+  interactionDistance: 3
   mouseOverCursor: {fileID: 2800000, guid: 28fdb2803cdd9cf4ea422c804eca2a99, type: 3}
   bInteractions: []
 --- !u!114 &414997304
@@ -4592,6 +4595,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Bob
+  interactionDistance: 3
   mouseOverCursor: {fileID: 2800000, guid: 28fdb2803cdd9cf4ea422c804eca2a99, type: 3}
   bInteractions: []
 --- !u!114 &529514515
@@ -4741,6 +4745,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: "B\xEAbados"
+  interactionDistance: 3
   mouseOverCursor: {fileID: 2800000, guid: 28fdb2803cdd9cf4ea422c804eca2a99, type: 3}
   bInteractions: []
 --- !u!114 &532601793
@@ -5827,6 +5832,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Suposto Feiticeiro
+  interactionDistance: 3
   mouseOverCursor: {fileID: 2800000, guid: 28fdb2803cdd9cf4ea422c804eca2a99, type: 3}
   bInteractions: []
 --- !u!114 &621110938
@@ -7036,6 +7042,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: "Ca\xE7ador"
+  interactionDistance: 3
   mouseOverCursor: {fileID: 2800000, guid: 28fdb2803cdd9cf4ea422c804eca2a99, type: 3}
   bInteractions: []
 --- !u!114 &757800290
@@ -17457,6 +17464,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   label: {fileID: 1501273533}
+  player: {fileID: 0}
   actions: []
 --- !u!222 &810527396
 CanvasRenderer:
@@ -17674,6 +17682,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Bob
+  interactionDistance: 3
   mouseOverCursor: {fileID: 2800000, guid: 28fdb2803cdd9cf4ea422c804eca2a99, type: 3}
   bInteractions: []
 --- !u!114 &842388849
@@ -18196,6 +18205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Duquesa Silma
+  interactionDistance: 3
   mouseOverCursor: {fileID: 2800000, guid: 28fdb2803cdd9cf4ea422c804eca2a99, type: 3}
   bInteractions: []
 --- !u!114 &871492766
@@ -18523,6 +18533,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   label: {fileID: 536147209}
+  player: {fileID: 572143429}
   actions: []
 --- !u!222 &936572016
 CanvasRenderer:
@@ -20063,6 +20074,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Pescador
+  interactionDistance: 3
   mouseOverCursor: {fileID: 2800000, guid: 28fdb2803cdd9cf4ea422c804eca2a99, type: 3}
   bInteractions: []
 --- !u!114 &1112882334
@@ -27793,6 +27805,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Bob
+  interactionDistance: 3
   mouseOverCursor: {fileID: 2800000, guid: 28fdb2803cdd9cf4ea422c804eca2a99, type: 3}
   bInteractions: []
 --- !u!114 &1183985005
@@ -39956,6 +39969,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Bob
+  interactionDistance: 3
   mouseOverCursor: {fileID: 2800000, guid: 28fdb2803cdd9cf4ea422c804eca2a99, type: 3}
   bInteractions: []
 --- !u!114 &1331995766
@@ -40106,6 +40120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Jaine
+  interactionDistance: 3
   mouseOverCursor: {fileID: 2800000, guid: 28fdb2803cdd9cf4ea422c804eca2a99, type: 3}
   bInteractions: []
 --- !u!114 &1347589111
@@ -41950,6 +41965,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Sir Lewis
+  interactionDistance: 3
   mouseOverCursor: {fileID: 2800000, guid: 28fdb2803cdd9cf4ea422c804eca2a99, type: 3}
   bInteractions: []
 --- !u!114 &1449919797
@@ -42511,6 +42527,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Bob
+  interactionDistance: 3
   mouseOverCursor: {fileID: 2800000, guid: 28fdb2803cdd9cf4ea422c804eca2a99, type: 3}
   bInteractions: []
 --- !u!114 &1505982563
@@ -45315,6 +45332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Teresa
+  interactionDistance: 3
   mouseOverCursor: {fileID: 2800000, guid: 28fdb2803cdd9cf4ea422c804eca2a99, type: 3}
   bInteractions: []
 --- !u!114 &1671228081
@@ -45576,6 +45594,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Nora
+  interactionDistance: 3
   mouseOverCursor: {fileID: 2800000, guid: 28fdb2803cdd9cf4ea422c804eca2a99, type: 3}
   bInteractions: []
 --- !u!114 &1710918379
@@ -47120,6 +47139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Homem Misterioso
+  interactionDistance: 3
   mouseOverCursor: {fileID: 2800000, guid: 28fdb2803cdd9cf4ea422c804eca2a99, type: 3}
   bInteractions: []
 --- !u!114 &1936792213
@@ -47468,6 +47488,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Sir Marius
+  interactionDistance: 3
   mouseOverCursor: {fileID: 2800000, guid: 28fdb2803cdd9cf4ea422c804eca2a99, type: 3}
   bInteractions: []
 --- !u!114 &1971013710
@@ -75261,6 +75282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Duque Robert
+  interactionDistance: 3
   mouseOverCursor: {fileID: 2800000, guid: 28fdb2803cdd9cf4ea422c804eca2a99, type: 3}
   bInteractions: []
 --- !u!114 &2036632144
@@ -76115,6 +76137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Taberneiro
+  interactionDistance: 3
   mouseOverCursor: {fileID: 2800000, guid: 28fdb2803cdd9cf4ea422c804eca2a99, type: 3}
   bInteractions: []
 --- !u!114 &2122990491
