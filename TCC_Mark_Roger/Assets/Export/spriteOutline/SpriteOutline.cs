@@ -9,18 +9,15 @@ public class SpriteOutline : MonoBehaviour
     [Range(0, 16)]
     public int outlineSize = 1;
     public bool outlineBorderNotInternal = true; //added by Chris Garcia (thespinforce@gmail.com)
-    public bool fixedOutline = false;
+
     private SpriteRenderer spriteRenderer;
 
     void OnEnable()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        if (fixedOutline)
-        { 
-            UpdateOutline(true);
-        }
 
-        }
+
+    }
 
     void OnDisable()
     {
@@ -31,13 +28,13 @@ public class SpriteOutline : MonoBehaviour
 
     private void OnMouseOver()
     {
-        if(fixedOutline)
+        
         UpdateOutline(true);
     }
 
     private void OnMouseExit()
     {
-        if (fixedOutline)
+       
             UpdateOutline(false);
     }
 
