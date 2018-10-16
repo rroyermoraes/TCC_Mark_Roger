@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56b624a761662d24285b8a585a0d8807, type: 3}
   m_Name: EstranhoStateAnel
   m_EditorClassIdentifier: 
-  greeting: "Me descreva o anel ent\xE3o:"
+  greeting: "Me descreva o an\xE9l ent\xE3o:"
   specialGreetingPortrait: {fileID: 0}
   blankState: 0
   lines:

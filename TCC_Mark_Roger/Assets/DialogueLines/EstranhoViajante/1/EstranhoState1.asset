@@ -31,11 +31,11 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-  - line: Anel Roubado
+  - line: "An\xE9l Roubado"
     responses:
-    - "\xC9 eu comprei um anel de um dos bebados"
+    - "\xC9 eu comprei um an\xE9l de um dos bebados"
     - "Mas eu paguei por ele, ent\xE3o n\xE3o \xE9 problema meu."
-    - "Alem disso o que me garante que o anel que voc\xEA est\xE1 procurando \xE9
+    - "Alem disso o que me garante que o an\xE9l que voc\xEA est\xE1 procurando \xE9
       o que eu comprei."
     isHidden: 0
     specialPortrait: {fileID: 0}
@@ -51,10 +51,10 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-  - line: Devolver o anel
+  - line: "Devolver o an\xE9l"
     responses:
-    - "Voc\xEA quer que eu te de o anel pelo qual eu paguei com meu dinheiro?"
-    - "Como eu disse, eu nem sei se eu tenho o anel que voc\xEA est\xE1 procurando."
+    - "Voc\xEA quer que eu te de o an\xE9l pelo qual eu paguei com meu dinheiro?"
+    - "Como eu disse, eu nem sei se eu tenho o an\xE9l que voc\xEA est\xE1 procurando."
     isHidden: 0
     specialPortrait: {fileID: 0}
     nextState: {fileID: 0}
@@ -72,10 +72,11 @@ MonoBehaviour:
   - line: Avisar a guarda
     responses:
     - "\xC9 assim ent\xE3o... Olha eu n\xE3o quero arrumar problemas."
-    - "Vamos fazer o seguinte, me descreve exatamente como \xE9 o anel que voc\xEA
+    - "Vamos fazer o seguinte, me descreve exatamente como \xE9 o an\xE9l que voc\xEA
       esta procurando"
-    - "Se o anel que voc\xEA descrever for o que eu comprei do b\xEAbado eu te devolvo."
-    - "Me diga ent\xE3o como era o anel:"
+    - "Se o an\xE9l que voc\xEA descrever for o que eu comprei do b\xEAbado eu te
+      devolvo."
+    - "Me diga ent\xE3o como era o an\xE9l:"
     isHidden: 0
     specialPortrait: {fileID: 0}
     nextState: {fileID: 11400000, guid: 8da58977455d94642b8f2146d563d404, type: 2}
