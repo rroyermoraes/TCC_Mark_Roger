@@ -28,7 +28,7 @@ public class SnapToPixel : MonoBehaviour {
 
     
         Vector3 pos = transform.position;
-		Vector3 camPos = new Vector3 (pos.x - pos.x % d, pos.y - pos.y % d, pos.z);
-		transform.position = camPos;
+		//Vector3 camPos = new Vector3 (pos.x - pos.x % d, pos.y - pos.y % d, pos.z);
+		transform.position = pos;
 	}
 }
