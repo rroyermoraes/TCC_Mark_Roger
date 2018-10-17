@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: River
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: 21300000, guid: c514d6102870f944886a8009139f0cf2, type: 3}
-  - {fileID: 21300002, guid: c514d6102870f944886a8009139f0cf2, type: 3}
+  - {fileID: 21300000, guid: 38cb7f9ede0e52545a835deca02281e6, type: 3}
+  - {fileID: 21300002, guid: 38cb7f9ede0e52545a835deca02281e6, type: 3}
   m_MinSpeed: 2
   m_MaxSpeed: 2
   m_AnimationStartTime: 0
