@@ -18,7 +18,7 @@ public class FrogGame : MonoBehaviour {
         if(b.color1==targetFrog.color1 && b.pattern == targetFrog.pattern && b.color2 == targetFrog.color2)
         {
             //Success text
-
+            Debug.Log("Era esse mesmo o sapo");
             return;
         }
         else

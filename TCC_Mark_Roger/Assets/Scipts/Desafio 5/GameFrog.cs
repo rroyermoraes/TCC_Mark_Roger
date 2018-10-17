@@ -50,7 +50,7 @@ public class GameFrog : InteractableObject {
     {
         //base.Take();
         FindObjectOfType<FrogGame>().PickFrog(this);
-        string[] s = new string[] { "Peguei o sapo " + description + " ." };
+        string[] s = new string[] { "Peguei o sapo " + description + "." };
         FindObjectOfType<PlayerSpeaker>().PlayerSpeak(s);
         //Debug.Log(s);
 
@@ -58,7 +58,7 @@ public class GameFrog : InteractableObject {
     public override void Inspect()
     {
         //base.Take();
-        string[] s = new string[] { "É um sapo "+ description + " ." };
+        string[] s = new string[] { "É um sapo "+ description + "." };
         FindObjectOfType<PlayerSpeaker>().PlayerSpeak(s);
         //Debug.Log(s);
 

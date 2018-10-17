@@ -11,10 +11,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56b624a761662d24285b8a585a0d8807, type: 3}
   m_Name: PecadorDialogue1
   m_EditorClassIdentifier: 
-  greeting: 
+  greeting: Achou o sapo certo?
   specialGreetingPortrait: {fileID: 0}
   blankState: 0
-  lines: []
+  lines:
+  - line: Mostrar sapo.
+    responses:
+    - Deixe me ver...
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    nextState: {fileID: 0}
+    targetNPCDialogue: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    eventsX:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    specialEventTrigger: 1
   endDialogueLine:
     line: 
     responses:
@@ -31,3 +47,4 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
+    specialEventTrigger: 0

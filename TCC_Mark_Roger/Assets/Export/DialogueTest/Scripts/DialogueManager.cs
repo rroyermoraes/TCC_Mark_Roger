@@ -300,6 +300,12 @@ public class DialogueManager : MonoBehaviour {
 
             activeLines[opt + linesContainer.topPointer].eventsX.Invoke();
 
+
+            if(activeLines[opt + linesContainer.topPointer].specialEventTrigger) {
+                activeNPCDialogue.GetComponent<CustomEventTrigger>().action.Invoke();
+            }
+
+
             //check if this option will close de dialogue
             if (activeLines[opt + linesContainer.topPointer].exitDialogue|| activeLines[opt+linesContainer.topPointer]==activeNPCDialogue.activeDialogueState.endDialogueLine)
             {

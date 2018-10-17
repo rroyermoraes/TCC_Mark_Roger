@@ -67,6 +67,8 @@ public class DialogueLineSerial
     [Tooltip("Turn on if you want this line to end de conversation")]
     public bool exitDialogue = false;
 
+    public bool specialEventTrigger = false;
+
 
 
     public DialogueLineSerial() {
