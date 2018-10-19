@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 95422571521361022}
   - component: {fileID: 58837664710618026}
   - component: {fileID: 70478593545810548}
+  - component: {fileID: 114907030677827322}
   m_Layer: 0
   m_Name: SpawnBlackRabbitRight
   m_TagString: Untagged
@@ -113,6 +114,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114907030677827322
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1551803769588024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76f753b1769bef549b708dc8a471ed54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 5
 --- !u!114 &114989212440598716
 MonoBehaviour:
   m_ObjectHideFlags: 1

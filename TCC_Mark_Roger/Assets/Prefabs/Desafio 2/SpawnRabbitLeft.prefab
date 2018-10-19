@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 95662963114704216}
   - component: {fileID: 58218950214679134}
   - component: {fileID: 70775389877735358}
+  - component: {fileID: 114870296847878324}
   m_Layer: 0
   m_Name: SpawnRabbitLeft
   m_TagString: Untagged
@@ -127,6 +128,18 @@ MonoBehaviour:
   direction: {x: 1, y: 0, z: 0}
   value: 1
   moveSpeed: 5
+--- !u!114 &114870296847878324
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1547839267984854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76f753b1769bef549b708dc8a471ed54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 5
 --- !u!212 &212229103356533394
 SpriteRenderer:
   m_ObjectHideFlags: 1
