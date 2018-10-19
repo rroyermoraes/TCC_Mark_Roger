@@ -10,28 +10,32 @@ public class InteractableObject : MonoBehaviour {
 
     public virtual void Take()
     {
-        string[] s = new string[] { "Pegando um(a) " + name };
-        FindObjectOfType<PlayerSpeaker>().PlayerSpeak(s);
-        Debug.Log(s);
+        FindObjectOfType<ContextMenuContainer>().HideContextMenu();
+       // string[] s = new string[] { "Pegando um(a) " + name };
+        //FindObjectOfType<PlayerSpeaker>().PlayerSpeak(s);
+        Debug.Log("Pegando");
         
 
     }
     public virtual void Read()
     {
-        string[] s = new string[] { "... " };
-        FindObjectOfType<PlayerSpeaker>().PlayerSpeak(s);
-        Debug.Log(s);
+        FindObjectOfType<ContextMenuContainer>().HideContextMenu();
+       // string[] s = new string[] { "... " };
+       // FindObjectOfType<PlayerSpeaker>().PlayerSpeak(s);
+        Debug.Log("Lendo");
 
     }
     public virtual void Inspect()
     {
-        string[] s = new string[] { "Isso é um(a) " + name };
-        FindObjectOfType<PlayerSpeaker>().PlayerSpeak(s);
-        Debug.Log(s);
+        FindObjectOfType<ContextMenuContainer>().HideContextMenu();
+       // string[] s = new string[] { "Isso é um(a) " + name };
+      //  FindObjectOfType<PlayerSpeaker>().PlayerSpeak(s);
+        Debug.Log("Inspecionando");
 
     }
     public virtual void Speak()
     {
+        FindObjectOfType<ContextMenuContainer>().HideContextMenu();
         Debug.Log("Estou falando com " + name);
 
     }

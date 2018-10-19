@@ -54,8 +54,15 @@ public class TimedSpawner : MonoBehaviour {
         Queue<TimedObject> q = new Queue<TimedObject>();
         int waveDelayTime;
         while (activeWave < waves.Count) {
-            cooldownText.text = ("Nivel: " + (activeWave + 1));
-            yield return new WaitForSeconds(1.5f);
+            if (activeWave == 0)
+            {
+                cooldownText.text = ("Certo se prepare que eu vou atrair eles pra esse lado !");
+            }
+            else {
+                cooldownText.text = ("Se prepare que tem mais vindo !");
+            }
+            
+            yield return new WaitForSeconds(2f);
             Debug.Log("Spawning wave: " + (activeWave + 1) + " in " + delayTime.ToString() + " seconds.");
             
             waveDelayTime = delayTime;

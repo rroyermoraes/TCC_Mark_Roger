@@ -17,8 +17,8 @@ public class DialogueManager : MonoBehaviour {
     private bool isTyping = false;
     public static bool isNPCSpeaking = false;
     private List<DialogueLineSerial> activeLines= new List<DialogueLineSerial>();
-    private GameObject givenItem;
-    public GameObject GivenItem { get { return givenItem; } }
+   // private GameObject givenItem;
+   // public GameObject GivenItem { get { return givenItem; } }
     private string richTextString = "";
     public bool richTextFix = true;
     private bool closingDialogue = false;
@@ -84,9 +84,12 @@ public class DialogueManager : MonoBehaviour {
         activeLines.Add(activeNPCDialogue.activeDialogueState.endDialogueLine);
     }
 
+    public void AddString(string g)
+    {
+        npcSentences.Enqueue(g);
+    }
 
-
-    private void NPCSpeak(string[] sentences)
+    public void NPCSpeak(string[] sentences)
     {
         npcLineContainer.text = "";
         richTextString = "";

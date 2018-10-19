@@ -9,6 +9,9 @@ public class ArrowShooter : MonoBehaviour {
     public Button restartButton;
     public Button endButton;
     public Text pointCount;
+    //public Text cooldownText;
+    public Animator bowAnimator;
+    public Animator bowShadowAnimator;
     [SerializeField]
     private float cooldownTime = 1;
     private bool cooldown = false;
@@ -54,7 +57,10 @@ public class ArrowShooter : MonoBehaviour {
                 Vector3 t = new Vector3(this.transform.position.x + spawnPoint.x, this.transform.position.y + spawnPoint.y, this.transform.position.z);
                 Quaternion q = this.transform.rotation;
                 Instantiate(arrow, t, q);
-                GetComponent<Animator>().SetTrigger("Shoot");
+                bowAnimator.SetTrigger("Shoot");
+                bowShadowAnimator.SetTrigger("Shoot");
+                GetComponent<AudioSource>().pitch = Random.Range(0.8f, 1.2f);
+                GetComponent<AudioSource>().Play();
                 cooldown = true;
                 StartCoroutine(Cooldown());
             }
@@ -66,15 +72,17 @@ public class ArrowShooter : MonoBehaviour {
         {
             enableArrows = true;
             GetComponent<SpriteRenderer>().enabled = true;
+            bowShadowAnimator.GetComponent<SpriteRenderer>().enabled = true;
         }
         else {
             enableArrows = false;
             GetComponent<SpriteRenderer>().enabled = false;
+            bowShadowAnimator.GetComponent<SpriteRenderer>().enabled = false;
         }
     }
 
     IEnumerator Cooldown() {
-
+        
         yield return new WaitForSeconds(cooldownTime);
         cooldown = false;
 
@@ -145,6 +153,7 @@ public class ArrowShooter : MonoBehaviour {
             }
         }
     }
+
 
 
 

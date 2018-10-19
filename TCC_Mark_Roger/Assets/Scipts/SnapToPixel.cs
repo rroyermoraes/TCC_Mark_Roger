@@ -10,12 +10,12 @@ public class SnapToPixel : MonoBehaviour {
     public Vector2 offset;
     public float moveSpeed;
 
-    float d;
+  //  float d;
 	
 	void Start() {
 		//cam = GetComponentInChildren<PixelCamera>();
 		
-		d = 1f / pixelPerUnit;
+		//d = 1f / pixelPerUnit;
 	}
 
 	void LateUpdate() {

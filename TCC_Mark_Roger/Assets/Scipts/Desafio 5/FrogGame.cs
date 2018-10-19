@@ -18,7 +18,10 @@ public class FrogGame : MonoBehaviour {
         if(b.color1==targetFrog.color1 && b.pattern == targetFrog.pattern && b.color2 == targetFrog.color2)
         {
             //Success text
-            Debug.Log("Era esse mesmo o sapo");
+            string succes;
+            succes = "Era esse mesmo o sapo";
+            GameFrog.FindObjectOfType<DialogueManager>().AddString(succes);
+            Debug.Log(succes);
             return;
         }
         else
@@ -113,7 +116,8 @@ public class FrogGame : MonoBehaviour {
                 speach = "Ele não tinha essas cores";
             }
 
-
+            
+            GameFrog.FindObjectOfType<DialogueManager>().AddString(speach);
             Debug.Log(speach);
             
 

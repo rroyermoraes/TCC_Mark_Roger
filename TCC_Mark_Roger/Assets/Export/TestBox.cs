@@ -17,7 +17,7 @@ public class TestBox : InteractableObject{
 
     public override void Take()
     {
-        //base.Take();
+        base.Take();
         string[] s = new string[] { "Não consigo pegar isso, é muito pesado" };
         FindObjectOfType<PlayerSpeaker>().PlayerSpeak(s);
         //Debug.Log(s);
