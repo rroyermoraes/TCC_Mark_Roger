@@ -6714,6 +6714,11 @@ Prefab:
       propertyPath: targetFrog.color2
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114905697901597020, guid: 678aef37467c2624caa6f11225766588,
+        type: 2}
+      propertyPath: compare
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 678aef37467c2624caa6f11225766588, type: 2}
   m_IsPrefabAsset: 0

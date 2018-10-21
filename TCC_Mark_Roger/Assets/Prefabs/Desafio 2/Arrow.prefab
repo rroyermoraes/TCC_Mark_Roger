@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114376054493992918}
   - component: {fileID: 61984125005138762}
   - component: {fileID: 82316609377512800}
-  - component: {fileID: 114337970673392960}
+  - component: {fileID: 114959508524077246}
   m_Layer: 0
   m_Name: Arrow
   m_TagString: Arrow
@@ -185,18 +185,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &114337970673392960
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1243736442093740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76f753b1769bef549b708dc8a471ed54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  time: 3
 --- !u!114 &114376054493992918
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -210,6 +198,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 15
   hitArrow: {fileID: 21300000, guid: 3bff1ca102699cb4a837d02c7774497b, type: 3}
+--- !u!114 &114959508524077246
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1243736442093740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37fac21d1f093d344816942d1abce94e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TimeOut: 3
+  m_DetachChildren: 0
 --- !u!212 &212513089881766376
 SpriteRenderer:
   m_ObjectHideFlags: 1

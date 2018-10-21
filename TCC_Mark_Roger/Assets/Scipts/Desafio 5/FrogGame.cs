@@ -14,7 +14,16 @@ public class FrogGame : MonoBehaviour {
     private bool onePosition = false;
 
     public void CompareFrogs() {
-       Frog b = compare.frog;
+        if (compare == null) {
+            string noFrog;
+            noFrog = "Você tem que pegar um sapo primeiro";
+            GameFrog.FindObjectOfType<DialogueManager>().AddString(noFrog);
+            Debug.Log(noFrog);
+            return;
+        }
+        Frog b = compare.frog;
+        
+
         if(b.color1==targetFrog.color1 && b.pattern == targetFrog.pattern && b.color2 == targetFrog.color2)
         {
             //Success text
