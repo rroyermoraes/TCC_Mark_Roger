@@ -24,9 +24,14 @@ public class NPCSpeaker : MonoBehaviour
     // Use this for initialization
     public UnityEvent whenDialogueEnds;
     private SpecialDialogueLine activeLine;
-
+    private AudioSource aSource;
 
     // Update is called once per frame
+
+    private void OnEnable()
+    {
+        aSource = GetComponent<AudioSource>();
+    }
 
 
     public void NPCSpeak(List<SpecialDialogueLine> nPCLines)
@@ -106,6 +111,7 @@ public class NPCSpeaker : MonoBehaviour
             foreach (char letter in dialogueString.ToCharArray())
             {
                 spechText.text += letter;
+                aSource.Play();
                 if (nextSentence)
                 {
                     nextSentence = false;
