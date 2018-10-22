@@ -107,11 +107,19 @@ public class NPCSpeaker : MonoBehaviour
             }
             richTextString += sentence;
 
-            
+
             foreach (char letter in dialogueString.ToCharArray())
             {
                 spechText.text += letter;
-                aSource.Play();
+
+                if (letter != ' ')
+                {
+                    aSource.Play();
+                }
+                else {
+                    yield return new WaitForSecondsRealtime(0.02f);
+                }
+                
                 if (nextSentence)
                 {
                     nextSentence = false;

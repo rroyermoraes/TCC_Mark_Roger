@@ -41,9 +41,10 @@ public class TimedSpawner : MonoBehaviour {
     public ArrowShooter manager;
     public Text cooldownText;
     private bool ended = false;
+    private AudioSource aSource;
 
     public void StartSpawnCicle(){
-        
+        aSource = GetComponent<AudioSource>();
         StartCoroutine(SpawnCicle());
 
     }
@@ -96,7 +97,11 @@ public class TimedSpawner : MonoBehaviour {
                 {
                     yield return new WaitForEndOfFrame();
                 }
+                aSource.pitch = Random.Range(0.9f, 1.1f);
+                aSource.Play();
+                yield return new WaitForSecondsRealtime(0.02f);
                 Instantiate(obj.objectToSpawn, t, r);
+
             }
             activeWave++;
             yield return new WaitForSeconds(delayTime+3);
