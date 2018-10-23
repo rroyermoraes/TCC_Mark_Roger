@@ -21,15 +21,6 @@ MonoBehaviour:
     - "E isso \xE9 tudo que voc\xEA precisa saber."
     isHidden: 0
     specialPortrait: {fileID: 0}
-    nextState: {fileID: 0}
-    targetNPCDialogue: {fileID: 0}
-    allreadySayd: 0
-    linesToUnlock: []
-    eventsX:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
   - line: "An\xE9l Roubado"
     responses:
@@ -39,35 +30,13 @@ MonoBehaviour:
       o que eu comprei."
     isHidden: 0
     specialPortrait: {fileID: 0}
-    nextState: {fileID: 0}
-    targetNPCDialogue: {fileID: 0}
-    allreadySayd: 0
-    linesToUnlock:
-    - state: {fileID: 11400000}
-      index: 2
-    eventsX:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
   - line: "Devolver o an\xE9l"
     responses:
     - "Voc\xEA quer que eu te de o an\xE9l pelo qual eu paguei com meu dinheiro?"
     - "Como eu disse, eu nem sei se eu tenho o an\xE9l que voc\xEA est\xE1 procurando."
-    isHidden: 0
+    isHidden: 1
     specialPortrait: {fileID: 0}
-    nextState: {fileID: 0}
-    targetNPCDialogue: {fileID: 0}
-    allreadySayd: 0
-    linesToUnlock:
-    - state: {fileID: 11400000}
-      index: 3
-    eventsX:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
   - line: Avisar a guarda
     responses:
@@ -77,18 +46,8 @@ MonoBehaviour:
     - "Se o an\xE9l que voc\xEA descrever for o que eu comprei do b\xEAbado eu te
       devolvo."
     - "Me diga ent\xE3o como era o an\xE9l:"
-    isHidden: 0
+    isHidden: 1
     specialPortrait: {fileID: 0}
-    nextState: {fileID: 11400000, guid: 8da58977455d94642b8f2146d563d404, type: 2}
-    targetNPCDialogue: {fileID: 11400000, guid: b75155a61041bc24fab6b391b3fac105,
-      type: 2}
-    allreadySayd: 0
-    linesToUnlock: []
-    eventsX:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
   endDialogueLine:
     line: Adeus.
@@ -96,13 +55,4 @@ MonoBehaviour:
     - "At\xE9 mais."
     isHidden: 0
     specialPortrait: {fileID: 0}
-    nextState: {fileID: 0}
-    targetNPCDialogue: {fileID: 0}
-    allreadySayd: 0
-    linesToUnlock: []
-    eventsX:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
     exitDialogue: 0

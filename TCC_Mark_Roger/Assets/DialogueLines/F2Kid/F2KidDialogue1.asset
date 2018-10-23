@@ -32,6 +32,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
+    specialEventTrigger: 0
   - line: Familia Ash.
     responses:
     - "As nossas familias nunca se deram bem, a mam\xE3e e a Senhora Teresa se odeiam."
@@ -52,6 +53,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
+    specialEventTrigger: 0
   - line: "Rela\xE7\xE3o com Willian Ash"
     responses:
     - "Fala baixo... se minha m\xE3e ouvir voc\xEA falando nisso ela me mata."
@@ -71,6 +73,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
+    specialEventTrigger: 0
   - line: Eu prometo. Pode me contar.
     responses:
     - No dia que o entraram na  casa do Willian ele estava comigo.
@@ -87,10 +90,22 @@ MonoBehaviour:
     linesToUnlock: []
     eventsX:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 11400000}
+          m_MethodName: CompleteObj
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 102
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
+    specialEventTrigger: 0
   endDialogueLine:
     line: "At\xE9 mais."
     responses:
@@ -107,3 +122,4 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
+    specialEventTrigger: 0

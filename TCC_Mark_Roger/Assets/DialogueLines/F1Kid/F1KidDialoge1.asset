@@ -31,6 +31,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
+    specialEventTrigger: 0
   - line: Anel desaparecido
     responses:
     - Acho que alguem entrou aqui e roubou o anel da familia
@@ -52,6 +53,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
+    specialEventTrigger: 0
   - line: Alguma pista?
     responses:
     - "Bem... no dia que entraram aqui eu notei algo estranho, mas n\xE3o conte pra
@@ -69,10 +71,22 @@ MonoBehaviour:
       index: 3
     eventsX:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 11400000}
+          m_MethodName: CompleteObj
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 102
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
+    specialEventTrigger: 0
   - line: "Escondendo coisas de sua m\xE3e"
     responses:
     - "Hey...isso \xE9 problema meu viu..."
@@ -94,6 +108,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
+    specialEventTrigger: 0
   - line: "O que voc\xEA estava fazendo na hora do roubo?"
     responses:
     - '... e eu estava com a...'
@@ -110,6 +125,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
+    specialEventTrigger: 0
   endDialogueLine:
     line: "At\xE9 mais, rapaz."
     responses:
@@ -126,3 +142,4 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
+    specialEventTrigger: 0

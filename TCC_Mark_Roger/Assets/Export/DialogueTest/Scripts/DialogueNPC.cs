@@ -6,49 +6,32 @@ using UnityEngine.UI;
 public class DialogueNPC : MonoBehaviour {
 
     public Sprite DefaltNPCPortrait;
-    public NPCState activeNPCState;
-    public DialogueState activeDialogueState;
+    public RuntimeNPCDialogueContainer activeNPCState;
+    public RuntimeDialogueState activeDialogueState;
 
-    private bool[] hiddenLines;
-	
-    // Use this for initialization
-	void Start () {
-        activeDialogueState = activeNPCState.defualtDialogueState;
-        //foreach(DialogueLineSerial l in activeDialogueState.lines)
-        //hiddenLines= activeDialogueState.lines
-	}
-	
-    public void ChangeNPCState(NPCState nState) {
 
-        activeNPCState = nState;
+    private void Start()
+    {
+        activeDialogueState = activeNPCState.defaultDialogueState;
     }
 
-    public void ChangeDialogueState(DialogueState nDialogueState) {
 
-        activeDialogueState = nDialogueState;
+    public void ChangeNPCState(RuntimeNPCDialogueContainer nNPC) {
 
+        activeNPCState = nNPC;
     }
-    public void ChageNPCState(NPCState nNPCState) {
-        activeNPCState = nNPCState;
+ 
+
+
+    public void ChangeDialogueState(RuntimeDialogueState nD) {
+
+        activeDialogueState = nD;
+
     }
 
 }
 
 
-public class RuntimeDialogueState {
 
-    public string greeting;
-    public Sprite specialGreetingPortrait;
-    public bool blankState = false;
-    public DialogueLineSerial[] lines;
 
-    public RuntimeDialogueState(DialogueState x) {
-        greeting = x.greeting;
-        specialGreetingPortrait = x.specialGreetingPortrait;
-    }
-    
-}
-public class RuntimeNPCState {
-    public RuntimeDialogueState[] runtimeStates;
-}
 

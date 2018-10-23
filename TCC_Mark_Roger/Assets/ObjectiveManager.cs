@@ -6,6 +6,7 @@ using UnityEngine;
 public class Objective {
     [SerializeField]
     private int id;
+    [SerializeField]
     private bool enabled = false;
     private bool completed = false;
     [SerializeField]
@@ -46,6 +47,7 @@ public class ObjectiveManager : MonoBehaviour {
 
     public void CompleteObjetive(int id)
     {
+        Debug.Log("Tentanco completar objetivo " + id);
         Objective n = objectives.Find(x => x.Id == id);
         if (n != null)
         {
@@ -54,10 +56,14 @@ public class ObjectiveManager : MonoBehaviour {
                 n.Completed = true;
                 Debug.Log(n.Description + " - Completed: " + n.Completed.ToString());
             }
+            else
+            {
+                Debug.Log("Impossivel completar - Objetivo não habilitado");
+            }
 
         }
         else {
-            Debug.Log("Impossivel completar - Objetivo nao encontrado");
+            Debug.Log("Impossivel completar - Objetivo não encontrado");
         }
 
         

@@ -1154,7 +1154,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &81244616
 Transform:
   m_ObjectHideFlags: 0
@@ -1214,7 +1214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DefaltNPCPortrait: {fileID: 21300000, guid: b130dbab74a406e4d8001b045dc33f28, type: 3}
-  activeNPCState: {fileID: 11400000, guid: f8890bbbac6d9984da96385b971f2984, type: 2}
+  activeNPCState: {fileID: 0}
   activeDialogueState: {fileID: 0}
 --- !u!50 &81244620
 Rigidbody2D:
@@ -2331,6 +2331,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 561697173}
+  - {fileID: 1598662912}
   m_Father: {fileID: 1178950122}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2377,7 +2378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DefaltNPCPortrait: {fileID: 21300000, guid: ad119388d54dced46a3d163a7763ec64, type: 3}
-  activeNPCState: {fileID: 11400000, guid: 80e93098830cc6343afdedff96b2e0a9, type: 2}
+  activeNPCState: {fileID: 1598662913}
   activeDialogueState: {fileID: 0}
 --- !u!50 &189248806
 Rigidbody2D:
@@ -3529,6 +3530,304 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &371377863
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 371377864}
+  - component: {fileID: 371377865}
+  m_Layer: 0
+  m_Name: F1_Mom_Dialogue2Anel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &371377864
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 371377863}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1581212609}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &371377865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 371377863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac5cadd30fa86140af6b1344006084b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseState: {fileID: 11400000, guid: 10fc18b664e9010439881cb243fff271, type: 2}
+  greeting: 
+  specialGreetingPortrait: {fileID: 0}
+  blankState: 0
+  lines:
+  - line: Como era o anel?
+    responses:
+    - ANEL 4
+    - "Espero que tenha prestado aten\xE7\xE3o."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    specialEventTrigger: 0
+  - line: Algum suspeito?
+    responses:
+    - "Claro. Eu tenho quase certeza que isso \xE9 coisa dos Larch"
+    - "Desde que estamos aqui esses malditos tambem est\xE3o, sempre se achando melhor
+      que os outros"
+    - "Aposto que eles deram jeito de pegar esse anel s\xF3 para nos irritar."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    specialEventTrigger: 0
+  - line: Pistas?
+    responses:
+    - "Eu n\xE3o sei de nada, s\xF3 sei que o anel estava no bau trancado."
+    - "Voc\xEA que \xE9 o investigar n\xE3o \xE9 mesmo? Ent\xE3o investigue."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    specialEventTrigger: 0
+  - line: Falar sobre outra coisa.
+    responses:
+    - "O que voc\xEA quer falar?"
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 948922977}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    specialEventTrigger: 0
+  endDialogueLine:
+    line: "At\xE9 mais."
+    responses:
+    - "At\xE9... e cuidado por onde anda pra n\xE3o sujar minha casa."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    specialEventTrigger: 0
+--- !u!1 &394545289
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 394545290}
+  - component: {fileID: 394545291}
+  m_Layer: 0
+  m_Name: HuntsmanDialogue1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &394545290
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 394545289}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 761551054}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &394545291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 394545289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac5cadd30fa86140af6b1344006084b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseState: {fileID: 11400000, guid: 1f1093c109550d1458bb78c1f8212340, type: 2}
+  greeting: "O que voc\xEA quer comigo?"
+  specialGreetingPortrait: {fileID: 0}
+  blankState: 0
+  lines:
+  - line: "Quem \xE9 voc\xEA?"
+    responses:
+    - "Meu nome \xE9 Thomas, eu que cuido da maior parte da ca\xE7a por essas bandas"
+    - "E eu te garanto que n\xE3o tem bicho ou pessoa que eu n\xE3o consiga ca\xE7ar."
+    - "Mas julgando pelas suas roupas n\xE3o acho que voc\xEA n\xE3o entenderia do
+      que eu estou falando."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    specialEventTrigger: 0
+  - line: Pacote do feiticeiro
+    responses:
+    - Ahh sim. As coisas daquele velho maluco.
+    - "Quanto a isso, eu ainda n\xE3o consegui juntar tudo que ele precisa"
+    - "Nessa \xE9poca eu fico muito ocupado com esses coelhos."
+    - "S\xF3 se alguem me ajudasse eu conseguiria resolver isso logo."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock:
+    - state: {fileID: 394545291}
+      index: 2
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    specialEventTrigger: 0
+  - line: Oferecer ajuda
+    responses:
+    - "Voc\xEA acha que consgue me ajudar a ca\xE7ar ent\xE3o? *hahahahah*"
+    - "\xC9 s\xE9rio?..."
+    - "Vamos ver ent\xE3o se voc\xEA presta pra alguma coisa. *hahaha* Quero s\xF3
+      ver..."
+    isHidden: 1
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 651000964}
+          m_MethodName: LoadLevel
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Desafio 2
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    specialEventTrigger: 0
+  - line: Ursos
+    responses:
+    - "Ahhh vejo que voc\xEA notou meus trof\xE9us..."
+    - "\xC9 isso ai minha especialidade \xE9 ca\xE7ar ursos"
+    - "Eles se acham os maiorais da floresta... algu\xE9m tem que mostrar pra eles
+      quem \xE9 o verdadeiro maioral da floresta."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    specialEventTrigger: 0
+  - line: Tamanho
+    responses:
+    - '...'
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    specialEventTrigger: 0
+  endDialogueLine:
+    line: Adeus.
+    responses:
+    - "At\xE9 mais."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    specialEventTrigger: 0
 --- !u!1 &414997300
 GameObject:
   m_ObjectHideFlags: 0
@@ -3608,7 +3907,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DefaltNPCPortrait: {fileID: 21300000, guid: 66c0cd82fadfab240b6843c0c366ac3b, type: 3}
-  activeNPCState: {fileID: 11400000, guid: 5ca4271583438df4c8f72e2670e857cc, type: 2}
+  activeNPCState: {fileID: 0}
   activeDialogueState: {fileID: 0}
 --- !u!50 &414997305
 Rigidbody2D:
@@ -4143,6 +4442,146 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!1 &480420575
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 480420576}
+  - component: {fileID: 480420577}
+  m_Layer: 0
+  m_Name: MisteryState1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &480420576
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 480420575}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1728261305}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &480420577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 480420575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac5cadd30fa86140af6b1344006084b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseState: {fileID: 11400000, guid: f5a89388b73d17043833b60d6fe05cd0, type: 2}
+  greeting: "Eu n\xE3o te conhe\xE7o... que assuntos voc\xEA tem comigo"
+  specialGreetingPortrait: {fileID: 0}
+  blankState: 0
+  lines:
+  - line: "Quem \xE9 voc\xEA?"
+    responses:
+    - Eu viajo por ai, comprando coisas e vendendo coisas
+    - "E isso \xE9 tudo que voc\xEA precisa saber."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    specialEventTrigger: 0
+  - line: "An\xE9l Roubado"
+    responses:
+    - "\xC9 eu comprei um an\xE9l de um dos bebados"
+    - "Mas eu paguei por ele, ent\xE3o n\xE3o \xE9 problema meu."
+    - "Alem disso o que me garante que o an\xE9l que voc\xEA est\xE1 procurando \xE9
+      o que eu comprei."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock:
+    - state: {fileID: 480420577}
+      index: 2
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    specialEventTrigger: 0
+  - line: "Devolver o an\xE9l"
+    responses:
+    - "Voc\xEA quer que eu te de o an\xE9l pelo qual eu paguei com meu dinheiro?"
+    - "Como eu disse, eu nem sei se eu tenho o an\xE9l que voc\xEA est\xE1 procurando."
+    isHidden: 1
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock:
+    - state: {fileID: 480420577}
+      index: 3
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    specialEventTrigger: 0
+  - line: Avisar a guarda
+    responses:
+    - "\xC9 assim ent\xE3o... Olha eu n\xE3o quero arrumar problemas."
+    - "Vamos fazer o seguinte, me descreve exatamente como \xE9 o an\xE9l que voc\xEA
+      esta procurando"
+    - "Se o an\xE9l que voc\xEA descrever for o que eu comprei do b\xEAbado eu te
+      devolvo."
+    - "Me diga ent\xE3o como era o an\xE9l:"
+    isHidden: 1
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 1040624825}
+    targetRuntimeDialogueContainer: {fileID: 596128850}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    specialEventTrigger: 0
+  endDialogueLine:
+    line: Adeus.
+    responses:
+    - "At\xE9 mais."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    specialEventTrigger: 0
 --- !u!1 &502290906
 GameObject:
   m_ObjectHideFlags: 0
@@ -4452,7 +4891,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DefaltNPCPortrait: {fileID: 21300000, guid: 2fdbd5c5c23d0a247b78d0203bc71f64, type: 3}
-  activeNPCState: {fileID: 11400000, guid: 5ca4271583438df4c8f72e2670e857cc, type: 2}
+  activeNPCState: {fileID: 0}
   activeDialogueState: {fileID: 0}
 --- !u!50 &529514516
 Rigidbody2D:
@@ -4542,7 +4981,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &532601790
 Transform:
   m_ObjectHideFlags: 0
@@ -4601,7 +5040,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DefaltNPCPortrait: {fileID: 21300000, guid: 9b6390979ebdaa348a688f694d8fdcf5, type: 3}
-  activeNPCState: {fileID: 11400000, guid: 06d6fe191b49cab4c95fe4c8939ad5a7, type: 2}
+  activeNPCState: {fileID: 0}
   activeDialogueState: {fileID: 0}
 --- !u!50 &532601794
 Rigidbody2D:
@@ -5712,6 +6151,50 @@ Transform:
   m_Father: {fileID: 1960147509}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &596128848
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 596128849}
+  - component: {fileID: 596128850}
+  m_Layer: 0
+  m_Name: NPCStateAnel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &596128849
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 596128848}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1936792210}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &596128850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 596128848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1214b550a1cac74f9f062a62a599732, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  portrait: {fileID: 0}
+  defaultDialogueState: {fileID: 1040624825}
+  runtimeStates:
+  - {fileID: 1040624825}
 --- !u!1 &621110934
 GameObject:
   m_ObjectHideFlags: 0
@@ -5732,7 +6215,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &621110935
 Transform:
   m_ObjectHideFlags: 0
@@ -5792,7 +6275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DefaltNPCPortrait: {fileID: 21300000, guid: 75445fe7c8b50d84ab804d9aacaac623, type: 3}
-  activeNPCState: {fileID: 11400000, guid: 5ca4271583438df4c8f72e2670e857cc, type: 2}
+  activeNPCState: {fileID: 0}
   activeDialogueState: {fileID: 0}
 --- !u!50 &621110939
 Rigidbody2D:
@@ -5862,6 +6345,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!1 &622049089
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 622049090}
+  - component: {fileID: 622049091}
+  m_Layer: 0
+  m_Name: NPCStates
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &622049090
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 622049089}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 860505849}
+  m_Father: {fileID: 2122990488}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &622049091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 622049089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1214b550a1cac74f9f062a62a599732, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  portrait: {fileID: 0}
+  defaultDialogueState: {fileID: 860505850}
+  runtimeStates:
+  - {fileID: 860505850}
 --- !u!1 &625408918
 GameObject:
   m_ObjectHideFlags: 0
@@ -7018,6 +7546,7 @@ Transform:
   m_Children:
   - {fileID: 2047184403}
   - {fileID: 535449178}
+  - {fileID: 761551054}
   m_Father: {fileID: 1178950122}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7064,7 +7593,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DefaltNPCPortrait: {fileID: 21300000, guid: 9fcfa91eac728eb4eb521ef0fe114973, type: 3}
-  activeNPCState: {fileID: 11400000, guid: da0643bc8a3f6884f902763f071c4404, type: 2}
+  activeNPCState: {fileID: 761551055}
   activeDialogueState: {fileID: 0}
 --- !u!50 &757800291
 Rigidbody2D:
@@ -7134,6 +7663,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!1 &761551053
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 761551054}
+  - component: {fileID: 761551055}
+  m_Layer: 0
+  m_Name: Huntsman_NPCState
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &761551054
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 761551053}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 394545290}
+  m_Father: {fileID: 757800287}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &761551055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 761551053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1214b550a1cac74f9f062a62a599732, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  portrait: {fileID: 0}
+  defaultDialogueState: {fileID: 394545291}
+  runtimeStates:
+  - {fileID: 394545291}
 --- !u!1 &773363288
 GameObject:
   m_ObjectHideFlags: 0
@@ -18385,7 +18959,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DefaltNPCPortrait: {fileID: 21300000, guid: caefcfcd7f063a84792a8c30f7b2af68, type: 3}
-  activeNPCState: {fileID: 11400000, guid: 5ca4271583438df4c8f72e2670e857cc, type: 2}
+  activeNPCState: {fileID: 0}
   activeDialogueState: {fileID: 0}
 --- !u!50 &842388850
 Rigidbody2D:
@@ -18725,6 +19299,106 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!1 &860505848
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 860505849}
+  - component: {fileID: 860505850}
+  m_Layer: 0
+  m_Name: TabernState1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &860505849
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 860505848}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 622049090}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &860505850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 860505848}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac5cadd30fa86140af6b1344006084b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseState: {fileID: 11400000, guid: 7ff0104603394524fb07629d0dc9057a, type: 2}
+  greeting: Vai beber algo?
+  specialGreetingPortrait: {fileID: 0}
+  blankState: 0
+  lines:
+  - line: Bebados.
+    responses:
+    - "Esses tr\xEAs est\xE3o sempre por aqui enchendo a cara"
+    - "Eu n\xE3o ligo, pras bobeiras deles, contanto que paguem a conta"
+    - "O que por incrivel que pare\xE7a tem acontecido."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    specialEventTrigger: 0
+  - line: Sujeito sentado no canto.
+    responses:
+    - "Eu nem sei de onde ele \xE9 para ser sincero, n\xE3o entendo quase nada do
+      que ele diz."
+    - "Ele dorme no segundo quarto la em cima e bebe eventualmente.\nPoderia muito
+      bem ser um espi\xE3o estrangeiro, mas n\xE3o \xE9 problema meu. "
+    - "Se est\xE1 pagando ent\xE3o n\xE3o me interessa."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    specialEventTrigger: 0
+  endDialogueLine:
+    line: "At\xE9 mais."
+    responses:
+    - "At\xE9 mais, se quiser algo pra beber me avise."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 1
+    specialEventTrigger: 0
 --- !u!1 &863892096
 GameObject:
   m_ObjectHideFlags: 0
@@ -18936,6 +19610,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 78060830}
+  - {fileID: 1862409089}
   m_Father: {fileID: 1178950122}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -18982,7 +19657,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DefaltNPCPortrait: {fileID: 21300000, guid: c771012d10c133d4c8bcf444cae3c51f, type: 3}
-  activeNPCState: {fileID: 11400000, guid: 1a13b1e10ccd7244390ff08511e3a0e1, type: 2}
+  activeNPCState: {fileID: 1862409090}
   activeDialogueState: {fileID: 0}
 --- !u!50 &871492767
 Rigidbody2D:
@@ -19379,6 +20054,272 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 936572013}
   m_CullTransparentMesh: 0
+--- !u!1 &948922975
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 948922976}
+  - component: {fileID: 948922977}
+  m_Layer: 0
+  m_Name: F1_Mom_Dialogue1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &948922976
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 948922975}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1581212609}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &948922977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 948922975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac5cadd30fa86140af6b1344006084b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseState: {fileID: 11400000, guid: 88809e30579bc4f46a5d1429f1bc2354, type: 2}
+  greeting: "O que voc\xEA quer aqui, n\xE3o estou com tempo pra perder com conversa."
+  specialGreetingPortrait: {fileID: 0}
+  blankState: 0
+  lines:
+  - line: Anel roubado
+    responses:
+    - "\xC9 isso mesmo alguem deu um jeito de entrar aqui e roubar um anel valioso.
+      Esse Anel \xE9 uma reliquia na nossa familia."
+    - 'Meu filho deveria dar ele para sua noiva, quando ele encontra-se uma boa menina. '
+    - "O anel devia ficar na familia assim, mas agora ele est\xE1 sumido."
+    - "Eu aposto que a fam\xEDlia Larch tem um dedo nisso tudo."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 371377865}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2056267251}
+          m_MethodName: CompleteObjetive
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 101
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    specialEventTrigger: 0
+  - line: Sua familia
+    responses:
+    - "N\xF3s vivemos nessas terras a muito tempo, plantamos aqui e tem sido assim
+      sempre."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    specialEventTrigger: 0
+  - line: A familia Larch
+    responses:
+    - "Eles s\xE3o um bando de metidos irritantes. Principalmente aquelasinha da Nora."
+    - "\"Olhe para minhas aboboras, como s\xE3o grandes e bonitas\""
+    - "Ela adora fazer coisas s\xF3 pra me irritar."
+    - "Aposto que toda esse confus\xE3o tem o dedo deles"
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    specialEventTrigger: 0
+  endDialogueLine:
+    line: "At\xE9 mais."
+    responses:
+    - "At\xE9 mais... E cuidado por onde anda pra n\xE3o sujar meu ch\xE3o"
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    specialEventTrigger: 0
+--- !u!1 &950058715
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 950058716}
+  - component: {fileID: 950058717}
+  m_Layer: 0
+  m_Name: DukeState1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &950058716
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 950058715}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2096020218}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &950058717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 950058715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac5cadd30fa86140af6b1344006084b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseState: {fileID: 11400000, guid: d27ce12fc1467f34c82ad4114eb04065, type: 2}
+  greeting: "Hey como anda a investiga\xE7\xE3o?"
+  specialGreetingPortrait: {fileID: 0}
+  blankState: 0
+  lines:
+  - line: Anel desaparecido
+    responses:
+    - Um Anel de valor aparentemente foi roubado da Familia Larch
+    - "E eles est\xE3o acusando a Familia Ash. Essas duas familias vivem de briga
+      *hahaha*"
+    - "Mas preciso que voc\xEA ajude a resolver esse roubo antes que essa briga fique
+      mais s\xE9ria"
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    specialEventTrigger: 0
+  - line: Guarda ocupada
+    responses:
+    - "N\xE3o se preocupe com isso"
+    - "Um campones est\xE1 desaparecido, e os guardas est\xE3o procurando por ele"
+    - 'Espero que encontrem ele logo, e que nenhum urso ja tenha encontrado '
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    specialEventTrigger: 0
+  - line: Acontecimentos recentes
+    responses:
+    - "As coisas est\xE3o bem agitadas recentemente."
+    - "Normalmente \xE9 tudo muito pacato por aqui."
+    - Espero que sua chegada ajude a resolver as coisas *hahaha*
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    specialEventTrigger: 0
+  - line: Coelhos?
+    responses:
+    - Ahhhh...sim... os coelhos *hahaha*
+    - Digamos que temos muitos pequenos problemas peludos por aqui.
+    - "Esses pestinhas s\xE3o uma dor de cabe\xE7a."
+    - "Mas quando conseguimos pegalos, s\xE3o uma delicia assados *hahaha*"
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    specialEventTrigger: 0
+  endDialogueLine:
+    line: Adeus.
+    responses:
+    - "At\xE9 mais."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    specialEventTrigger: 0
 --- !u!1 &950641928
 GameObject:
   m_ObjectHideFlags: 0
@@ -20334,6 +21275,145 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!1 &1040624823
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1040624824}
+  - component: {fileID: 1040624825}
+  m_Layer: 0
+  m_Name: MisteryState2Ring
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1040624824
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1040624823}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1728261305}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1040624825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1040624823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac5cadd30fa86140af6b1344006084b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseState: {fileID: 11400000, guid: 8da58977455d94642b8f2146d563d404, type: 2}
+  greeting: "Me descreva o an\xE9l ent\xE3o:"
+  specialGreetingPortrait: {fileID: 0}
+  blankState: 0
+  lines:
+  - line: Anel 1
+    responses: []
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    specialEventTrigger: 0
+  - line: 'Anel 2
+
+'
+    responses: []
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    specialEventTrigger: 0
+  - line: Anel 3
+    responses: []
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    specialEventTrigger: 0
+  - line: Anel 4
+    responses: []
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    specialEventTrigger: 0
+  - line: Anel 5
+    responses: []
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    specialEventTrigger: 0
+  endDialogueLine:
+    line: Preciso pensar um pouco.
+    responses:
+    - "Volte quando tiver certeza, mas n\xE3o demore que eu n\xE3o vou ficar esperando."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    specialEventTrigger: 0
 --- !u!1 &1046275059
 GameObject:
   m_ObjectHideFlags: 0
@@ -20683,6 +21763,85 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9455dc4d8fa3bab4c8b953235efc82ec, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1094050797
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1094050798}
+  - component: {fileID: 1094050799}
+  m_Layer: 0
+  m_Name: FrenchState1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1094050798
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1094050797}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1598662912}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1094050799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1094050797}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac5cadd30fa86140af6b1344006084b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseState: {fileID: 11400000, guid: 70a4efb502c09bf499fa2a2cb9de1c14, type: 2}
+  greeting: '...'
+  specialGreetingPortrait: {fileID: 0}
+  blankState: 0
+  lines:
+  - line: '...'
+    responses:
+    - 'Qu''est-ce que tu regardes '
+    - Va prendre soin de ta vie!
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    specialEventTrigger: 0
+  endDialogueLine:
+    line: "At\xE9 mais..."
+    responses:
+    - '...'
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    specialEventTrigger: 0
 --- !u!1 &1104333942
 GameObject:
   m_ObjectHideFlags: 0
@@ -21022,7 +22181,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1112882331
 Transform:
   m_ObjectHideFlags: 0
@@ -21081,7 +22240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DefaltNPCPortrait: {fileID: 21300000, guid: 5c42170f0c59dfa4da3f3a0f46ec1c4c, type: 3}
-  activeNPCState: {fileID: 11400000, guid: 6914d04a85a59cb4a8b0481d5d37a250, type: 2}
+  activeNPCState: {fileID: 0}
   activeDialogueState: {fileID: 0}
 --- !u!50 &1112882335
 Rigidbody2D:
@@ -30426,7 +31585,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1183985002
 Transform:
   m_ObjectHideFlags: 0
@@ -30486,7 +31645,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DefaltNPCPortrait: {fileID: 21300000, guid: e584ee77fef9da444a2c88c48e49805f, type: 3}
-  activeNPCState: {fileID: 11400000, guid: 5ca4271583438df4c8f72e2670e857cc, type: 2}
+  activeNPCState: {fileID: 0}
   activeDialogueState: {fileID: 0}
 --- !u!50 &1183985006
 Rigidbody2D:
@@ -42697,7 +43856,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DefaltNPCPortrait: {fileID: 21300000, guid: 1437afce3399ee34fb8e50309881a19f, type: 3}
-  activeNPCState: {fileID: 11400000, guid: 5ca4271583438df4c8f72e2670e857cc, type: 2}
+  activeNPCState: {fileID: 0}
   activeDialogueState: {fileID: 0}
 --- !u!50 &1331995767
 Rigidbody2D:
@@ -42787,7 +43946,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1347589108
 Transform:
   m_ObjectHideFlags: 0
@@ -42847,7 +44006,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DefaltNPCPortrait: {fileID: 21300000, guid: 0a761bbdbadeca14fb5ecb71fc19de51, type: 3}
-  activeNPCState: {fileID: 11400000, guid: 3e491fc88c517d1458841c05851bad33, type: 2}
+  activeNPCState: {fileID: 0}
   activeDialogueState: {fileID: 0}
 --- !u!50 &1347589112
 Rigidbody2D:
@@ -43011,6 +44170,68 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1352896599}
   m_CullTransparentMesh: 0
+--- !u!1 &1361304679
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1361304680}
+  - component: {fileID: 1361304681}
+  m_Layer: 0
+  m_Name: DuchesState1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1361304680
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1361304679}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1862409089}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1361304681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1361304679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac5cadd30fa86140af6b1344006084b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseState: {fileID: 11400000, guid: 7325f5943df6c9744bf0eeb6a5cf1f2f, type: 2}
+  greeting: "Ol\xE1."
+  specialGreetingPortrait: {fileID: 0}
+  blankState: 1
+  lines: []
+  endDialogueLine:
+    line: 
+    responses:
+    - 
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    specialEventTrigger: 0
 --- !u!43 &1364823226
 Mesh:
   m_ObjectHideFlags: 0
@@ -44631,7 +45852,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1449919794
 Transform:
   m_ObjectHideFlags: 0
@@ -44691,7 +45912,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DefaltNPCPortrait: {fileID: 21300000, guid: 7afc316976181684a8ed0b3c3b39007c, type: 3}
-  activeNPCState: {fileID: 11400000, guid: 5ca4271583438df4c8f72e2670e857cc, type: 2}
+  activeNPCState: {fileID: 0}
   activeDialogueState: {fileID: 0}
 --- !u!50 &1449919798
 Rigidbody2D:
@@ -45193,7 +46414,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1505982560
 Transform:
   m_ObjectHideFlags: 0
@@ -45252,7 +46473,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DefaltNPCPortrait: {fileID: 21300000, guid: e584ee77fef9da444a2c88c48e49805f, type: 3}
-  activeNPCState: {fileID: 11400000, guid: 5ca4271583438df4c8f72e2670e857cc, type: 2}
+  activeNPCState: {fileID: 0}
   activeDialogueState: {fileID: 0}
 --- !u!50 &1505982564
 Rigidbody2D:
@@ -45891,6 +47112,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4978749838383098, guid: e938495f02caa0d47b4b8c45c941bfbe,
     type: 2}
   m_PrefabInternal: {fileID: 144168000}
+--- !u!1 &1581212608
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1581212609}
+  - component: {fileID: 1581212610}
+  m_Layer: 0
+  m_Name: F1_Mom_NPCState
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1581212609
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1581212608}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 948922976}
+  - {fileID: 371377864}
+  m_Father: {fileID: 1671228078}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1581212610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1581212608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1214b550a1cac74f9f062a62a599732, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  portrait: {fileID: 0}
+  defaultDialogueState: {fileID: 948922977}
+  runtimeStates:
+  - {fileID: 948922977}
+  - {fileID: 371377865}
 --- !u!1 &1586148815
 GameObject:
   m_ObjectHideFlags: 0
@@ -46157,6 +47425,51 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1588355345}
   m_CullTransparentMesh: 0
+--- !u!1 &1598662911
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1598662912}
+  - component: {fileID: 1598662913}
+  m_Layer: 0
+  m_Name: NPCStates
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1598662912
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1598662911}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1094050798}
+  m_Father: {fileID: 189248802}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1598662913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1598662911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1214b550a1cac74f9f062a62a599732, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  portrait: {fileID: 0}
+  defaultDialogueState: {fileID: 1094050799}
+  runtimeStates:
+  - {fileID: 1094050799}
 --- !u!1 &1608361078
 GameObject:
   m_ObjectHideFlags: 0
@@ -48017,6 +49330,7 @@ Transform:
   m_Children:
   - {fileID: 154245326}
   - {fileID: 646621627}
+  - {fileID: 1581212609}
   m_Father: {fileID: 1178950122}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -48063,7 +49377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DefaltNPCPortrait: {fileID: 21300000, guid: 420df8454800ce246aa4d009add872d9, type: 3}
-  activeNPCState: {fileID: 11400000, guid: 948a66477506a4e41b3a85101a0e4287, type: 2}
+  activeNPCState: {fileID: 1581212610}
   activeDialogueState: {fileID: 0}
 --- !u!50 &1671228082
 Rigidbody2D:
@@ -48268,7 +49582,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1710918376
 Transform:
   m_ObjectHideFlags: 0
@@ -48328,7 +49642,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DefaltNPCPortrait: {fileID: 21300000, guid: 476fcd1435da91f438a3f4a64a9ea9ce, type: 3}
-  activeNPCState: {fileID: 11400000, guid: b286cede8464ce54ca942f7e02626d1f, type: 2}
+  activeNPCState: {fileID: 0}
   activeDialogueState: {fileID: 0}
 --- !u!50 &1710918380
 Rigidbody2D:
@@ -48398,6 +49712,53 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!1 &1728261304
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1728261305}
+  - component: {fileID: 1728261306}
+  m_Layer: 0
+  m_Name: NPCState1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1728261305
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1728261304}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 480420576}
+  - {fileID: 1040624824}
+  m_Father: {fileID: 1936792210}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1728261306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1728261304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1214b550a1cac74f9f062a62a599732, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  portrait: {fileID: 0}
+  defaultDialogueState: {fileID: 480420577}
+  runtimeStates:
+  - {fileID: 480420577}
+  - {fileID: 1040624825}
 --- !u!1 &1728518919
 GameObject:
   m_ObjectHideFlags: 0
@@ -49131,6 +50492,51 @@ Transform:
   m_Father: {fileID: 1737476748}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1862409088
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1862409089}
+  - component: {fileID: 1862409090}
+  m_Layer: 0
+  m_Name: NPCState1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1862409089
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1862409088}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1361304680}
+  m_Father: {fileID: 871492763}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1862409090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1862409088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1214b550a1cac74f9f062a62a599732, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  portrait: {fileID: 0}
+  defaultDialogueState: {fileID: 1361304681}
+  runtimeStates:
+  - {fileID: 1361304681}
 --- !u!1 &1876943955
 GameObject:
   m_ObjectHideFlags: 0
@@ -49827,6 +51233,8 @@ Transform:
   m_Children:
   - {fileID: 166626660}
   - {fileID: 775464820}
+  - {fileID: 1728261305}
+  - {fileID: 596128849}
   m_Father: {fileID: 1178950122}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -49873,7 +51281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DefaltNPCPortrait: {fileID: 21300000, guid: 57c8337c7cd0ffc418524d5375acfcbe, type: 3}
-  activeNPCState: {fileID: 11400000, guid: fe873623d9469584099787ec089c8835, type: 2}
+  activeNPCState: {fileID: 1728261306}
   activeDialogueState: {fileID: 0}
 --- !u!50 &1936792214
 Rigidbody2D:
@@ -50161,7 +51569,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1971013707
 Transform:
   m_ObjectHideFlags: 0
@@ -50221,7 +51629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DefaltNPCPortrait: {fileID: 21300000, guid: 2e34f429a1b505346982e3d60d67a451, type: 3}
-  activeNPCState: {fileID: 11400000, guid: 5ca4271583438df4c8f72e2670e857cc, type: 2}
+  activeNPCState: {fileID: 0}
   activeDialogueState: {fileID: 0}
 --- !u!50 &1971013711
 Rigidbody2D:
@@ -85365,6 +86773,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1739249893}
+  - {fileID: 2096020218}
   m_Father: {fileID: 1178950122}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -85411,7 +86820,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DefaltNPCPortrait: {fileID: 21300000, guid: b2753de60a5006a429ad9fdd52fdf463, type: 3}
-  activeNPCState: {fileID: 11400000, guid: 3687b123d7de5a4458e76055b3ee5b11, type: 2}
+  activeNPCState: {fileID: 2096020219}
   activeDialogueState: {fileID: 0}
 --- !u!50 &2036632145
 Rigidbody2D:
@@ -85640,24 +87049,28 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.26942015, y: 1.0352023}
-      - {x: 0.45943952, y: 1.1650561}
-      - {x: 0.44652867, y: 1.5039583}
-      - {x: 0.31266618, y: 1.7296957}
-      - {x: 0.17328405, y: 1.8056198}
-      - {x: 0.2108481, y: 2.1945553}
-      - {x: -0.008963823, y: 2.3546424}
-      - {x: -0.22728157, y: 2.179135}
-      - {x: -0.19467187, y: 1.8049954}
-      - {x: -0.32614493, y: 1.6558692}
-      - {x: -0.48052585, y: 1.521736}
-      - {x: -0.48751235, y: 1.1711516}
-      - {x: -0.32554126, y: 1.0461171}
+    - - {x: 0.2757826, y: 0.3184948}
+      - {x: 0.48188686, y: 0.43833923}
+      - {x: 0.4934206, y: 1.3637371}
+      - {x: 0.29589367, y: 1.669424}
+      - {x: 0.2407484, y: 2.0781384}
+      - {x: 0.2803545, y: 2.1520052}
+      - {x: 0.18373394, y: 2.2279701}
+      - {x: 0.13067532, y: 2.1396627}
+      - {x: -0.116251945, y: 2.1406784}
+      - {x: -0.17623043, y: 2.2191381}
+      - {x: -0.29136753, y: 2.13842}
+      - {x: -0.24607754, y: 2.038867}
+      - {x: -0.29005718, y: 1.714963}
+      - {x: -0.48981, y: 1.3746519}
+      - {x: -0.49591732, y: 0.45839977}
+      - {x: -0.3080721, y: 0.32714462}
       - {x: -0.30362797, y: 0.120921254}
-      - {x: -0.49826992, y: 0.048500657}
-      - {x: -0.42067075, y: -0.069343686}
-      - {x: 0.4265225, y: -0.059882283}
-      - {x: 0.41516948, y: 0.079375744}
+      - {x: -0.47336674, y: -0.04613781}
+      - {x: -0.29116344, y: -0.08926773}
+      - {x: -0.016255379, y: -0.02221489}
+      - {x: 0.32192135, y: -0.09474945}
+      - {x: 0.43509388, y: -0.04514885}
       - {x: 0.2794366, y: 0.13472545}
 --- !u!1 &2056267250
 GameObject:
@@ -85687,10 +87100,57 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectives:
-  - id: 11
-    description: Objetivo Numero 1
-  - id: 12
-    description: Objetivo Numero 2
+  - id: 101
+    enabled: 1
+    description: Fale com Teresa sobre o anel desaparecido.
+  - id: 102
+    enabled: 0
+    description: Consiga pistas com outros membros das familias.
+  - id: 103
+    enabled: 0
+    description: Fale com a familia inimiga sobre o anel desparecido.
+  - id: 104
+    enabled: 0
+    description: "Investigue a taverna sobre os b\xEAbados e algum possivel suspeito."
+  - id: 105
+    enabled: 0
+    description: "Beba com os b\xEAbados da estalagem para conseguir informa\xE7\xF5es."
+  - id: 106
+    enabled: 0
+    description: "Tente extrair mais informa\xE7\xE3o dos b\xEAbados"
+  - id: 107
+    enabled: 0
+    description: "Consiga dinheiro para pagar mais b\xEAbida."
+  - id: 108
+    enabled: 0
+    description: Fale com o Duque Robert sobre um empretimo.
+  - id: 112
+    enabled: 0
+    description: "Fale com o suposto feiticeiro e como voc\xEA poderia ajudar."
+  - id: 113
+    enabled: 0
+    description: "Consiga o pacote com o ca\xE7ador."
+  - id: 114
+    enabled: 0
+    description: "Ajude o ca\xE7ador a diminuir a popula\xE7\xE3o de coelhos"
+  - id: 115
+    enabled: 0
+    description: Leve o pacote de volta ao feiticeiro
+  - id: 116
+    enabled: 0
+    description: Leve os cogumelos para o mercador local
+  - id: 117
+    enabled: 0
+    description: "Retire mais informa\xE7oes dos b\xEAbados"
+  - id: 118
+    enabled: 0
+    description: Tente recuperar o anel do estranho andarilho misterioso.
+  - id: 119
+    enabled: 0
+    description: Fale com alguem da guarda  sobre o anel.
+  - id: 120
+    enabled: 0
+    description: Volte para a taberna descansar.
 --- !u!4 &2056267252
 Transform:
   m_ObjectHideFlags: 0
@@ -86117,6 +87577,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!1 &2096020217
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2096020218}
+  - component: {fileID: 2096020219}
+  m_Layer: 0
+  m_Name: NPCState1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2096020218
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2096020217}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 950058716}
+  m_Father: {fileID: 2036632141}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2096020219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2096020217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1214b550a1cac74f9f062a62a599732, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  portrait: {fileID: 0}
+  defaultDialogueState: {fileID: 950058717}
+  runtimeStates:
+  - {fileID: 950058717}
 --- !u!1 &2101105378
 GameObject:
   m_ObjectHideFlags: 0
@@ -86444,6 +87949,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 847117850}
+  - {fileID: 622049090}
   m_Father: {fileID: 1178950122}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -86490,7 +87996,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DefaltNPCPortrait: {fileID: 21300000, guid: caefcfcd7f063a84792a8c30f7b2af68, type: 3}
-  activeNPCState: {fileID: 11400000, guid: 83fb4694ca6b94f4190344acdee2e2a7, type: 2}
+  activeNPCState: {fileID: 622049091}
   activeDialogueState: {fileID: 0}
 --- !u!50 &2122990492
 Rigidbody2D:

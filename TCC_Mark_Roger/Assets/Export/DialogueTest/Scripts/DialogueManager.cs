@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class DialogueManager : MonoBehaviour {
     public GameObject dialogueScreen;
@@ -16,7 +17,7 @@ public class DialogueManager : MonoBehaviour {
     private Queue<string> npcSentences = new Queue<string>();
     private bool isTyping = false;
     public static bool isNPCSpeaking = false;
-    private List<DialogueLineSerial> activeLines= new List<DialogueLineSerial>();
+    private List<DialogueLineRuntime> activeLines= new List<DialogueLineRuntime>();
    // private GameObject givenItem;
    // public GameObject GivenItem { get { return givenItem; } }
     private string richTextString = "";
@@ -25,15 +26,16 @@ public class DialogueManager : MonoBehaviour {
 
 
 
+
     // Start the conversation
     public void StartDialogue(DialogueNPC npc)
     {
         activeNPCDialogue = npc;
-        if (activeNPCDialogue.activeNPCState) {
+        if (activeNPCDialogue.activeDialogueState) {
             dialogueScreen.SetActive(true);
             linesContainer.ResetPointer();
             closingDialogue = false;
-            activeNPCDialogue.activeDialogueState = activeNPCDialogue.activeNPCState.defualtDialogueState;
+            activeNPCDialogue.activeDialogueState = activeNPCDialogue.activeNPCState.defaultDialogueState;
             npcLineContainer.text = "";
             if (activeNPCDialogue.activeNPCState.portrait != null) {
                 npcPortrait.sprite = activeNPCDialogue.activeNPCState.portrait;
@@ -47,7 +49,7 @@ public class DialogueManager : MonoBehaviour {
                 }
                     
             }
-            NPCSpeak(new string[] { activeNPCDialogue.activeNPCState.defualtDialogueState.greeting });
+            NPCSpeak(new string[] { activeNPCDialogue.activeNPCState.defaultDialogueState.greeting });
             if (!activeNPCDialogue.activeDialogueState.blankState)
             {
                 RefreshActiveLines();
@@ -75,7 +77,7 @@ public class DialogueManager : MonoBehaviour {
 
     private void RefreshActiveLines() {
         activeLines.Clear();
-        foreach (DialogueLineSerial line in activeNPCDialogue.activeDialogueState.lines)
+        foreach (DialogueLineRuntime line in activeNPCDialogue.activeDialogueState.lines)
         {
             if (!line.isHidden) {
                 activeLines.Add(line);
@@ -225,7 +227,7 @@ public class DialogueManager : MonoBehaviour {
 
 
     public void CloseDialogue() {
-        DialogueLineSerial endLine=null;
+        DialogueLineRuntime endLine=null;
         endLine = activeNPCDialogue.activeDialogueState.endDialogueLine;
         if (endLine!=null&&!closingDialogue&&!isNPCSpeaking) {
             NPCSpeak(endLine.responses);
@@ -237,14 +239,21 @@ public class DialogueManager : MonoBehaviour {
             }
     }
 
-    public void UnlockDialogueLine(DialogueState state,int i) {
+    public void UnlockDialogueLine(RuntimeDialogueState state,int i) {
         state.lines[i].isHidden = false;
-        //Debug.Log(state.lines[i].line + state.lines[i].isHidden.ToString());
-    }
 
+    }
+    IEnumerator InvokeLineEvents(UnityEvent e) {
+        while (isNPCSpeaking)
+        {
+            yield return null;
+        }
+        e.Invoke();
+    }
+    
     public void SelectDialogueOption(int opt)
     {
-
+        
         if (!lockedOptions){
             //show the selected line responses texts, sending the strings to the NPCSpeak method to be writen. 
             NPCSpeak(activeLines[opt + linesContainer.topPointer].responses);
@@ -254,21 +263,23 @@ public class DialogueManager : MonoBehaviour {
             {
                 npcPortrait.sprite = activeLines[opt + linesContainer.topPointer].specialPortrait;
             }
-
+            //check if this options starts a event defined in th dialogue state
+            StartCoroutine(InvokeLineEvents(activeLines[opt + linesContainer.topPointer].events));
+            //.Invoke();
 
             //check if this option calls for a change to a diferente NPCState
-            if (activeLines[opt + linesContainer.topPointer].targetNPCDialogue != null)
+            if (activeLines[opt + linesContainer.topPointer].targetRuntimeDialogueContainer != null)
             {
-                activeNPCDialogue.ChageNPCState(activeLines[opt + linesContainer.topPointer].targetNPCDialogue);
+                activeNPCDialogue.ChangeNPCState(activeLines[opt + linesContainer.topPointer].targetRuntimeDialogueContainer);
             }
 
             //check if this option calls for a change to another dialogueState
-            if (activeLines[opt + linesContainer.topPointer].nextState != null)
+            if (activeLines[opt + linesContainer.topPointer].targetRuntimeState != null)
             {
-                activeNPCDialogue.ChangeDialogueState(activeLines[opt + linesContainer.topPointer].nextState);
+                activeNPCDialogue.ChangeDialogueState(activeLines[opt + linesContainer.topPointer].targetRuntimeState);
                 RefreshActiveLines();
                 linesContainer.ResetPointer();
-                activeLines.Add(activeNPCDialogue.activeDialogueState.endDialogueLine);
+                //activeLines.Add(activeNPCDialogue.activeDialogueState.endDialogueLine);
                 linesContainer.FillConteiners(activeLines);
                 StartCoroutine(ShowResponses());
             }
@@ -277,7 +288,7 @@ public class DialogueManager : MonoBehaviour {
 
 
 
-
+            
             //check if this option will unlock another ones, if so, unlocks them, and if one of them is within the same dialogue state, it will reset the options containers
             if (activeLines[opt + linesContainer.topPointer].linesToUnlock != null)
             {
@@ -294,16 +305,9 @@ public class DialogueManager : MonoBehaviour {
                 }
 
             }
+            
 
-
-            //---------------------------------------------------------------------------------
-            //---------------Call a method to give the player the iten-------------------------
-            //---------------------------------------------------------------------------------
-
-
-            activeLines[opt + linesContainer.topPointer].eventsX.Invoke();
-
-
+            //checks if there is a special event to be triggered in the gameObject itself
             if(activeLines[opt + linesContainer.topPointer].specialEventTrigger) {
                 activeNPCDialogue.GetComponent<CustomEventTrigger>().action.Invoke();
             }
@@ -316,7 +320,7 @@ public class DialogueManager : MonoBehaviour {
                 StartCoroutine(EndConversation(0.5f));
             }
         }
-        
+      
     }
 
 }

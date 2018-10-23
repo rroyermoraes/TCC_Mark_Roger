@@ -12,7 +12,7 @@ public class PlayerLinesContainer : MonoBehaviour {
 
     public Button scrollUp;//Ui button to scroll down in the conversation options
 
-    private List<DialogueLineSerial> currentLines= new List<DialogueLineSerial>();//Container of the DialogueLines that must fill the containers
+    private List<DialogueLineRuntime> currentLines= new List<DialogueLineRuntime>();//Container of the DialogueLines that must fill the containers
 
     public bool[] textConteinersUsability;
 
@@ -50,7 +50,7 @@ public class PlayerLinesContainer : MonoBehaviour {
     //Fill the containers with the lines givem, if are more lines than containers the extra lines will not apear,
     // if there are less lines than the number of containers it will fill with a black an disable the button
 
-    public void FillConteiners(List<DialogueLineSerial> incomingLines)
+    public void FillConteiners(List<DialogueLineRuntime> incomingLines)
     {
         
         currentLines.Clear();
