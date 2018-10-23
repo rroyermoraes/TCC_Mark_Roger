@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Desafio 2.unity
     guid: c0ef407f0724e784a8f079e317b93721
+  - enabled: 1
+    path: Assets/Scenes/Desafio 3.unity
+    guid: 58e1e4e3fd69c0440b65d966ff99f654
   m_configObjects: {}

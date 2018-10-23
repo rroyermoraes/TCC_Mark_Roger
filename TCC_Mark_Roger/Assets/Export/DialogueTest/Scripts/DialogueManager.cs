@@ -264,8 +264,11 @@ public class DialogueManager : MonoBehaviour {
                 npcPortrait.sprite = activeLines[opt + linesContainer.topPointer].specialPortrait;
             }
             //check if this options starts a event defined in th dialogue state
-            StartCoroutine(InvokeLineEvents(activeLines[opt + linesContainer.topPointer].events));
-            //.Invoke();
+
+            if (!activeLines[opt + linesContainer.topPointer].lateEventTrigger)
+            {
+                StartCoroutine(InvokeLineEvents(activeLines[opt + linesContainer.topPointer].events));
+            }
 
             //check if this option calls for a change to a diferente NPCState
             if (activeLines[opt + linesContainer.topPointer].targetRuntimeDialogueContainer != null)
@@ -307,9 +310,9 @@ public class DialogueManager : MonoBehaviour {
             }
             
 
-            //checks if there is a special event to be triggered in the gameObject itself
-            if(activeLines[opt + linesContainer.topPointer].specialEventTrigger) {
-                activeNPCDialogue.GetComponent<CustomEventTrigger>().action.Invoke();
+            //checks if there is a special event should be late triggered
+            if(activeLines[opt + linesContainer.topPointer].lateEventTrigger) {
+                activeLines[opt + linesContainer.topPointer].events.Invoke();
             }
 
 

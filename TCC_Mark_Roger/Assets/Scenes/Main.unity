@@ -216,6 +216,176 @@ PolygonCollider2D:
       - {x: 0.3108635, y: -0.1094532}
       - {x: 0.47300148, y: -0.069330215}
       - {x: 0.2794366, y: 0.13472545}
+--- !u!1 &6250977
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6250978}
+  - component: {fileID: 6250979}
+  m_Layer: 0
+  m_Name: F2_Kid_Dialogue1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6250978
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 6250977}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1588689288}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6250979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 6250977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac5cadd30fa86140af6b1344006084b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseState: {fileID: 11400000, guid: 86865188ed20df14bbbbc72921014650, type: 2}
+  greeting: Hey! tudo bem?
+  specialGreetingPortrait: {fileID: 0}
+  blankState: 0
+  lines:
+  - line: Anel Roubado.
+    responses:
+    - Eu fiquei sabendo que roubaram um anel valioso da casa do Willian.
+    - "\xC9 estranho pensar que alguem aqui do vilarejo fosse fazer algo assim."
+    - "Seja l\xE1 quem for deve estar em uma situa\xE7\xE3o dificil."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock:
+    - state: {fileID: 6250979}
+      index: 2
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    lateEventTrigger: 0
+  - line: Familia Ash.
+    responses:
+    - "As nossas familias nunca se deram bem, a mam\xE3e e a Senhora Teresa se odeiam."
+    - "Mas eu n\xE3o acho que eles s\xE3o t\xE3o maus assim. Principalmente o Willian...err...
+      esque\xE7a o que eu acabei de dizer..."
+    - "Eu gostaria que nossas familias se dessem bem, mas mam\xE3e \xE9 t\xE3o teimosa
+      quanto a Senhora Teresa."
+    - "E agora com essa situa\xE7\xE3o do anel as coisas est\xE3o ainda mais sensiveis."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock:
+    - state: {fileID: 6250979}
+      index: 2
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    lateEventTrigger: 0
+  - line: "Rela\xE7\xE3o com Willian Ash"
+    responses:
+    - "Fala baixo... se minha m\xE3e ouvir voc\xEA falando nisso ela me mata."
+    - "*cochicho* N\xE3o conte pra mam\xE3e, mas eu tenho encontrado o Willian escondida,
+      eu gosto de ficar com ele, mas se mam\xE3e descobrir ela vai estragar tudo."
+    - "*cochicho* Eu sei de uma coisa que pode te ajudar nessa hist\xF3ria do anel.
+      Eu posso te contar se voc\xEA prometer ficar calado sobre eu e o Willian..."
+    isHidden: 1
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock:
+    - state: {fileID: 6250979}
+      index: 3
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    lateEventTrigger: 0
+  - line: Eu prometo. Pode me contar.
+    responses:
+    - No dia que o entraram na  casa do Willian ele estava comigo.
+    - "Nos vimos um vulto perto da casa. Parecia ser um homem grande. At\xE9 meio
+      gordinho."
+    - Ai o Willian foi checar e disse que sentiu cheiro de bebida.
+    - "Isso \xE9 tudo que eu sei, mas n\xE3o fale sobre isso com ninguem... principalemente
+      com a mam\xE3e e com a Senhora Teresa."
+    isHidden: 1
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2056267251}
+          m_MethodName: CompleteObjetive
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 102
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 2056267251}
+          m_MethodName: EnableObjective
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 104
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    lateEventTrigger: 0
+  endDialogueLine:
+    line: "At\xE9 mais."
+    responses:
+    - "At\xE9 mais."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    lateEventTrigger: 0
 --- !u!1 &19319935
 GameObject:
   m_ObjectHideFlags: 0
@@ -1154,7 +1324,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &81244616
 Transform:
   m_ObjectHideFlags: 0
@@ -1168,6 +1338,7 @@ Transform:
   m_Children:
   - {fileID: 841248576}
   - {fileID: 1628770879}
+  - {fileID: 794250962}
   m_Father: {fileID: 1178950122}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1214,7 +1385,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DefaltNPCPortrait: {fileID: 21300000, guid: b130dbab74a406e4d8001b045dc33f28, type: 3}
-  activeNPCState: {fileID: 0}
+  activeNPCState: {fileID: 794250963}
   activeDialogueState: {fileID: 0}
 --- !u!50 &81244620
 Rigidbody2D:
@@ -2298,6 +2469,165 @@ PolygonCollider2D:
       - {x: 0.39693832, y: -0.09368992}
       - {x: 0.47010803, y: -0.02627325}
       - {x: 0.2794366, y: 0.13472545}
+--- !u!1 &179271965
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 179271966}
+  - component: {fileID: 179271967}
+  m_Layer: 0
+  m_Name: DunksDialogue1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &179271966
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 179271965}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1222649789}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &179271967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 179271965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac5cadd30fa86140af6b1344006084b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseState: {fileID: 11400000, guid: 4e295122477dff045bf839333bb46d4b, type: 2}
+  greeting: Hey cara.
+  specialGreetingPortrait: {fileID: 0}
+  blankState: 0
+  lines:
+  - line: Jogar Desafio 1
+    responses: []
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 651000964}
+          m_MethodName: LoadLevel
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Desafio 1
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    lateEventTrigger: 0
+  - line: Jogar Desafio 3
+    responses: []
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 651000964}
+          m_MethodName: LoadLevel
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Desafio 3
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    lateEventTrigger: 0
+  endDialogueLine:
+    line: Adeus
+    responses:
+    - '...'
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    lateEventTrigger: 0
+--- !u!1 &179514079
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 179514080}
+  - component: {fileID: 179514081}
+  m_Layer: 0
+  m_Name: F2_Mom_NPCState
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &179514080
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 179514079}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 803320491}
+  m_Father: {fileID: 1710918376}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &179514081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 179514079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1214b550a1cac74f9f062a62a599732, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  portrait: {fileID: 0}
+  defaultDialogueState: {fileID: 803320492}
+  runtimeStates:
+  - {fileID: 803320492}
 --- !u!1 &189248801
 GameObject:
   m_ObjectHideFlags: 0
@@ -3591,7 +3921,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-    specialEventTrigger: 0
+    lateEventTrigger: 0
   - line: Algum suspeito?
     responses:
     - "Claro. Eu tenho quase certeza que isso \xE9 coisa dos Larch"
@@ -3610,7 +3940,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-    specialEventTrigger: 0
+    lateEventTrigger: 0
   - line: Pistas?
     responses:
     - "Eu n\xE3o sei de nada, s\xF3 sei que o anel estava no bau trancado."
@@ -3627,7 +3957,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-    specialEventTrigger: 0
+    lateEventTrigger: 0
   - line: Falar sobre outra coisa.
     responses:
     - "O que voc\xEA quer falar?"
@@ -3643,7 +3973,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-    specialEventTrigger: 0
+    lateEventTrigger: 0
   endDialogueLine:
     line: "At\xE9 mais."
     responses:
@@ -3660,7 +3990,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-    specialEventTrigger: 0
+    lateEventTrigger: 0
 --- !u!1 &394545289
 GameObject:
   m_ObjectHideFlags: 0
@@ -3724,7 +4054,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-    specialEventTrigger: 0
+    lateEventTrigger: 0
   - line: Pacote do feiticeiro
     responses:
     - Ahh sim. As coisas daquele velho maluco.
@@ -3745,7 +4075,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-    specialEventTrigger: 0
+    lateEventTrigger: 0
   - line: Oferecer ajuda
     responses:
     - "Voc\xEA acha que consgue me ajudar a ca\xE7ar ent\xE3o? *hahahahah*"
@@ -3775,7 +4105,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-    specialEventTrigger: 0
+    lateEventTrigger: 0
   - line: Ursos
     responses:
     - "Ahhh vejo que voc\xEA notou meus trof\xE9us..."
@@ -3794,7 +4124,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-    specialEventTrigger: 0
+    lateEventTrigger: 0
   - line: Tamanho
     responses:
     - '...'
@@ -3810,7 +4140,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-    specialEventTrigger: 0
+    lateEventTrigger: 0
   endDialogueLine:
     line: Adeus.
     responses:
@@ -3827,7 +4157,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-    specialEventTrigger: 0
+    lateEventTrigger: 0
 --- !u!1 &414997300
 GameObject:
   m_ObjectHideFlags: 0
@@ -4503,7 +4833,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-    specialEventTrigger: 0
+    lateEventTrigger: 0
   - line: "An\xE9l Roubado"
     responses:
     - "\xC9 eu comprei um an\xE9l de um dos bebados"
@@ -4524,7 +4854,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-    specialEventTrigger: 0
+    lateEventTrigger: 0
   - line: "Devolver o an\xE9l"
     responses:
     - "Voc\xEA quer que eu te de o an\xE9l pelo qual eu paguei com meu dinheiro?"
@@ -4543,7 +4873,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-    specialEventTrigger: 0
+    lateEventTrigger: 0
   - line: Avisar a guarda
     responses:
     - "\xC9 assim ent\xE3o... Olha eu n\xE3o quero arrumar problemas."
@@ -4564,7 +4894,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-    specialEventTrigger: 0
+    lateEventTrigger: 0
   endDialogueLine:
     line: Adeus.
     responses:
@@ -4581,7 +4911,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-    specialEventTrigger: 0
+    lateEventTrigger: 0
 --- !u!1 &502290906
 GameObject:
   m_ObjectHideFlags: 0
@@ -4812,6 +5142,188 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 517232586}
   m_CullTransparentMesh: 0
+--- !u!1 &524763296
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 524763297}
+  - component: {fileID: 524763298}
+  m_Layer: 0
+  m_Name: F1_Kid_Dialogue1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &524763297
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 524763296}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 794250962}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &524763298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 524763296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac5cadd30fa86140af6b1344006084b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseState: {fileID: 11400000, guid: ef3b527d39602ec499ae10f34976f020, type: 2}
+  greeting: Hey.
+  specialGreetingPortrait: {fileID: 0}
+  blankState: 0
+  lines:
+  - line: "Quem \xE9 voce?"
+    responses:
+    - Meu chamo Willian
+    - Eu sou o filho mais velho da familia
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    lateEventTrigger: 0
+  - line: Anel desaparecido
+    responses:
+    - Acho que alguem entrou aqui e roubou o anel da familia
+    - "Mam\xE3e est\xE1 furiosa, e fica botando a culpa nos Larch"
+    - "Eu n\xE3o acho que eles tenham feito algo assim."
+    - "Mas \xE9  dificil convenser minha m\xE3e quando ela coloca alguma coisa na
+      cabe\xE7a."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    lateEventTrigger: 0
+  - line: Alguma pista?
+    responses:
+    - "Bem... no dia que entraram aqui eu notei algo estranho, mas n\xE3o conte pra
+      minha m\xE3e... "
+    - "O sol j\xE1 estava se ponto e eu vi um vulto estranho perto de casa."
+    - Quando fui checar senti um cheiro de bebida...
+    - "Mas prometa que n\xE3o vai falar sobre isso pra minha m\xE3e."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock:
+    - state: {fileID: 524763298}
+      index: 3
+    events:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2056267251}
+          m_MethodName: CompleteObjetive
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 102
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 2056267251}
+          m_MethodName: EnableObjective
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 104
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    lateEventTrigger: 0
+  - line: "Escondendo coisas de sua m\xE3e"
+    responses:
+    - "Hey...isso \xE9 problema meu viu..."
+    - Ok...Ok...  eu devia estar fazendo outra coisa quando invadiram nossa casa.
+    - "Se minha m\xE3e descobrir que eu vi alguma coisa, ela vai descobrir que eu
+      n\xE3o estava fazendo minhas tarefas."
+    - Ai ela vai ficar mais furiosa ainda. E vai me encher de perguntas.
+    isHidden: 1
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock:
+    - state: {fileID: 524763298}
+      index: 4
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    lateEventTrigger: 0
+  - line: "O que voc\xEA estava fazendo na hora do roubo?"
+    responses:
+    - '... e eu estava com a...'
+    - "hey, espera ai, eu n\xE3o preciso te falar sobre isso."
+    isHidden: 1
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    lateEventTrigger: 0
+  endDialogueLine:
+    line: "At\xE9 mais, rapaz."
+    responses:
+    - "At\xE9 mais."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    lateEventTrigger: 0
 --- !u!1 &529514511
 GameObject:
   m_ObjectHideFlags: 0
@@ -4981,7 +5493,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &532601790
 Transform:
   m_ObjectHideFlags: 0
@@ -4994,6 +5506,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 727584053}
+  - {fileID: 1222649789}
   m_Father: {fileID: 1178950122}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5040,7 +5553,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DefaltNPCPortrait: {fileID: 21300000, guid: 9b6390979ebdaa348a688f694d8fdcf5, type: 3}
-  activeNPCState: {fileID: 0}
+  activeNPCState: {fileID: 1222649790}
   activeDialogueState: {fileID: 0}
 --- !u!50 &532601794
 Rigidbody2D:
@@ -8008,6 +8521,51 @@ PolygonCollider2D:
       - {x: 0.4265225, y: -0.059882283}
       - {x: 0.41516948, y: 0.079375744}
       - {x: 0.2794366, y: 0.13472545}
+--- !u!1 &794250961
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 794250962}
+  - component: {fileID: 794250963}
+  m_Layer: 0
+  m_Name: F1_Kid_NPCState
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &794250962
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 794250961}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 524763297}
+  m_Father: {fileID: 81244616}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &794250963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 794250961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1214b550a1cac74f9f062a62a599732, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  portrait: {fileID: 0}
+  defaultDialogueState: {fileID: 524763298}
+  runtimeStates:
+  - {fileID: 524763298}
 --- !u!1 &803314387
 GameObject:
   m_ObjectHideFlags: 0
@@ -18110,6 +18668,138 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &803320490
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 803320491}
+  - component: {fileID: 803320492}
+  m_Layer: 0
+  m_Name: F2_Mom_Dialogue1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &803320491
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 803320490}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 179514080}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &803320492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 803320490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac5cadd30fa86140af6b1344006084b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseState: {fileID: 11400000, guid: b2e2996e3e67be34c8bf165b90525a87, type: 2}
+  greeting: "Ol\xE1 rapaz."
+  specialGreetingPortrait: {fileID: 0}
+  blankState: 0
+  lines:
+  - line: Anel desaparecido.
+    responses:
+    - Ahhh... sim eu fiquei sabendo que alguem roubou um anel da casa dos Ash.
+    - E tambem que aquela nojenta da Teresa acha que foi alguem da minha familia.
+    - "Aposto que voc\xEA s\xF3 esta aqui inclusive por que ela falou que foi alguem
+      daqui que pegou esse anel idiota."
+    - "Eu te digo uma coisa rapaz. Ninguem aqui de casa faria isso, e \xE9 melhor
+      eles pararem com essas acusa\xE7\xF5es e logo."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2056267251}
+          m_MethodName: CompleteObjetive
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 103
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    lateEventTrigger: 0
+  - line: Alguma suspeita?
+    responses:
+    - "N\xE3o fa\xE7o id\xE9ia de quem poderia ter sido"
+    - Alem disso. como eu saberia de alguma coisa.
+    - "Se quiser ter certeza pode perguntar pra qualquer um aqui. Eu garanto que n\xE3o
+      temos nada a ver com essa confus\xE3o."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    lateEventTrigger: 0
+  - line: Familia Ash
+    responses:
+    - "Eles s\xE3o um tipinho de gente bem irritante."
+    - "Est\xE3o sempre querendo ser melhores que todo mundo"
+    - "Desde que vivemos nessas terras eles est\xE3o por aqui e nunca nos demos bem,
+      e garanto que nunca vamos."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    lateEventTrigger: 0
+  endDialogueLine:
+    line: Adeus
+    responses:
+    - "At\xE9 mais."
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    lateEventTrigger: 0
 --- !u!1 &808377015
 GameObject:
   m_ObjectHideFlags: 0
@@ -19361,7 +20051,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-    specialEventTrigger: 0
+    lateEventTrigger: 0
   - line: Sujeito sentado no canto.
     responses:
     - "Eu nem sei de onde ele \xE9 para ser sincero, n\xE3o entendo quase nada do
@@ -19381,7 +20071,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-    specialEventTrigger: 0
+    lateEventTrigger: 0
   endDialogueLine:
     line: "At\xE9 mais."
     responses:
@@ -19398,7 +20088,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 1
-    specialEventTrigger: 0
+    lateEventTrigger: 0
 --- !u!1 &863892096
 GameObject:
   m_ObjectHideFlags: 0
@@ -20126,10 +20816,32 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 2056267251}
+          m_MethodName: EnableObjective
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 102
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 2056267251}
+          m_MethodName: EnableObjective
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 103
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-    specialEventTrigger: 0
+    lateEventTrigger: 0
   - line: Sua familia
     responses:
     - "N\xF3s vivemos nessas terras a muito tempo, plantamos aqui e tem sido assim
@@ -20146,7 +20858,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-    specialEventTrigger: 0
+    lateEventTrigger: 0
   - line: A familia Larch
     responses:
     - "Eles s\xE3o um bando de metidos irritantes. Principalmente aquelasinha da Nora."
@@ -20165,7 +20877,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-    specialEventTrigger: 0
+    lateEventTrigger: 0
   endDialogueLine:
     line: "At\xE9 mais."
     responses:
@@ -20182,7 +20894,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-    specialEventTrigger: 0
+    lateEventTrigger: 0
 --- !u!1 &950058715
 GameObject:
   m_ObjectHideFlags: 0
@@ -20247,7 +20959,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-    specialEventTrigger: 0
+    lateEventTrigger: 0
   - line: Guarda ocupada
     responses:
     - "N\xE3o se preocupe com isso"
@@ -20265,7 +20977,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-    specialEventTrigger: 0
+    lateEventTrigger: 0
   - line: Acontecimentos recentes
     responses:
     - "As coisas est\xE3o bem agitadas recentemente."
@@ -20283,7 +20995,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-    specialEventTrigger: 0
+    lateEventTrigger: 0
   - line: Coelhos?
     responses:
     - Ahhhh...sim... os coelhos *hahaha*
@@ -20302,7 +21014,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-    specialEventTrigger: 0
+    lateEventTrigger: 0
   endDialogueLine:
     line: Adeus.
     responses:
@@ -20319,7 +21031,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-    specialEventTrigger: 0
+    lateEventTrigger: 0
 --- !u!1 &950641928
 GameObject:
   m_ObjectHideFlags: 0
@@ -21334,7 +22046,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-    specialEventTrigger: 0
+    lateEventTrigger: 0
   - line: 'Anel 2
 
 '
@@ -21351,7 +22063,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-    specialEventTrigger: 0
+    lateEventTrigger: 0
   - line: Anel 3
     responses: []
     isHidden: 0
@@ -21366,7 +22078,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-    specialEventTrigger: 0
+    lateEventTrigger: 0
   - line: Anel 4
     responses: []
     isHidden: 0
@@ -21381,7 +22093,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-    specialEventTrigger: 0
+    lateEventTrigger: 0
   - line: Anel 5
     responses: []
     isHidden: 0
@@ -21396,7 +22108,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-    specialEventTrigger: 0
+    lateEventTrigger: 0
   endDialogueLine:
     line: Preciso pensar um pouco.
     responses:
@@ -21413,7 +22125,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-    specialEventTrigger: 0
+    lateEventTrigger: 0
 --- !u!1 &1046275059
 GameObject:
   m_ObjectHideFlags: 0
@@ -21824,7 +22536,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-    specialEventTrigger: 0
+    lateEventTrigger: 0
   endDialogueLine:
     line: "At\xE9 mais..."
     responses:
@@ -21841,7 +22553,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-    specialEventTrigger: 0
+    lateEventTrigger: 0
 --- !u!1 &1104333942
 GameObject:
   m_ObjectHideFlags: 0
@@ -22174,14 +22886,13 @@ GameObject:
   - component: {fileID: 1112882334}
   - component: {fileID: 1112882333}
   - component: {fileID: 1112882332}
-  - component: {fileID: 1112882337}
   m_Layer: 0
   m_Name: Fisherman
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1112882331
 Transform:
   m_ObjectHideFlags: 0
@@ -22194,6 +22905,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 643593904}
+  - {fileID: 1556603868}
   m_Father: {fileID: 1178950122}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -22240,7 +22952,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DefaltNPCPortrait: {fileID: 21300000, guid: 5c42170f0c59dfa4da3f3a0f46ec1c4c, type: 3}
-  activeNPCState: {fileID: 0}
+  activeNPCState: {fileID: 1556603869}
   activeDialogueState: {fileID: 0}
 --- !u!50 &1112882335
 Rigidbody2D:
@@ -22310,33 +23022,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
---- !u!114 &1112882337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1112882330}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54365641c72333b41b6896a63a1ddf33, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  action:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1653881773}
-        m_MethodName: CompareFrogs
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1116421693
 GameObject:
   m_ObjectHideFlags: 0
@@ -32015,6 +32700,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!1 &1222649788
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1222649789}
+  - component: {fileID: 1222649790}
+  m_Layer: 0
+  m_Name: Drunks_NPCState
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1222649789
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1222649788}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 179271966}
+  m_Father: {fileID: 532601790}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1222649790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1222649788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1214b550a1cac74f9f062a62a599732, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  portrait: {fileID: 0}
+  defaultDialogueState: {fileID: 179271967}
+  runtimeStates:
+  - {fileID: 179271967}
 --- !u!1 &1226290633
 GameObject:
   m_ObjectHideFlags: 0
@@ -32748,6 +33478,95 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1253792860}
   m_CullTransparentMesh: 0
+--- !u!1 &1264981356
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1264981357}
+  - component: {fileID: 1264981358}
+  m_Layer: 0
+  m_Name: FishermanDialogue1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1264981357
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1264981356}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1556603868}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1264981358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1264981356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac5cadd30fa86140af6b1344006084b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseState: {fileID: 11400000, guid: 49c4ac8627552cd47a60634b0086edcc, type: 2}
+  greeting: Achou o sapo certo?
+  specialGreetingPortrait: {fileID: 0}
+  blankState: 0
+  lines:
+  - line: Mostrar sapo.
+    responses:
+    - Deixe me ver...
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1653881773}
+          m_MethodName: CompareFrogs
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    lateEventTrigger: 1
+  endDialogueLine:
+    line: 
+    responses:
+    - 
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    lateEventTrigger: 0
 --- !u!1 &1268086190
 GameObject:
   m_ObjectHideFlags: 0
@@ -43946,7 +44765,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1347589108
 Transform:
   m_ObjectHideFlags: 0
@@ -43960,6 +44779,7 @@ Transform:
   m_Children:
   - {fileID: 2143595866}
   - {fileID: 950641929}
+  - {fileID: 1588689288}
   m_Father: {fileID: 1178950122}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -44006,7 +44826,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DefaltNPCPortrait: {fileID: 21300000, guid: 0a761bbdbadeca14fb5ecb71fc19de51, type: 3}
-  activeNPCState: {fileID: 0}
+  activeNPCState: {fileID: 1588689289}
   activeDialogueState: {fileID: 0}
 --- !u!50 &1347589112
 Rigidbody2D:
@@ -44231,7 +45051,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-    specialEventTrigger: 0
+    lateEventTrigger: 0
 --- !u!43 &1364823226
 Mesh:
   m_ObjectHideFlags: 0
@@ -46888,6 +47708,51 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1556010741}
   m_CullTransparentMesh: 0
+--- !u!1 &1556603867
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1556603868}
+  - component: {fileID: 1556603869}
+  m_Layer: 0
+  m_Name: Fisherman_NPCState
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1556603868
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1556603867}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1264981357}
+  m_Father: {fileID: 1112882331}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1556603869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1556603867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1214b550a1cac74f9f062a62a599732, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  portrait: {fileID: 0}
+  defaultDialogueState: {fileID: 1264981358}
+  runtimeStates:
+  - {fileID: 1264981358}
 --- !u!1 &1561962740
 GameObject:
   m_ObjectHideFlags: 0
@@ -47425,6 +48290,51 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1588355345}
   m_CullTransparentMesh: 0
+--- !u!1 &1588689287
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1588689288}
+  - component: {fileID: 1588689289}
+  m_Layer: 0
+  m_Name: F2_Kid_NPCState
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1588689288
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1588689287}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 6250978}
+  m_Father: {fileID: 1347589108}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1588689289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1588689287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1214b550a1cac74f9f062a62a599732, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  portrait: {fileID: 0}
+  defaultDialogueState: {fileID: 6250979}
+  runtimeStates:
+  - {fileID: 6250979}
 --- !u!1 &1598662911
 GameObject:
   m_ObjectHideFlags: 0
@@ -49582,7 +50492,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1710918376
 Transform:
   m_ObjectHideFlags: 0
@@ -49596,6 +50506,7 @@ Transform:
   m_Children:
   - {fileID: 505720353}
   - {fileID: 1913043819}
+  - {fileID: 179514080}
   m_Father: {fileID: 1178950122}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -49642,7 +50553,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DefaltNPCPortrait: {fileID: 21300000, guid: 476fcd1435da91f438a3f4a64a9ea9ce, type: 3}
-  activeNPCState: {fileID: 0}
+  activeNPCState: {fileID: 179514081}
   activeDialogueState: {fileID: 0}
 --- !u!50 &1710918380
 Rigidbody2D:

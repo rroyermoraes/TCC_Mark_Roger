@@ -136,8 +136,12 @@ public class FrogGame : MonoBehaviour {
 
     public void PickFrog(GameFrog f)
     {
-        compare.transform.position = f.transform.position;
-        compare = f ;
+        if (compare)
+        {
+            compare.transform.position = f.transform.position;
+            
+        }
+        compare = f;
         compare.transform.position = new Vector3(-999f, -999f);
 
     }
