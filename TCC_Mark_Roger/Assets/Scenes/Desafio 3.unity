@@ -997,14 +997,14 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 782d60921e30cba45803a6528ed34bba, type: 2}
-    m_FontSize: 8
+    m_Font: {fileID: 12800000, guid: da022706ef4d8504e8c41793f2d7c41a, type: 2}
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 7
     m_MaxSize: 73
     m_Alignment: 4
-    m_AlignByGeometry: 1
+    m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
@@ -2314,6 +2314,7 @@ RectTransform:
   - {fileID: 1315723752}
   - {fileID: 1848492149}
   - {fileID: 1515472246}
+  - {fileID: 1878935809}
   m_Father: {fileID: 33289918}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2490,23 +2491,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nPCSpeaker: {fileID: 1848492150}
   specialDialogueLines:
-  - line: "Voc\xEA gosta de conversar ent\xE3o... vamos beber!! *hic*"
+  - line: Hey cara, conseguiu mais bebida pra gente vamos beber!! *hic*
     contextPortrait: {fileID: 21300000, guid: 66c0cd82fadfab240b6843c0c366ac3b, type: 3}
     specialEvent:
       m_PersistentCalls:
         m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-  - line: "\xC9 isso ai, n\xE3o tem motivo melhor pra beber!"
+  - line: Estamos com um a menos agora, mas logo ele deve aparecer
     contextPortrait: {fileID: 21300000, guid: 2f0534ddd5746bd45a03be14dd1a812b, type: 3}
     specialEvent:
       m_PersistentCalls:
         m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-  - line: "Hey taberneiro! Traga umas bebidas pra gente, hoje \xE9 por conta do senhor
-      investigador aqui."
-    contextPortrait: {fileID: 21300000, guid: 1437afce3399ee34fb8e50309881a19f, type: 3}
+  - line: Hey taberneiro! Pode trazer a bebida*hic*
+    contextPortrait: {fileID: 21300000, guid: 66c0cd82fadfab240b6843c0c366ac3b, type: 3}
     specialEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -7285,7 +7285,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: 40.899994}
-  m_SizeDelta: {x: 90.27, y: 15}
+  m_SizeDelta: {x: 120, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1315723753
 MonoBehaviour:
@@ -10485,6 +10485,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1878935810}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!222 &1848492151
@@ -10796,6 +10807,145 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -93}
   m_SizeDelta: {x: 32, y: 55}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &1878935808
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 391319942}
+    m_Modifications:
+    - target: {fileID: 224621730880013766, guid: 9b60b8dfe9d2f394291c9120f85a59ad,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224621730880013766, guid: 9b60b8dfe9d2f394291c9120f85a59ad,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224621730880013766, guid: 9b60b8dfe9d2f394291c9120f85a59ad,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224621730880013766, guid: 9b60b8dfe9d2f394291c9120f85a59ad,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224621730880013766, guid: 9b60b8dfe9d2f394291c9120f85a59ad,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224621730880013766, guid: 9b60b8dfe9d2f394291c9120f85a59ad,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224621730880013766, guid: 9b60b8dfe9d2f394291c9120f85a59ad,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224621730880013766, guid: 9b60b8dfe9d2f394291c9120f85a59ad,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 224621730880013766, guid: 9b60b8dfe9d2f394291c9120f85a59ad,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224621730880013766, guid: 9b60b8dfe9d2f394291c9120f85a59ad,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224621730880013766, guid: 9b60b8dfe9d2f394291c9120f85a59ad,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224621730880013766, guid: 9b60b8dfe9d2f394291c9120f85a59ad,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224621730880013766, guid: 9b60b8dfe9d2f394291c9120f85a59ad,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224621730880013766, guid: 9b60b8dfe9d2f394291c9120f85a59ad,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224621730880013766, guid: 9b60b8dfe9d2f394291c9120f85a59ad,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224621730880013766, guid: 9b60b8dfe9d2f394291c9120f85a59ad,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224621730880013766, guid: 9b60b8dfe9d2f394291c9120f85a59ad,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224621730880013766, guid: 9b60b8dfe9d2f394291c9120f85a59ad,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114115426633790562, guid: 9b60b8dfe9d2f394291c9120f85a59ad,
+        type: 2}
+      propertyPath: m_Text
+      value: "O objetivo \xE9 tirar informa\xE7\xF5es dos b\xEAbados  novamente. Mas
+        parece que um deles n\xE3o esta aqui."
+      objectReference: {fileID: 0}
+    - target: {fileID: 114291763965651082, guid: 9b60b8dfe9d2f394291c9120f85a59ad,
+        type: 2}
+      propertyPath: m_Text
+      value: "As coisas devem ser muito parecidas com a vez anterior, mas agora existem
+        algumas diferen\xE7as"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114713996568543410, guid: 9b60b8dfe9d2f394291c9120f85a59ad,
+        type: 2}
+      propertyPath: m_Text
+      value: "Na primeira etapa a bebida sera servida para os dois que est\xE3o presentes
+        e voc\xEA, e ent\xE3o todos ir\xE3o beber\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114142977968523942, guid: 9b60b8dfe9d2f394291c9120f85a59ad,
+        type: 2}
+      propertyPath: m_Text
+      value: Na segunda etapa a bebida sera servida em todos os copos, e aquele que
+        tiver ficado com menos bebida na etapa ira beber a do copo sem dono.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114078505570467390, guid: 9b60b8dfe9d2f394291c9120f85a59ad,
+        type: 2}
+      propertyPath: m_Text
+      value: "Preste aten\xE7\xE3o nas quantias para conseguir que ninguem beba demais."
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9b60b8dfe9d2f394291c9120f85a59ad, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!224 &1878935809 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 224621730880013766, guid: 9b60b8dfe9d2f394291c9120f85a59ad,
+    type: 2}
+  m_PrefabInternal: {fileID: 1878935808}
+--- !u!1 &1878935810 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1084423656022948, guid: 9b60b8dfe9d2f394291c9120f85a59ad,
+    type: 2}
+  m_PrefabInternal: {fileID: 1878935808}
 --- !u!1 &1903836126
 GameObject:
   m_ObjectHideFlags: 0
@@ -11185,8 +11335,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 782d60921e30cba45803a6528ed34bba, type: 2}
-    m_FontSize: 8
+    m_Font: {fileID: 12800000, guid: da022706ef4d8504e8c41793f2d7c41a, type: 2}
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0

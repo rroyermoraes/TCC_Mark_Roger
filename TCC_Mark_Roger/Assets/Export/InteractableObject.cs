@@ -11,7 +11,8 @@ public class InteractableObject : MonoBehaviour {
     public virtual void Take()
     {
         FindObjectOfType<ContextMenuContainer>().HideContextMenu();
-       // string[] s = new string[] { "Pegando um(a) " + name };
+        Cursor.SetCursor(CustomCursor.NormalCursor, Vector2.zero, CursorMode.Auto);
+        // string[] s = new string[] { "Pegando um(a) " + name };
         //FindObjectOfType<PlayerSpeaker>().PlayerSpeak(s);
         Debug.Log("Pegando");
         
@@ -20,22 +21,25 @@ public class InteractableObject : MonoBehaviour {
     public virtual void Read()
     {
         FindObjectOfType<ContextMenuContainer>().HideContextMenu();
-       // string[] s = new string[] { "... " };
-       // FindObjectOfType<PlayerSpeaker>().PlayerSpeak(s);
+        Cursor.SetCursor(CustomCursor.NormalCursor, Vector2.zero, CursorMode.Auto);
+        // string[] s = new string[] { "... " };
+        // FindObjectOfType<PlayerSpeaker>().PlayerSpeak(s);
         Debug.Log("Lendo");
 
     }
     public virtual void Inspect()
     {
         FindObjectOfType<ContextMenuContainer>().HideContextMenu();
-       // string[] s = new string[] { "Isso é um(a) " + name };
-      //  FindObjectOfType<PlayerSpeaker>().PlayerSpeak(s);
+        Cursor.SetCursor(CustomCursor.NormalCursor, Vector2.zero, CursorMode.Auto);
+        // string[] s = new string[] { "Isso é um(a) " + name };
+        //  FindObjectOfType<PlayerSpeaker>().PlayerSpeak(s);
         Debug.Log("Inspecionando");
 
     }
     public virtual void Speak()
     {
         FindObjectOfType<ContextMenuContainer>().HideContextMenu();
+        Cursor.SetCursor(CustomCursor.NormalCursor, Vector2.zero, CursorMode.Auto);
         Debug.Log("Estou falando com " + name);
 
     }

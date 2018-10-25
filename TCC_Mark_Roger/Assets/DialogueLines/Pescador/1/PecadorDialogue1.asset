@@ -20,31 +20,11 @@ MonoBehaviour:
     - Deixe me ver...
     isHidden: 0
     specialPortrait: {fileID: 0}
-    nextState: {fileID: 0}
-    targetNPCDialogue: {fileID: 0}
-    allreadySayd: 0
-    linesToUnlock: []
-    eventsX:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-    specialEventTrigger: 1
   endDialogueLine:
-    line: 
+    line: "At\xE9 mais."
     responses:
-    - 
+    - "Tudo bem, at\xE9 mais."
     isHidden: 0
     specialPortrait: {fileID: 0}
-    nextState: {fileID: 0}
-    targetNPCDialogue: {fileID: 0}
-    allreadySayd: 0
-    linesToUnlock: []
-    eventsX:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
     exitDialogue: 0
-    specialEventTrigger: 0
