@@ -38,7 +38,6 @@ GameObject:
   - component: {fileID: 212362950997539496}
   - component: {fileID: 60120273247643494}
   - component: {fileID: 50805120987788166}
-  - component: {fileID: 114582362599977700}
   - component: {fileID: 114646844814554434}
   - component: {fileID: 114326143119989690}
   m_Layer: 0
@@ -197,20 +196,6 @@ MonoBehaviour:
   color: {r: 1, g: 1, b: 1, a: 1}
   outlineSize: 1
   outlineBorderNotInternal: 1
---- !u!114 &114582362599977700
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1538106041610362}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42b2b2e502f000b4ea4027e2acfe4fbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DefaltNPCPortrait: {fileID: 0}
-  activeNPCState: {fileID: 11400000, guid: 5ca4271583438df4c8f72e2670e857cc, type: 2}
-  activeDialogueState: {fileID: 0}
 --- !u!114 &114646844814554434
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -223,8 +208,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Bob
+  interactionDistance: 3
   mouseOverCursor: {fileID: 2800000, guid: 28fdb2803cdd9cf4ea422c804eca2a99, type: 3}
-  bInteractions: []
 --- !u!212 &212062352850350888
 SpriteRenderer:
   m_ObjectHideFlags: 1

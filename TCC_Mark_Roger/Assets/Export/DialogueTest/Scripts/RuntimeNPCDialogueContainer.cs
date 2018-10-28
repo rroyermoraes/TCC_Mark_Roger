@@ -4,11 +4,18 @@ using UnityEngine;
 
 
 public class RuntimeNPCDialogueContainer : MonoBehaviour {
+
+    [SerializeField]
+    private int dialogue_Id=0;
     public Sprite portrait;
     [SerializeField]
     public RuntimeDialogueState defaultDialogueState;
     [SerializeField]
     public List<RuntimeDialogueState> runtimeStates= new List<RuntimeDialogueState>();
+
+    public int Dialogue_Id{get{return dialogue_Id;}}
+
+
 
     //private RuntimeDialogueState defualtDialogueState;
 
