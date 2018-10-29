@@ -22,7 +22,7 @@ public class SolutionPosition {
 
 public class DesafioCripta : MonoBehaviour {
     [SerializeField]
-    public GamePiece[,] game = new GamePiece[5, 5];
+    public GamePiece[,] game = new GamePiece[4, 4];
     public SolutionPosition startPosition;
     public List<SolutionPosition> solutionPositions = new List<SolutionPosition>();
     public bool autostart = false;
@@ -33,9 +33,9 @@ public class DesafioCripta : MonoBehaviour {
 
 
     public void DebugGame() {
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < 4; i++)
         {
-            for (int j = 0; j < 5; j++)
+            for (int j = 0; j < 4; j++)
             {
                
                 Debug.Log(game[i, j].name);
@@ -67,9 +67,9 @@ public class DesafioCripta : MonoBehaviour {
 
     public void ResetPieces() {
         StopAllCoroutines();
-        for (int a = 0; a < 5; a++)
+        for (int a = 0; a < 4; a++)
         {
-            for (int b = 0; b < 5; b++)
+            for (int b = 0; b < 4; b++)
             {
                 game[a, b].Reset();
 
@@ -82,10 +82,10 @@ public class DesafioCripta : MonoBehaviour {
         int i, j, k, y;
         GamePiece aux;
         Vector3 auxT;
-        i = Random.Range(0, 5);
-        j = Random.Range(0, 5);
-        k = Random.Range(0, 5);
-        y = Random.Range(0, 5);
+        i = Random.Range(0, 4);
+        j = Random.Range(0, 4);
+        k = Random.Range(0, 4);
+        y = Random.Range(0, 4);
 
         ResetPieces();
 
@@ -98,13 +98,31 @@ public class DesafioCripta : MonoBehaviour {
             game[i, j] = game[k, y];
             game[k, y].transform.localPosition = auxT;
             game[k, y] = aux;
-            i = Random.Range(0, 5);
-            j = Random.Range(0, 5);
-            k = Random.Range(0, 5);
-            y = Random.Range(0, 5);
+            i = Random.Range(0, 4);
+            j = Random.Range(0, 4);
+            k = Random.Range(0, 4);
+            y = Random.Range(0, 4);
 
         }
-        
+
+        for (int a = 0; a < 4; a++)
+        {
+            for (int b = 0; b < 4; b++)
+            {
+               if(game[a, b].GetBlank())
+                {
+                    auxT = game[0, 3].transform.localPosition;
+                    aux = game[0, 3];
+                    game[0, 3].transform.localPosition = game[a, b].transform.localPosition;
+                    game[0, 3] = game[a, b];
+                    game[a, b].transform.localPosition = auxT;
+                    game[a, b] = aux;
+                    break;
+                }
+
+            }
+        }
+
 
 
         DebugGame();
@@ -115,11 +133,11 @@ public class DesafioCripta : MonoBehaviour {
 
     public void GameMove(int i, int j) {
         ResetPieces();
-        if ((i >= 0 && i <= 4) && (j >= 0 && j <= 4)) {
+        if ((i >= 0 && i <= 3) && (j >= 0 && j <= 3)) {
             GamePiece aux;
             Vector3 auxT;
             //direita
-            if (i < 4 && game[i + 1, j].GetBlank()) {
+            if (i < 3 && game[i + 1, j].GetBlank()) {
                 auxT = game[i, j].transform.localPosition;
                 aux = game[i, j];
                 game[i, j].transform.localPosition = game[i + 1, j].transform.localPosition;
@@ -138,7 +156,7 @@ public class DesafioCripta : MonoBehaviour {
                 game[i - 1, j] = aux;
             }
             //cima
-            if (j < 4 && game[i, j+1].GetBlank())
+            if (j < 3 && game[i, j+1].GetBlank())
             {
                 auxT = game[i, j].transform.localPosition;
                 aux = game[i, j];
@@ -169,7 +187,7 @@ public class DesafioCripta : MonoBehaviour {
         //yield return new WaitForEndOfFrame();
         yield return null;
         //direita
-        if (i < 4 && game[i, j].RightConnection && game[i + 1, j].LeftConnection) {
+        if (i < 3 && game[i, j].RightConnection && game[i + 1, j].LeftConnection) {
             if (!game[i + 1, j].GetFlooded())
             {
                 StartCoroutine(Flood(i + 1, j)) ;
@@ -177,7 +195,7 @@ public class DesafioCripta : MonoBehaviour {
             }
         }
         //acima
-        if (j < 4 && game[i, j].TopConnection && game[i , j + 1].BottomConnection)
+        if (j < 3 && game[i, j].TopConnection && game[i , j + 1].BottomConnection)
         {
             if (!game[i, j + 1].GetFlooded())
             {
@@ -232,7 +250,7 @@ public class DesafioCripta : MonoBehaviour {
          yield return new WaitForSeconds(0.25f);
         
         //direita
-        if (i < 4 && game[i, j].RightConnection && game[i + 1, j].LeftConnection)
+        if (i < 3 && game[i, j].RightConnection && game[i + 1, j].LeftConnection)
         {
             if (game[i + 1, j].GetFlooded())
             {
@@ -241,7 +259,7 @@ public class DesafioCripta : MonoBehaviour {
             }
         }
         //acima
-        if (j < 4 && game[i, j].TopConnection && game[i, j + 1].BottomConnection)
+        if (j < 3 && game[i, j].TopConnection && game[i, j + 1].BottomConnection)
         {
             if (game[i, j + 1].GetFlooded())
             {
