@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     {
         if ((EventSystem.current.IsPointerOverGameObject()) || (ContextMenuContainer.contextMenuActive))
         {
-            return;
+           // return;
         }
         if (Input.GetMouseButtonDown(0))
         {
@@ -29,6 +29,17 @@ public class PlayerController : MonoBehaviour
                 //agent.Move(new Vector3(1, 0));
             }
         }
+
+        if(Input.GetAxis("Vertical") !=0 || Input.GetAxis("Horizontal") != 0)
+        {
+           // agent.isStopped = true;
+            Vector3 movement = new Vector3(Input.GetAxis("Horizontal") * agent.speed, Input.GetAxis("Vertical") * agent.speed,0);
+            Debug.Log(movement);
+            movement = movement.normalized;
+            agent.SetDestination(transform.position+movement);
+        }
+
+
         
         angle = Mathf.Atan2(agent.velocity.y, agent.velocity.x)*Mathf.Rad2Deg;
 
