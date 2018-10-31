@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public float stopAnimBias = 0;
     public NavMeshAgent agent;
     float angle;
+    private Vector3 mousePosition;
     // Update is called once per frame
     void Update()
     {
@@ -29,13 +30,19 @@ public class PlayerController : MonoBehaviour
                 //agent.Move(new Vector3(1, 0));
             }
         }
+        if (Input.mousePosition != mousePosition){
+            Cursor.visible = true;
+        }
 
         if(Input.GetAxis("Vertical") !=0 || Input.GetAxis("Horizontal") != 0)
         {
-           // agent.isStopped = true;
-            Vector3 movement = new Vector3(Input.GetAxis("Horizontal") * agent.speed, Input.GetAxis("Vertical") * agent.speed,0);
-            Debug.Log(movement);
-            movement = movement.normalized;
+            // agent.isStopped = true;
+            Cursor.visible = false;
+            
+            mousePosition = Input.mousePosition;
+            Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"),0);
+           // Debug.Log(movement);
+            //movement = movement.normalized;
             agent.SetDestination(transform.position+movement);
         }
 

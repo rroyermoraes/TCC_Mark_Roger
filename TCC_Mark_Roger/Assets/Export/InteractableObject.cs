@@ -50,6 +50,7 @@ public class InteractableObject : MonoBehaviour {
 
     private void OnMouseOver()
     {
+        
         Cursor.SetCursor(CustomCursor.ContextMenuCursor, Vector2.zero,CursorMode.Auto);
     }
     private void OnMouseExit()

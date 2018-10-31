@@ -28,7 +28,7 @@ public class SpriteOutline : MonoBehaviour
 
     private void OnMouseOver()
     {
-        
+        if(Cursor.visible)
         UpdateOutline(true);
     }
 
