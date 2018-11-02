@@ -76,12 +76,16 @@ public class DesafioBebida : MonoBehaviour {
 
         //fill
         b1Slider.AnimateSlide(a[3]);
+        b1Slider.GetComponent<AudioSource>().Play();
         yield return new WaitForSeconds(1);
         b2Slider.AnimateSlide(a[0]);
+        b2Slider.GetComponent<AudioSource>().Play();
         yield return new WaitForSeconds(1);
         b3Slider.AnimateSlide(a[1]);
+        b3Slider.GetComponent<AudioSource>().Play();
         yield return new WaitForSeconds(1);
         b4Slider.AnimateSlide(a[2]);
+        b4Slider.GetComponent<AudioSource>().Play();
         yield return new WaitForSeconds(1);
         //pause
         yield return new WaitForSeconds(1.5f);
@@ -124,12 +128,16 @@ public class DesafioBebida : MonoBehaviour {
         }
 
         b1Slider.AnimateSlide(b[3]);
+        b1Slider.GetComponent<AudioSource>().Play();
         yield return new WaitForSeconds(1);
         b2Slider.AnimateSlide(b[0]);
+        b2Slider.GetComponent<AudioSource>().Play();
         yield return new WaitForSeconds(1);
         b3Slider.AnimateSlide(b[1]);
+        b3Slider.GetComponent<AudioSource>().Play();
         yield return new WaitForSeconds(1);
         b4Slider.AnimateSlide(b[2]);
+        b4Slider.GetComponent<AudioSource>().Play();
         yield return new WaitForSeconds(1);
 
 
