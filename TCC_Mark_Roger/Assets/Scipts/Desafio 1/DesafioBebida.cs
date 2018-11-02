@@ -34,6 +34,7 @@ public class DesafioBebida : MonoBehaviour {
     public SliderAnimator a1Slider;
     public SliderAnimator a2Slider;
     public SliderAnimator a3Slider;
+    public SliderAnimator a4Slider;
 
     public Animator d1Animator;
     public Animator d2Animator;
@@ -62,6 +63,7 @@ public class DesafioBebida : MonoBehaviour {
         a1Slider.AnimateSlide(0);
         a2Slider.AnimateSlide(0);
         a3Slider.AnimateSlide(0);
+        a4Slider.AnimateSlide(0);
         yield return new WaitForSeconds(2);
         
 
@@ -94,6 +96,7 @@ public class DesafioBebida : MonoBehaviour {
         b3Slider.AnimateSlide(0);
         a3Slider.AnimateSlide(a[1]);
         b4Slider.AnimateSlide(0);
+        a4Slider.AnimateSlide(a[2]);
 
 
         //wait
@@ -220,6 +223,7 @@ public class DesafioBebida : MonoBehaviour {
         a1Slider.AnimateSlide(c[3]);
         a2Slider.AnimateSlide(c[0]);
         a3Slider.AnimateSlide(c[1]);
+        a4Slider.AnimateSlide(c[2]);
         yield return new WaitForSeconds(1);
         d1Animator.SetBool("Drink", false);
         d2Animator.SetBool("Drink", false);

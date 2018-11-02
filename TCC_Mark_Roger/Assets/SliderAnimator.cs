@@ -42,7 +42,7 @@ public class SliderAnimator : MonoBehaviour {
             elapsedTime += Time.deltaTime;
             yield return new WaitForEndOfFrame();
         }
-
+        sl.value = v;
         while (fillColor.a >= 0)
         {
             fillColor.a -= 0.02f;
@@ -64,6 +64,7 @@ public class SliderAnimator : MonoBehaviour {
             elapsedTime += Time.deltaTime;
             yield return new WaitForEndOfFrame();
         }
+        sl.value = v;
 
     }
 
