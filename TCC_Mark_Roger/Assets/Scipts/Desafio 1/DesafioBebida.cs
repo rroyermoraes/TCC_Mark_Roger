@@ -40,7 +40,7 @@ public class DesafioBebida : MonoBehaviour {
     public Animator d2Animator;
     public Animator d3Animator;
 
-
+    public Animator cupSwapAnimator;
 
     public Text maxMovesF;
     public Text moveCountF;
@@ -264,14 +264,14 @@ public class DesafioBebida : MonoBehaviour {
 
     }
 
-    public void Exchange(int pos1, int pos2)
+    public bool Exchange(int pos1, int pos2)
     {
         moves++;
         moveCountF.text = moves.ToString();
         if (moves > maxMoves)
         {
             CommitTurn();
-            return;
+            return false;
         }
         int aux = 0;
         aux = b[pos1];
@@ -283,7 +283,7 @@ public class DesafioBebida : MonoBehaviour {
 
         bDrink[pos1].value = b[pos1];
         bDrink[pos2].value = b[pos2];
-
+        return true;
 
     }
 
@@ -291,16 +291,32 @@ public class DesafioBebida : MonoBehaviour {
 
         switch (i) {
             case 1:
-                Exchange(0, 1);
+                if (Exchange(0, 1)) {
+                    cupSwapAnimator.SetTrigger("TopLeft");
+                    cupSwapAnimator.GetComponent<AudioSource>().pitch = Random.Range(0.9f, 1.1f);
+                    cupSwapAnimator.GetComponent<AudioSource>().Play();
+                }
                 break;
             case 2:
-                Exchange(1, 2);
+                if (Exchange(1, 2)) {
+                    cupSwapAnimator.SetTrigger("BottonLeft");
+                    cupSwapAnimator.GetComponent<AudioSource>().pitch = Random.Range(0.9f, 1.1f);
+                    cupSwapAnimator.GetComponent<AudioSource>().Play();
+                }                
                 break;
             case 3:
-                Exchange(2, 3);
+                if (Exchange(2, 3)) {
+                    cupSwapAnimator.SetTrigger("BottonRight");
+                    cupSwapAnimator.GetComponent<AudioSource>().pitch = Random.Range(0.9f, 1.1f);
+                    cupSwapAnimator.GetComponent<AudioSource>().Play();
+                }                
                 break;
             case 4:
-                Exchange(3, 0);
+                if (Exchange(3, 0)) {
+                    cupSwapAnimator.SetTrigger("TopRight");
+                    cupSwapAnimator.GetComponent<AudioSource>().pitch = Random.Range(0.9f, 1.1f);
+                    cupSwapAnimator.GetComponent<AudioSource>().Play();
+                }                
                 break;
         }
 
