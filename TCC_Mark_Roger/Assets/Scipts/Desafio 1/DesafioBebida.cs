@@ -18,6 +18,11 @@ public class DesafioBebida : MonoBehaviour {
     public List<DesafioBebidaTurn> turnos = new List<DesafioBebidaTurn>(1);
     public int activeTurn = 0;
     private bool newTurnReady = false;
+    [SerializeField]
+    private bool holdGame = false;
+    public SpecialDialogue[] caseLines;
+    public NPCSpeaker npcSpeakerBox;
+
     #region EditorFields
     [Space(10f)]
 
@@ -44,10 +49,16 @@ public class DesafioBebida : MonoBehaviour {
 
     public Text maxMovesF;
     public Text moveCountF;
+    public Text turnF;
+    public Text failsF;
 
     public List<Button> exchangeButtons = new List<Button>(new Button[4]);
     public Button confirmB;
     public Button nextTurnB;
+
+    public List<int> A {get{return a;}set{a = value;}}
+
+    public List<int> B {get{return b;}set{b = value;}}
 
 
 
@@ -60,31 +71,36 @@ public class DesafioBebida : MonoBehaviour {
         EnableDisableExchange(false);
         confirmB.interactable = false;
         confirmB.GetComponentInChildren<SpriteOutline>().outlineSize = 0;
+
         a1Slider.AnimateSlide(0);
         a2Slider.AnimateSlide(0);
         a3Slider.AnimateSlide(0);
         a4Slider.AnimateSlide(0);
-        yield return new WaitForSeconds(2);
+        while (holdGame) {
+            yield return new WaitForEndOfFrame();
+        }
+
+        yield return new WaitForSeconds(1);
         
 
         for (int j = 0; j < 4; j++)
         {
-            a[j] = nA[j];
+            A[j] = nA[j];
             bDrink[j].value = 0;
 
         }
 
         //fill
-        b1Slider.AnimateSlide(a[3]);
+        b1Slider.AnimateSlide(A[3]);
         b1Slider.GetComponent<AudioSource>().Play();
         yield return new WaitForSeconds(1);
-        b2Slider.AnimateSlide(a[0]);
+        b2Slider.AnimateSlide(A[0]);
         b2Slider.GetComponent<AudioSource>().Play();
         yield return new WaitForSeconds(1);
-        b3Slider.AnimateSlide(a[1]);
+        b3Slider.AnimateSlide(A[1]);
         b3Slider.GetComponent<AudioSource>().Play();
         yield return new WaitForSeconds(1);
-        b4Slider.AnimateSlide(a[2]);
+        b4Slider.AnimateSlide(A[2]);
         b4Slider.GetComponent<AudioSource>().Play();
         yield return new WaitForSeconds(1);
         //pause
@@ -94,20 +110,20 @@ public class DesafioBebida : MonoBehaviour {
         d2Animator.SetBool("Drink", true);
         d3Animator.SetBool("Drink", true);
         b1Slider.AnimateSlide(0);
-        a1Slider.AnimateSlide(a[3]);
+        a1Slider.AnimateSlide(A[3]);
         b2Slider.AnimateSlide(0);
-        a2Slider.AnimateSlide(a[0]);
+        a2Slider.AnimateSlide(A[0]);
         b3Slider.AnimateSlide(0);
-        a3Slider.AnimateSlide(a[1]);
+        a3Slider.AnimateSlide(A[1]);
         b4Slider.AnimateSlide(0);
-        a4Slider.AnimateSlide(a[2]);
+        a4Slider.AnimateSlide(A[2]);
 
 
         //wait
         yield return new WaitForSeconds(1);
         for (int i = 0; i < 4; i++)
         {
-            cF[i].text = a[i].ToString();
+            cF[i].text = A[i].ToString();
 
         }
         d1Animator.SetBool("Drink", false);
@@ -123,20 +139,20 @@ public class DesafioBebida : MonoBehaviour {
         //b = nB;
         for (int j = 0; j < 4; j++)
         {
-            b[j] = nB[j];
+            B[j] = nB[j];
 
         }
 
-        b1Slider.AnimateSlide(b[3]);
+        b1Slider.AnimateSlide(B[3]);
         b1Slider.GetComponent<AudioSource>().Play();
         yield return new WaitForSeconds(1);
-        b2Slider.AnimateSlide(b[0]);
+        b2Slider.AnimateSlide(B[0]);
         b2Slider.GetComponent<AudioSource>().Play();
         yield return new WaitForSeconds(1);
-        b3Slider.AnimateSlide(b[1]);
+        b3Slider.AnimateSlide(B[1]);
         b3Slider.GetComponent<AudioSource>().Play();
         yield return new WaitForSeconds(1);
-        b4Slider.AnimateSlide(b[2]);
+        b4Slider.AnimateSlide(B[2]);
         b4Slider.GetComponent<AudioSource>().Play();
         yield return new WaitForSeconds(1);
 
@@ -146,7 +162,7 @@ public class DesafioBebida : MonoBehaviour {
 
         for (int i = 0; i < 4; i++)
         {
-            bF[i].text = b[i].ToString();
+            bF[i].text = B[i].ToString();
             //bDrink[i].value = b[i];
 
         }
@@ -168,12 +184,21 @@ public class DesafioBebida : MonoBehaviour {
             {
                 b.interactable = true;
             }
-
+            SumInspiector[] s = FindObjectsOfType<SumInspiector>();
+            foreach(SumInspiector inspector in s)
+            {
+                inspector.InspectSum(f);
+            }
         }
         else {
             foreach (Button b in exchangeButtons)
             {
                 b.interactable = false;
+            }
+            SumInspiector[] s = FindObjectsOfType<SumInspiector>();
+            foreach (SumInspiector inspector in s)
+            {
+                inspector.InspectSum(f);
             }
         }
 
@@ -194,7 +219,7 @@ public class DesafioBebida : MonoBehaviour {
         confirmB.interactable = false;
         confirmB.GetComponentInChildren<SpriteOutline>().outlineSize = 0;
         for (int i = 0; i < 4; i++) {
-            c[i] = a[i] + b[i];
+            c[i] = A[i] + B[i];
             if (c[i] > 10)
             {
                 result = false;
@@ -217,14 +242,14 @@ public class DesafioBebida : MonoBehaviour {
             }
 
         }
-        StartCoroutine(LastDrink(c));
+        StartCoroutine(LastDrink(c,result));
 
 
 
-        CheckTurn(result);
+        
     }
 
-    IEnumerator LastDrink(List<int> c){
+    IEnumerator LastDrink(List<int> c,bool result){
         d1Animator.SetBool("Drink", true);
         d2Animator.SetBool("Drink", true);
         d3Animator.SetBool("Drink", true);
@@ -236,18 +261,25 @@ public class DesafioBebida : MonoBehaviour {
         d1Animator.SetBool("Drink", false);
         d2Animator.SetBool("Drink", false);
         d3Animator.SetBool("Drink", false);
+        yield return new WaitForSeconds(0.5f);
+        CheckTurn(result);
 
     }
 
 
     public void ConfirmButton() {
         CommitTurn();
+        for (int i = 0; i < 4; i++)
+        {
+            bF[i].text = "";
+            
 
+        }
 
     }
     private void SetTurnA()
     {
-        
+        turnF.text = (activeTurn + 1).ToString();
         //StartCoroutine(SetA(turnos[activeTurn].iA));
         for (int i = 0; i < 4; i++)
         {
@@ -282,15 +314,15 @@ public class DesafioBebida : MonoBehaviour {
             return false;
         }
         int aux = 0;
-        aux = b[pos1];
-        b[pos1] = b[pos2];
-        b[pos2] = aux;
+        aux = B[pos1];
+        B[pos1] = B[pos2];
+        B[pos2] = aux;
 
-        bF[pos1].text = b[pos1].ToString();
-        bF[pos2].text = b[pos2].ToString();
+        bF[pos1].text = B[pos1].ToString();
+        bF[pos2].text = B[pos2].ToString();
 
-        bDrink[pos1].value = b[pos1];
-        bDrink[pos2].value = b[pos2];
+        bDrink[pos1].value = B[pos1];
+        bDrink[pos2].value = B[pos2];
         return true;
 
     }
@@ -337,6 +369,7 @@ public class DesafioBebida : MonoBehaviour {
         if (!result)
         {
             turnFails++;
+            failsF.text = turnFails.ToString();
             if (turnFails > maxFails)
             {
                 Debug.LogError("Fim do desafio, voce falhou demais.");
@@ -354,7 +387,13 @@ public class DesafioBebida : MonoBehaviour {
             Debug.Log("Parabens voce concluiu esse turno."+"(" + activeTurn.ToString() + ")");
             activeTurn++;
             newTurnReady = true;
-            nextTurnB.gameObject.SetActive(true);
+            //nextTurnB.gameObject.SetActive(true);
+            holdGame = true;
+            npcSpeakerBox.gameObject.SetActive(true);
+            npcSpeakerBox.StopAllCoroutines();
+            caseLines[activeTurn - 1].StreamSpecialDialogue();
+            npcSpeakerBox.SkipSentence();
+            // ConfirmButton();
 
         }
         EnableDisableExchange(false);
@@ -362,6 +401,9 @@ public class DesafioBebida : MonoBehaviour {
         confirmB.GetComponentInChildren<SpriteOutline>().outlineSize = 0;
 
 
+    }
+    public void ResumeGameFlow() {
+        holdGame = false;
     }
 
     public void NextTurnButton() {
