@@ -5,16 +5,23 @@ using UnityEngine.UI;
 
 public class SumInspiector : MonoBehaviour {
     private bool inspectSum = false;
+    public Color baseColor;
+    public Color failColor;
     public int i=0;
     private int c;
     private DesafioBebida game;
 
-  //  public bool InspectSum{get{return inspectSum;}set{inspectSum = value;}}
+    public int C {get{return c;}set{c = value;}}
+
+
 
     public void InspectSum(bool v)
     {
         inspectSum = v;
     }
+
+
+
 
     // Use this for initialization
     void Start () {
@@ -23,16 +30,20 @@ public class SumInspiector : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (inspectSum) {
-            c = game.A[i] + game.B[i];
-            GetComponent<Slider>().value = c;
-            if (c > 10)
+        if (inspectSum)
+        {
+            C = game.A[i] + game.B[i];
+            GetComponent<Slider>().value = C;
+            if (C > 10)
             {
+
+
                 GetComponent<Animator>().SetBool("Sum", false);
                 GetComponent<Animator>().SetBool("SumFail", true);
             }
             else
             {
+
                 GetComponent<Animator>().SetBool("SumFail", false);
                 GetComponent<Animator>().SetBool("Sum", true);
             }
@@ -42,5 +53,6 @@ public class SumInspiector : MonoBehaviour {
             GetComponent<Slider>().value = 0;
 
         }
+
     }
 }
