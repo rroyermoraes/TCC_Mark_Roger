@@ -22,6 +22,10 @@ public class SolutionPosition {
 
 public class DesafioCripta : MonoBehaviour {
     [SerializeField]
+    public SpriteRenderer fundo2;
+    public AudioSource gameMoveSound;
+    public AudioSource solutionSound;
+    public AudioSource failSound;
     public GamePiece[,] game = new GamePiece[4, 4];
     public SolutionPosition startPosition;
     public List<SolutionPosition> solutionPositions = new List<SolutionPosition>();
@@ -38,7 +42,7 @@ public class DesafioCripta : MonoBehaviour {
             for (int j = 0; j < 4; j++)
             {
                
-                Debug.Log(game[i, j].name);
+               // Debug.Log(game[i, j].name);
             }
         }
     }
@@ -67,6 +71,8 @@ public class DesafioCripta : MonoBehaviour {
 
     public void ResetPieces() {
         StopAllCoroutines();
+        
+        //StartCoroutine(BackgroundShine(false));
         for (int a = 0; a < 4; a++)
         {
             for (int b = 0; b < 4; b++)
@@ -125,7 +131,7 @@ public class DesafioCripta : MonoBehaviour {
 
 
 
-        DebugGame();
+       // DebugGame();
 
     }
 
@@ -133,6 +139,7 @@ public class DesafioCripta : MonoBehaviour {
 
     public void GameMove(int i, int j) {
         ResetPieces();
+        
         if ((i >= 0 && i <= 3) && (j >= 0 && j <= 3)) {
             GamePiece aux;
             Vector3 auxT;
@@ -144,6 +151,8 @@ public class DesafioCripta : MonoBehaviour {
                 game[i, j] = game[i + 1, j];
                 game[i + 1, j].transform.localPosition = auxT;
                 game[i + 1, j] = aux;
+               // gameMoveSound.pitch = Random.Range(0.9f, 1.1f);
+                gameMoveSound.Play();
             }
             //esquerda
             if (i > 0 && game[i - 1, j].GetBlank())
@@ -154,6 +163,8 @@ public class DesafioCripta : MonoBehaviour {
                 game[i, j] = game[i - 1, j];
                 game[i - 1, j].transform.localPosition = auxT;
                 game[i - 1, j] = aux;
+                //gameMoveSound.pitch = Random.Range(0.9f, 1.1f);
+                gameMoveSound.Play();
             }
             //cima
             if (j < 3 && game[i, j+1].GetBlank())
@@ -164,6 +175,8 @@ public class DesafioCripta : MonoBehaviour {
                 game[i, j] = game[i, j + 1];
                 game[i, j + 1].transform.localPosition = auxT;
                 game[i, j + 1] = aux;
+                //gameMoveSound.pitch = Random.Range(0.9f, 1.1f);
+                gameMoveSound.Play();
             }
             //baixo
             if (j > 0 && game[i, j - 1].GetBlank())
@@ -174,6 +187,8 @@ public class DesafioCripta : MonoBehaviour {
                 game[i, j] = game[i, j - 1];
                 game[i, j - 1].transform.localPosition = auxT;
                 game[i, j - 1] = aux;
+               // gameMoveSound.pitch = Random.Range(0.9f, 1.1f);
+                gameMoveSound.Play();
             }
 
 
@@ -223,6 +238,12 @@ public class DesafioCripta : MonoBehaviour {
         bool solution = CheckSolution();
         if (solution) {
             Debug.Log("Desafio Completo");
+            if (!solutionSound.isPlaying){
+                solutionSound.Play();
+                StartCoroutine(Camera.main.GetComponent<CameraShake>().Shake(4, 0.06f));
+                
+            }
+
             complete = true;
          //   StartCoroutine(Shine(Mathf.RoundToInt(startPosition.position.x), Mathf.RoundToInt(startPosition.position.y)));
             
@@ -284,35 +305,94 @@ public class DesafioCripta : MonoBehaviour {
         }
     }
 
+    IEnumerator InvalidStartPositions() {
 
+        Debug.Log("tilt");
+        Color c = new Color(1,1,1,0);
+        fundo2.color = c;
+        while (c.a < 1)
+        {
+            c.a += 0.1f;
+            fundo2.color = c;
+            yield return new WaitForEndOfFrame();
+        }
+        while (c.a > 0)
+        {
+            c.a -= 0.1f;
+            fundo2.color = c;
+            yield return new WaitForEndOfFrame();
+        }
+
+    }
+    IEnumerator BackgroundShine(bool t) {
+        if (t){
+            Color c = new Color(1, 1, 1, 0);
+            fundo2.color = c;
+            while (c.a < 1)
+            {
+                c.a += 0.1f;
+                fundo2.color = c;
+                yield return new WaitForEndOfFrame();
+            }
+        }
+        else{
+            Color c = new Color(1, 1, 1, 1);
+            fundo2.color = c;
+            while (c.a > 0)
+            {
+                c.a -= 0.1f;
+                fundo2.color = c;
+                yield return new WaitForEndOfFrame();
+            }
+        }
+
+
+    }
 
 
     public void StartFlood() {
-
+        
         bool f = true;
         int i, j;
-        i = Mathf.RoundToInt(startPosition.position.x);
-        j = Mathf.RoundToInt(startPosition.position.y);
+        foreach(SolutionPosition s in solutionPositions){
+            i = Mathf.RoundToInt(s.position.x);
+            j = Mathf.RoundToInt(s.position.y);
 
-        if (game[i, j].LeftConnection != startPosition.leftConnection && startPosition.leftConnection)
-        {
-            f = false;
+            if (game[i, j].LeftConnection != s.leftConnection && s.leftConnection)
+            {
+                f = false;
+                break;
+            }
+            if (game[i, j].RightConnection != s.rightConnection && s.rightConnection)
+            {
+                f = false;
+                break;
+            }
+            if (game[i, j].TopConnection != s.topConnection && s.topConnection)
+            {
+                f = false;
+                break;
+            }
+            if (game[i, j].BottomConnection != s.bottomConnection && s.bottomConnection)
+            {
+                f = false;
+                break;
+            }
         }
-        if (game[i, j].RightConnection != startPosition.rightConnection && startPosition.rightConnection)
-        {
-            f = false;
-        }
-        if (game[i, j].TopConnection != startPosition.topConnection && startPosition.topConnection)
-        {
-            f = false;
-        }
-        if (game[i, j].BottomConnection != startPosition.bottomConnection && startPosition.bottomConnection)
-        {
-            f = false;
-        }
+        
+        
+
 
         if (f) {
-            StartCoroutine(Flood(Mathf.RoundToInt(startPosition.position.x), Mathf.RoundToInt(startPosition.position.y)));
+            StartCoroutine(BackgroundShine(true));
+            StartCoroutine(Flood(Mathf.RoundToInt(solutionPositions[0].position.x), Mathf.RoundToInt(solutionPositions[0].position.y)));
+            StartCoroutine(Flood(Mathf.RoundToInt(solutionPositions[1].position.x), Mathf.RoundToInt(solutionPositions[1].position.y)));
+            StartCoroutine(Flood(Mathf.RoundToInt(solutionPositions[2].position.x), Mathf.RoundToInt(solutionPositions[2].position.y)));
+            StartCoroutine(Flood(Mathf.RoundToInt(solutionPositions[3].position.x), Mathf.RoundToInt(solutionPositions[3].position.y)));
+        }
+        else{
+            
+            StartCoroutine(InvalidStartPositions());
         }
         
     }
@@ -364,17 +444,17 @@ public class DesafioCripta : MonoBehaviour {
                 return;
             }
             RaycastHit2D hit = Physics2D.Raycast(screenPosition, Vector3.forward, Mathf.Infinity, filtro);
-            Debug.DrawRay(screenPosition, Vector3.forward, Color.red, 5f);
+           // Debug.DrawRay(screenPosition, Vector3.forward, Color.red, 5f);
             if (hit)
             {
-                Debug.Log("hit");
+               // Debug.Log("hit");
                 if (hit.transform.gameObject.GetComponent<GamePiece>() != null) {
                     GameMove(Mathf.RoundToInt(hit.transform.localPosition.x), Mathf.RoundToInt(hit.transform.localPosition.y));
                 }
 
             }
             else {
-                Debug.Log("miss");
+               // Debug.Log("miss");
             }
             
         }
