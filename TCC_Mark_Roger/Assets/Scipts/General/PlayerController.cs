@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public Camera cam;
     public Animator anim;
+    public FootstepAssistant footsA;
     public float stopAnimBias = 0;
     public NavMeshAgent agent;
     float angle;
@@ -84,7 +85,7 @@ public class PlayerController : MonoBehaviour
                 anim.SetBool("Right", false);
                 anim.SetBool("Left", false);
             }
-
+            footsA.StartWalking();
 
         }
         else {
@@ -92,6 +93,7 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("Right", false);
             anim.SetBool("Up", false);
             anim.SetBool("Down", false);
+            footsA.StopWalking();
         }
     
     

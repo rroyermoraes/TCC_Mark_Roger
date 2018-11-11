@@ -26,6 +26,8 @@ public class DesafioBebida : MonoBehaviour {
     #region EditorFields
     [Space(10f)]
 
+    public GameObject outlineEffect;
+
     public List<Text> aF = new List<Text>(4);
     public List<Text> bF = new List<Text>(4);
     public List<Text> cF = new List<Text>(4);
@@ -70,7 +72,8 @@ public class DesafioBebida : MonoBehaviour {
     {
         EnableDisableExchange(false);
         confirmB.interactable = false;
-        confirmB.GetComponentInChildren<SpriteOutline>().outlineSize = 0;
+        outlineEffect.GetComponent<Image>().color = new Color(0, 0, 0, 0);
+        //confirmB.GetComponentInChildren<SpriteOutline>().outlineSize = 0;
 
         a1Slider.AnimateSlide(0);
         a2Slider.AnimateSlide(0);
@@ -168,7 +171,8 @@ public class DesafioBebida : MonoBehaviour {
         }
         EnableDisableExchange(true);
         confirmB.interactable = true;
-        confirmB.GetComponentInChildren<SpriteOutline>().outlineSize = 1;
+        outlineEffect.GetComponent<Image>().color = new Color(1, 1, 1, 1);
+        //confirmB.GetComponentInChildren<SpriteOutline>().outlineSize = 1;
     }
 
     private void SetMaxMoves(int i)
@@ -217,7 +221,8 @@ public class DesafioBebida : MonoBehaviour {
         List<int> c = new List<int>(new int[4]);
         EnableDisableExchange(false);
         confirmB.interactable = false;
-        confirmB.GetComponentInChildren<SpriteOutline>().outlineSize = 0;
+        outlineEffect.GetComponent<Image>().color = new Color(0, 0, 0, 0);
+        //confirmB.GetComponentInChildren<SpriteOutline>().outlineSize = 0;
         for (int i = 0; i < 4; i++) {
             c[i] = A[i] + B[i];
             if (c[i] > 10)
@@ -398,7 +403,8 @@ public class DesafioBebida : MonoBehaviour {
         }
         EnableDisableExchange(false);
         confirmB.interactable = false;
-        confirmB.GetComponentInChildren<SpriteOutline>().outlineSize = 0;
+        outlineEffect.GetComponent<Image>().color = new Color(0, 0, 0, 0);
+       // confirmB.GetComponentInChildren<SpriteOutline>().outlineSize = 0;
 
 
     }
