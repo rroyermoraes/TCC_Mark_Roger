@@ -7403,7 +7403,7 @@ MonoBehaviour:
   m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 1157401890}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &1157401893
@@ -7849,6 +7849,7 @@ GameObject:
   - component: {fileID: 1194202339}
   - component: {fileID: 1194202338}
   - component: {fileID: 1194202337}
+  - component: {fileID: 1194202340}
   m_Layer: 5
   m_Name: StartTest
   m_TagString: Untagged
@@ -7987,6 +7988,17 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1194202335}
   m_CullTransparentMesh: 0
+--- !u!114 &1194202340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1194202335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51782e9fa3d5ddd4bbb6946f9c383dc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1197776061
 GameObject:
   m_ObjectHideFlags: 0
@@ -10724,7 +10736,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1895880023}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -10738,7 +10750,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1895880023}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -11658,6 +11670,31 @@ Prefab:
       value: "Voc\xEA tem um n\xFAmero limite de trocas antes que os b\xEAbados peguem
         os copos e bebam.\r\n\r\nQuando voc\xEA tiver feito as trocas que achar necess\xE1rio
         e quiser terminar o turno, clique no seu copo para todos beberem."
+      objectReference: {fileID: 0}
+    - target: {fileID: 114488884203452096, guid: 9b60b8dfe9d2f394291c9120f85a59ad,
+        type: 2}
+      propertyPath: m_Navigation.m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114642690972788300, guid: 9b60b8dfe9d2f394291c9120f85a59ad,
+        type: 2}
+      propertyPath: m_Navigation.m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114261998736588814, guid: 9b60b8dfe9d2f394291c9120f85a59ad,
+        type: 2}
+      propertyPath: m_Navigation.m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114295944371112712, guid: 9b60b8dfe9d2f394291c9120f85a59ad,
+        type: 2}
+      propertyPath: m_Navigation.m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114277981671701666, guid: 9b60b8dfe9d2f394291c9120f85a59ad,
+        type: 2}
+      propertyPath: m_Navigation.m_Mode
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b60b8dfe9d2f394291c9120f85a59ad, type: 2}
