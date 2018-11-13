@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     {
         if ((EventSystem.current.IsPointerOverGameObject()) || (ContextMenuContainer.contextMenuActive))
         {
-           // return;
+            return;
         }
         if (Input.GetMouseButtonDown(0))
         {
@@ -154,5 +154,17 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("Left", false);
 
         }*/
+    }
+
+
+    public void Stop() {
+        agent.velocity = Vector3.zero;
+        agent.isStopped=true;
+
+    }
+    public void Resume()
+    {
+        agent.destination = agent.transform.position;
+        agent.isStopped = false;
     }
 }

@@ -15,24 +15,21 @@ public class Teleport : MonoBehaviour {
         
         if (Input.GetMouseButtonDown(1))
         {
+
+
             d = Vector3.Magnitude(player.transform.position - transform.position);
             if (d <= interactionDistance)
             {
                 Vector3 mPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0f);
                 Vector3 sPosition = Camera.main.ScreenToWorldPoint(mPosition);
-                RaycastHit2D hit = Physics2D.Raycast(sPosition, Vector3.forward, Mathf.Infinity, -1);
-
-
+                RaycastHit2D hit = Physics2D.Raycast(sPosition, Vector3.forward, Mathf.Infinity,mask);
 
                 if (hit && hit.transform == transform )
                 {
                     player.GetComponent<NavMeshAgent>().Warp(tpoint.position);
-                    // player.GetComponent<NavMeshAgent>().enabled = false;
-                    // player.transform.position = tpoint.position;
                     Camera.main.GetComponent<SnapToPixel>().enabled = false;
                     Camera.main.transform.position = new Vector3(tpoint.position.x, tpoint.position.y, Camera.main.transform.position.z);
                     Camera.main.GetComponent<SnapToPixel>().enabled = true;
-                    //  player.GetComponent<NavMeshAgent>().enabled = true;
 
                 }
 
