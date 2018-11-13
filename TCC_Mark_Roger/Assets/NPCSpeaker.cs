@@ -117,7 +117,7 @@ public class NPCSpeaker : MonoBehaviour
                     aSource.Play();
                 }
                 else {
-                    yield return new WaitForSecondsRealtime(0.02f);
+                    yield return new WaitForSecondsRealtime(0.04f);
                 }
                 
                 if (nextSentence)
