@@ -957,7 +957,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1535317417}
-  m_RootOrder: 25
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &47059172
 GameObject:
@@ -2248,7 +2248,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1535317417}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &112623093
 GameObject:
@@ -2364,7 +2364,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &114921136
 GameObject:
@@ -4118,7 +4118,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1535317417}
-  m_RootOrder: 24
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &228845394
 GameObject:
@@ -4335,7 +4335,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1535317417}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &242315776
 GameObject:
@@ -4663,7 +4663,7 @@ RectTransform:
   - {fileID: 1427825241}
   - {fileID: 1268086191}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4794,7 +4794,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1535317417}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &300662375
 GameObject:
@@ -4869,7 +4869,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1535317417}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &302967474
 GameObject:
@@ -5023,7 +5023,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1535317417}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &312865325
 GameObject:
@@ -5772,7 +5772,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1535317417}
-  m_RootOrder: 26
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &379009759
 GameObject:
@@ -6133,8 +6133,8 @@ Transform:
   m_LocalPosition: {x: 3.4875665, y: -3.9061434, z: 453.4803}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1535317417}
-  m_RootOrder: 1
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &412671263
 GameObject:
@@ -6343,6 +6343,122 @@ Transform:
   m_Father: {fileID: 1561962741}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &420865965
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 420865966}
+  - component: {fileID: 420865967}
+  m_Layer: 0
+  m_Name: DunksDialogue1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &420865966
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 420865965}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 783924492}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &420865967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 420865965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac5cadd30fa86140af6b1344006084b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseState: {fileID: 11400000, guid: 4e295122477dff045bf839333bb46d4b, type: 2}
+  greeting: Hey cara.
+  specialGreetingPortrait: {fileID: 0}
+  blankState: 0
+  lines:
+  - line: "Como s\xE3o as coisas por aqui?"
+    responses:
+    - "As coisas s\xE3o bem tranquilas..."
+    - "E a bebida \xE9 boa. *ha ha ha*"
+    isHidden: 0
+    specialPortrait: {fileID: 21300000, guid: 2f0534ddd5746bd45a03be14dd1a812b, type: 3}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    lateEventTrigger: 0
+  - line: "Voc\xEAs ficam aqui o dia inteiro?"
+    responses:
+    - "Claro que n\xE3o"
+    - "N\xF3s trabalhamos quanto tem trabalho pra ser feito"
+    - E bebemos quando tem bebida pra ser bebida.*hic*
+    isHidden: 0
+    specialPortrait: {fileID: 21300000, guid: 83aefb776f733ab4ab61052cebe1bded, type: 3}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    lateEventTrigger: 0
+  - line: Algo estranho aconteceu recentemente?
+    responses:
+    - "N\xE3o sei o que voc\xEA quer dizer com estranho."
+    - "Pra mim o mais estranho que aconteceu por aqui foi voc\xEA aparecer."
+    - "E o sumi\xE7o do Edmund. Ele provavelmente foi pego por um urso ou algo do
+      tipo."
+    isHidden: 0
+    specialPortrait: {fileID: 21300000, guid: 9b6390979ebdaa348a688f694d8fdcf5, type: 3}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    lateEventTrigger: 0
+  endDialogueLine:
+    line: Adeus
+    responses:
+    - '...'
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    lateEventTrigger: 0
 --- !u!1 &429463192
 GameObject:
   m_ObjectHideFlags: 0
@@ -7597,6 +7713,7 @@ Transform:
   m_Children:
   - {fileID: 727584053}
   - {fileID: 1222649789}
+  - {fileID: 783924492}
   m_Father: {fileID: 1178950122}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7643,7 +7760,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nPC_Id: 12
   DefaltNPCPortrait: {fileID: 21300000, guid: 9b6390979ebdaa348a688f694d8fdcf5, type: 3}
-  activeNPCState: {fileID: 1222649790}
+  activeNPCState: {fileID: 783924493}
   activeDialogueState: {fileID: 0}
 --- !u!50 &532601794
 Rigidbody2D:
@@ -8951,7 +9068,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4244492779181690, guid: efabc7ced9a7cd544aaf8bdb3a745be2, type: 2}
       propertyPath: m_RootOrder
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 114466924195481228, guid: efabc7ced9a7cd544aaf8bdb3a745be2,
         type: 2}
@@ -9062,7 +9179,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1535317417}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &593258380
 Prefab:
@@ -9741,7 +9858,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1535317417}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &657563930
 MonoBehaviour:
@@ -9851,7 +9968,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1535317417}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &674238485
 GameObject:
@@ -10183,11 +10300,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4736355616403130, guid: 678aef37467c2624caa6f11225766588, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 784.57
+      value: 884.1
       objectReference: {fileID: 0}
     - target: {fileID: 4736355616403130, guid: 678aef37467c2624caa6f11225766588, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 319.04
+      value: 275.3
       objectReference: {fileID: 0}
     - target: {fileID: 4736355616403130, guid: 678aef37467c2624caa6f11225766588, type: 2}
       propertyPath: m_LocalPosition.z
@@ -11324,7 +11441,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1535317417}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &775464819
 GameObject:
@@ -11401,6 +11518,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &783924491
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 783924492}
+  - component: {fileID: 783924493}
+  m_Layer: 0
+  m_Name: Drunks_NPCState
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &783924492
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 783924491}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.00000011920929, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 420865966}
+  m_Father: {fileID: 532601790}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &783924493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 783924491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1214b550a1cac74f9f062a62a599732, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue_Id: 121
+  portrait: {fileID: 0}
+  defaultDialogueState: {fileID: 420865967}
+  runtimeStates:
+  - {fileID: 420865967}
 --- !u!1 &794250961
 GameObject:
   m_ObjectHideFlags: 0
@@ -23040,7 +23203,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1535317417}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &836040290
 GameObject:
@@ -23115,7 +23278,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1535317417}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &841248575
 GameObject:
@@ -23651,6 +23814,22 @@ MonoBehaviour:
   specialGreetingPortrait: {fileID: 0}
   blankState: 0
   lines:
+  - line: "Acho melhor n\xE3o."
+    responses:
+    - Tudo bem.
+    isHidden: 0
+    specialPortrait: {fileID: 0}
+    targetRuntimeState: {fileID: 0}
+    targetRuntimeDialogueContainer: {fileID: 0}
+    allreadySayd: 0
+    linesToUnlock: []
+    events:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    exitDialogue: 0
+    lateEventTrigger: 0
   - line: Bebados.
     responses:
     - "Esses tr\xEAs est\xE3o sempre por aqui enchendo a cara"
@@ -25715,7 +25894,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1535317417}
-  m_RootOrder: 27
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1001292055
 GameObject:
@@ -26679,7 +26858,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1535317417}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1086351670
 Prefab:
@@ -27397,7 +27576,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1112882330}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 810.34, y: 324.12, z: 0}
+  m_LocalPosition: {x: 913.85, y: 279.27, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 643593904}
@@ -35143,7 +35322,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1535317417}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1177521307
 GameObject:
@@ -35237,7 +35416,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1535317417}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1178950121
 GameObject:
@@ -35282,7 +35461,7 @@ Transform:
   - {fileID: 1449919794}
   - {fileID: 842388852}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1183985001
 GameObject:
@@ -35733,7 +35912,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1535317417}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1219769817
 GameObject:
@@ -35820,7 +35999,7 @@ GameObject:
   - component: {fileID: 1222649789}
   - component: {fileID: 1222649790}
   m_Layer: 0
-  m_Name: Drunks_NPCState
+  m_Name: Drunks_NPCStateTestChallenge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35851,7 +36030,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1214b550a1cac74f9f062a62a599732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue_Id: 121
+  dialogue_Id: 120
   portrait: {fileID: 0}
   defaultDialogueState: {fileID: 179271967}
   runtimeStates:
@@ -35901,7 +36080,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1227433603
 RectTransform:
   m_ObjectHideFlags: 0
@@ -36683,7 +36862,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1535317417}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1253792860
 GameObject:
@@ -37387,7 +37566,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1535317417}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1283551811
 GameObject:
@@ -55201,7 +55380,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1535317417}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1422164870
 GameObject:
@@ -56343,7 +56522,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 174255560}
-  - {fileID: 395619074}
   - {fileID: 1586876355}
   - {fileID: 653006657}
   - {fileID: 293196125}
@@ -57096,7 +57274,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1535317417}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1588355345
 GameObject:
@@ -57812,6 +57990,17 @@ MonoBehaviour:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 532601793}
+          m_MethodName: ChangeNPCState
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 120
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -59154,7 +59343,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1535317417}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1652753199
 GameObject:
@@ -61014,7 +61203,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1535317417}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1808124995
 GameObject:
@@ -61273,7 +61462,7 @@ Transform:
   - {fileID: 1595151618}
   - {fileID: 1227433603}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1827792131
 GameObject:
@@ -62782,7 +62971,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1535317417}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1960147508
 GameObject:
@@ -149166,7 +149355,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2062847939
 GameObject:

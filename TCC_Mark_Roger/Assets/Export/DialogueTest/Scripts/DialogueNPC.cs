@@ -30,7 +30,19 @@ public class DialogueNPC : MonoBehaviour {
         activeDialogueState = nD;
 
     }
+    public void ChangeNPCState(int id) {
+        List<RuntimeNPCDialogueContainer> dialogueContainers = new List<RuntimeNPCDialogueContainer>(GameObject.Find("NPCS").GetComponentsInChildren<RuntimeNPCDialogueContainer>(true));
 
+        foreach(RuntimeNPCDialogueContainer npc_DC in dialogueContainers)
+        {
+            if (npc_DC.Dialogue_Id == id)
+            {
+                activeNPCState = npc_DC;
+                break;
+
+            }
+        }
+    }
 }
 
 
