@@ -78,7 +78,21 @@ public class DialogueLineSerial
 
 
 }
+[System.Serializable]
+public struct DialogueResponse {
+    [TextArea]
+    public string line;
+    public Sprite portrait;
 
+    public DialogueResponse(string s, Sprite sp)
+    {
+        line = s;
+        portrait = sp;
+
+    }
+
+
+} 
 
 [System.Serializable]
 public class DialogueLineRuntime {
@@ -91,6 +105,8 @@ public class DialogueLineRuntime {
     [Tooltip("The NPC response lines, use multiple to longer texts that will overflow the textbox")]
     [TextArea]
     public string[] responses;
+    public DialogueResponse[] lineResponses;
+
     [Space(10)]
     public bool isHidden = false;
     [Tooltip("Will this line use a special portrait for the NPC response? Leave empty to use the default npc portrait")]
@@ -110,8 +126,5 @@ public class DialogueLineRuntime {
     [Tooltip("Turn on if you want this line to end de conversation")]
     public bool exitDialogue = false;
     public bool lateEventTrigger = false;
-
-
-
 }
 
