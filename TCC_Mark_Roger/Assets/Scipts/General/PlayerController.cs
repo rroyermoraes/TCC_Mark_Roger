@@ -20,14 +20,11 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetMouseButtonDown(0))
         {
-
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
-
             if (Physics.Raycast(ray, out hit))
             {
                 agent.SetDestination(hit.point);
-                
                 //agent.Move(new Vector3(1, 0));
             }
         }
@@ -37,54 +34,68 @@ public class PlayerController : MonoBehaviour
 
         if(Input.GetAxis("Vertical") !=0 || Input.GetAxis("Horizontal") != 0)
         {
-            // agent.isStopped = true;
             Cursor.visible = false;
-            
             mousePosition = Input.mousePosition;
-            Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"),0);
-           // Debug.Log(movement);
-            //movement = movement.normalized;
+            Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")/2,0);
+            //Debug.Log(movement);
+           // movement = movement.normalized;
             agent.SetDestination(transform.position+movement);
         }
 
-
-        
         angle = Mathf.Atan2(agent.velocity.y, agent.velocity.x)*Mathf.Rad2Deg;
 
         if (agent.velocity.magnitude > stopAnimBias)
         {
-            if ((angle >= 0 && angle <= 30)||(angle <= 0 && angle >= -30))
+            if ((angle >= 0 && angle < 30)||(angle <= 0 && angle > -22))
             {
+                //MoveRight
                 anim.SetBool("Right", true);
-
                 anim.SetBool("Left", false);
                 anim.SetBool("Up", false);
                 anim.SetBool("Down", false);
             }
             if (angle > 30 && angle < 150)
             {
+                //MoveUp
                 anim.SetBool("Up", true);
-
                 anim.SetBool("Down", false);
                 anim.SetBool("Right", false);
                 anim.SetBool("Left", false);
             }
-            if ((angle >= 150 && angle <= 180)||(angle <= -150 && angle >= -180))
+            if ((angle > 150 && angle <= 180)||(angle < -158 && angle >= -180))
             {
+                //MoveLeft
                 anim.SetBool("Left", true);
-
                 anim.SetBool("Up", false);
                 anim.SetBool("Down", false);
                 anim.SetBool("Right", false);
             }
-            if (angle < -30 && angle > -150)
-            {
+            if (angle <= -112 && angle >= -158) {
+                //MoveDownLeft
+                anim.SetBool("Left", true);
+                anim.SetBool("Up", false);
                 anim.SetBool("Down", true);
+                anim.SetBool("Right", false);
+            }
 
+            if (angle < -68 && angle > -112)
+            {
+                //MoveDown
+                anim.SetBool("Down", true);
                 anim.SetBool("Up", false);
                 anim.SetBool("Right", false);
                 anim.SetBool("Left", false);
             }
+            if(angle <= -22 && angle >= -68)
+            {
+                //MoveDownRight
+                anim.SetBool("Down", true);
+                anim.SetBool("Up", false);
+                anim.SetBool("Right", true);
+                anim.SetBool("Left", false);
+
+            }
+
             footsA.StartWalking();
 
         }
